@@ -1,0 +1,1803 @@
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 63
+Riesgo global del laboratorio (promedio de prioridades): 11.4556
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 60
+Riesgo global del laboratorio (promedio de prioridades): 9.705
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 59
+Riesgo global del laboratorio (promedio de prioridades): 8.2884
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 64
+Riesgo global del laboratorio (promedio de prioridades): 11.5556
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 63
+Riesgo global del laboratorio (promedio de prioridades): 11.3056
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 60
+Riesgo global del laboratorio (promedio de prioridades): 9.255
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 64
+Riesgo global del laboratorio (promedio de prioridades): 11.8056
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 63
+Riesgo global del laboratorio (promedio de prioridades): 12.8563
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 86
+Riesgo global del laboratorio (promedio de prioridades): 26.918
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 80
+Riesgo global del laboratorio (promedio de prioridades): 23.0495
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 97
+Riesgo global del laboratorio (promedio de prioridades): 38.4165
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 96
+Riesgo global del laboratorio (promedio de prioridades): 38.5525
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 95
+Riesgo global del laboratorio (promedio de prioridades): 41.528
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 98
+Riesgo global del laboratorio (promedio de prioridades): 47.2025
+---- REPORTE DEL DIA 6 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 96
+Riesgo global del laboratorio (promedio de prioridades): 47.054
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 69
+Riesgo global del laboratorio (promedio de prioridades): 15.4055
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 77
+Riesgo global del laboratorio (promedio de prioridades): 21.3885
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 67
+Riesgo global del laboratorio (promedio de prioridades): 14.415
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 78
+Riesgo global del laboratorio (promedio de prioridades): 21.3975
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+Equipos pendientes de atencion: 72
+Riesgo global del laboratorio (promedio de prioridades): 17.37
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.18 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.09
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -30.56 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -50.84 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -25.42
+
+Equipos pendientes de atencion (prioridad mayor a 0): 62
+Riesgo global del laboratorio (promedio de prioridades): 11.0556
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.18 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.09
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: 19.44  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.72
+ID: LAP-83   | Tipo: Laptop            | Criticidad: 19.16  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.58
+
+Equipos pendientes de atencion (prioridad mayor a 0): 64
+Riesgo global del laboratorio (promedio de prioridades): 11.6556
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 0.00
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 73
+Riesgo global del laboratorio (promedio de prioridades): 16.3461
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -25.00
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 0.00
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 81
+Riesgo global del laboratorio (promedio de prioridades): 21.3221
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 19.82  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.91
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -50.56 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -25.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -30.84 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.42
+
+Equipos pendientes de atencion (prioridad mayor a 0): 68
+Riesgo global del laboratorio (promedio de prioridades): 10.7768
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.18 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.09
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -50.56 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -25.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -50.84 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -25.42
+
+Equipos pendientes de atencion (prioridad mayor a 0): 62
+Riesgo global del laboratorio (promedio de prioridades): 10.9556
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.18 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.09
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -30.56 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: 19.16  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.58
+
+Equipos pendientes de atencion (prioridad mayor a 0): 63
+Riesgo global del laboratorio (promedio de prioridades): 11.4056
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 70
+Riesgo global del laboratorio (promedio de prioridades): 16.4191
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 0.00
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 79
+Riesgo global del laboratorio (promedio de prioridades): 20.5226
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: 0.00
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 87
+Riesgo global del laboratorio (promedio de prioridades): 24.4756
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-56    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 0.00
+ID: AIO-77   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -25.00
+ID: PC-86    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 91
+Riesgo global del laboratorio (promedio de prioridades): 28.2996
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 19.82  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.91
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: 19.44  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.72
+ID: LAP-83   | Tipo: Laptop            | Criticidad: 19.16  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.58
+
+Equipos pendientes de atencion (prioridad mayor a 0): 70
+Riesgo global del laboratorio (promedio de prioridades): 11.3482
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 76
+Riesgo global del laboratorio (promedio de prioridades): 16.471
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 83
+Riesgo global del laboratorio (promedio de prioridades): 21.1015
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 19.82  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.91
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -30.56 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -0.84  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -0.42
+
+Equipos pendientes de atencion (prioridad mayor a 0): 63
+Riesgo global del laboratorio (promedio de prioridades): 11.5556
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 69
+Riesgo global del laboratorio (promedio de prioridades): 16.4096
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 0.00
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 79
+Riesgo global del laboratorio (promedio de prioridades): 21.0561
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-56    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 86
+Riesgo global del laboratorio (promedio de prioridades): 24.8156
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-39   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-47   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 92
+Riesgo global del laboratorio (promedio de prioridades): 29.0921
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 19.82  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 9.91
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -30.56 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -0.84  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -0.42
+
+Equipos pendientes de atencion (prioridad mayor a 0): 63
+Riesgo global del laboratorio (promedio de prioridades): 11.5556
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.18 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -15.09
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -0.56  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -0.28
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -50.84 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -25.42
+
+Equipos pendientes de atencion (prioridad mayor a 0): 62
+Riesgo global del laboratorio (promedio de prioridades): 11.2056
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 0.00
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 70
+Riesgo global del laboratorio (promedio de prioridades): 16.3556
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-56    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 81
+Riesgo global del laboratorio (promedio de prioridades): 21.3231
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: 10.00
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 86
+Riesgo global del laboratorio (promedio de prioridades): 25.5246
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-39   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 10.00
+ID: PC-21    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 90
+Riesgo global del laboratorio (promedio de prioridades): 29.4971
+
+---- REPORTE DEL DIA 6 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-86    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-98   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 0.00
+ID: AIO-47   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 33.2371
+
+---- REPORTE DEL DIA 7 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-32   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: -25.00
+ID: LAP-3    | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-77   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 36.1461
+
+---- REPORTE DEL DIA 8 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-13   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: 0.00
+ID: OSC-19   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-65   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 38.4396
+
+---- REPORTE DEL DIA 9 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-80   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-68   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-74   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 40.4059
+
+---- REPORTE DEL DIA 10 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-92   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: 0.00
+ID: MIC-50   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-27   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 42.4239
+
+---- REPORTE DEL DIA 11 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-10   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-87   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-53   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 43.6379
+
+---- REPORTE DEL DIA 12 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-35   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-45   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-18   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 44.7115
+
+---- REPORTE DEL DIA 13 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-59   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-69   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-22   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 45.2865
+
+---- REPORTE DEL DIA 14 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-81    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-75   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-41    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 45.867
+
+---- REPORTE DEL DIA 15 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-11    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-89   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-96    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 46.03
+
+---- REPORTE DEL DIA 16 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-63   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-33   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-14   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 45.686
+
+---- REPORTE DEL DIA 17 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-48   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-93   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-24   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 45.8595
+
+---- REPORTE DEL DIA 18 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-38   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-78   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-84   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 45.6995
+
+---- REPORTE DEL DIA 19 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-72   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: 0.00
+ID: OSC-99   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-66    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 45.762
+
+---- REPORTE DEL DIA 20 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-60   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-42   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-5    | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 45.968
+
+---- REPORTE DEL DIA 21 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-30   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-57   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-1     | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 46.492
+
+---- REPORTE DEL DIA 22 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-54   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-2    | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-70   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 46.515
+
+---- REPORTE DEL DIA 23 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-34   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-94   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-8    | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 47.019
+
+---- REPORTE DEL DIA 24 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-20   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-82   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: -25.00
+ID: AIO-17   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 46.798
+
+---- REPORTE DEL DIA 25 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-26    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-58   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-46    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 46.808
+
+---- REPORTE DEL DIA 26 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: 0.00
+ID: LAP-88   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: 0.00
+ID: OSC-64   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 47.455
+
+---- REPORTE DEL DIA 27 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-73   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-12   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-37   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 47.54
+
+---- REPORTE DEL DIA 28 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-100  | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-76    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-49   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 47.564
+
+---- REPORTE DEL DIA 29 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-43   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: 0.00
+ID: AIO-97   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: 0.00
+ID: PC-31    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 47.624
+
+---- REPORTE DEL DIA 30 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-91    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-28   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-55   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 98
+Riesgo global del laboratorio (promedio de prioridades): 47.558
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -32.78 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.39
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: 16.84  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.42
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -3.44  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -1.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 55
+Riesgo global del laboratorio (promedio de prioridades): 5.3896
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -32.78 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.39
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -33.16 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.58
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -33.44 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 54
+Riesgo global del laboratorio (promedio de prioridades): 4.9806
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 0.00
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -25.00
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -8.53333
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -65.60 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -32.80
+ID: LAP-1    | Tipo: Laptop            | Criticidad: 1.40   | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 0.70
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -7.60  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -3.80
+
+Equipos pendientes de atencion (prioridad mayor a 0): 1
+Riesgo global del laboratorio (promedio de prioridades): -12.3667
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -14.72 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -7.36
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -47.92 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -23.96
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -78.52 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -39.26
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -24.1267
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -1.94  | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -0.97
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -24.58 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -12.29
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -31.10 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.55
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -10.4053
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -15.59 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -7.79
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -70.92 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -35.46
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -4.62  | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -2.31
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -16.1877
+
+---- REPORTE DEL DIA 6 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: 1.88   | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 0.94
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -52.32 | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: -26.16
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -63.18 | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: -31.59
+
+Equipos pendientes de atencion (prioridad mayor a 0): 1
+Riesgo global del laboratorio (promedio de prioridades): -20.1375
+
+---- REPORTE DEL DIA 7 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -15.22 | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: -7.61
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -7.86  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: -3.93
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -80.24 | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: -40.12
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -18.6208
+
+---- REPORTE DEL DIA 8 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -67.17 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -33.59
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -69.04 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -34.52
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -63.45 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -31.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -34.8775
+
+---- REPORTE DEL DIA 9 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -78.63 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -39.32
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -81.49 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -40.74
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -63.01 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -31.50
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -38.9888
+
+---- REPORTE DEL DIA 10 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -8.00  | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -4.00
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -82.93 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -41.46
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -36.10 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -18.05
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -23.1711
+
+---- REPORTE DEL DIA 11 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: 2.60   | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: 1.30
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -23.82 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -11.91
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -63.59 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -31.79
+
+Equipos pendientes de atencion (prioridad mayor a 0): 1
+Riesgo global del laboratorio (promedio de prioridades): -16.3342
+
+---- REPORTE DEL DIA 12 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -15.48 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -7.74
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: 0.04   | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: 0.02
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -12.52 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -6.26
+
+Equipos pendientes de atencion (prioridad mayor a 0): 1
+Riesgo global del laboratorio (promedio de prioridades): -7.06018
+
+---- REPORTE DEL DIA 13 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -65.59 | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: -32.80
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -49.90 | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: -24.95
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -71.10 | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: -35.55
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -33.6987
+
+---- REPORTE DEL DIA 14 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -77.18 | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: -38.59
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -81.02 | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: -40.51
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -32.92 | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: -16.46
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -34.6531
+
+---- REPORTE DEL DIA 15 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -53.18 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -26.59
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -32.20 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -16.10
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -35.24 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -17.62
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -23.1039
+
+---- REPORTE DEL DIA 16 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -4.64  | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -2.32
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -26.65 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -13.32
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -80.04 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -40.02
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -21.7541
+
+---- REPORTE DEL DIA 17 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -46.13 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -23.06
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -52.53 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -26.26
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -83.41 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -41.70
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -33.7442
+
+---- REPORTE DEL DIA 18 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-1    | Tipo: Laptop            | Criticidad: -7.63  | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -3.81
+ID: AIO-3    | Tipo: All-In-One        | Criticidad: -28.91 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -14.45
+ID: PC-2     | Tipo: PC de escritorio  | Criticidad: -64.28 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -32.14
+
+Equipos pendientes de atencion (prioridad mayor a 0): 0
+Riesgo global del laboratorio (promedio de prioridades): -20.4022
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 17.22  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.61
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: 16.84  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.42
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -53.44 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -26.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 56
+Riesgo global del laboratorio (promedio de prioridades): 5.3866
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 10.00
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: 19.78  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 9.89
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: 19.46  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 9.73
+
+Equipos pendientes de atencion (prioridad mayor a 0): 63
+Riesgo global del laboratorio (promedio de prioridades): 10.2173
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 67
+Riesgo global del laboratorio (promedio de prioridades): 16.2708
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -32.78 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.39
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -33.16 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.58
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -53.44 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -26.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 54
+Riesgo global del laboratorio (promedio de prioridades): 4.8866
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: -50.06 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.03
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -50.14 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.07
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -0.72  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -0.36
+
+Equipos pendientes de atencion (prioridad mayor a 0): 58
+Riesgo global del laboratorio (promedio de prioridades): 9.964
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-77   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 71
+Riesgo global del laboratorio (promedio de prioridades): 15.193
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: 0.00
+ID: AIO-47   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 72
+Riesgo global del laboratorio (promedio de prioridades): 19.415
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-56    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 0.00
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 0.00
+ID: PC-86    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 80
+Riesgo global del laboratorio (promedio de prioridades): 23.916
+
+---- REPORTE DEL DIA 6 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-65   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-32   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 28.91
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -32.78 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.39
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -3.16  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -1.58
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -33.44 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 54
+Riesgo global del laboratorio (promedio de prioridades): 5.1366
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: -30.66 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -15.33
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -0.54  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -0.27
+
+Equipos pendientes de atencion (prioridad mayor a 0): 61
+Riesgo global del laboratorio (promedio de prioridades): 10.3681
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 69
+Riesgo global del laboratorio (promedio de prioridades): 14.6521
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-21    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-86    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 76
+Riesgo global del laboratorio (promedio de prioridades): 19.0281
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-56    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-65   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 83
+Riesgo global del laboratorio (promedio de prioridades): 23.2701
+
+---- REPORTE DEL DIA 6 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-77   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 0.00
+ID: OSC-39   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-13   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 89
+Riesgo global del laboratorio (promedio de prioridades): 27.3186
+
+---- REPORTE DEL DIA 7 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-80   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-47   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 31.4176
+
+---- REPORTE DEL DIA 8 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-32   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-19   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-68   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 35.0209
+
+---- REPORTE DEL DIA 9 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-50   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-27   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-3    | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 38.2262
+
+---- REPORTE DEL DIA 10 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-74   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-87   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-59   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 92
+Riesgo global del laboratorio (promedio de prioridades): 40.3897
+
+---- REPORTE DEL DIA 11 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-92   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-10   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-96    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 92
+Riesgo global del laboratorio (promedio de prioridades): 42.748
+
+---- REPORTE DEL DIA 12 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-41    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-22   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -25.00
+ID: LAP-53   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 91
+Riesgo global del laboratorio (promedio de prioridades): 43.8855
+
+---- REPORTE DEL DIA 13 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-69   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-35   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-98   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 92
+Riesgo global del laboratorio (promedio de prioridades): 44.773
+
+---- REPORTE DEL DIA 14 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-33   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: 0.00
+ID: PC-1     | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: -25.00
+ID: LAP-93   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 92
+Riesgo global del laboratorio (promedio de prioridades): 45.4035
+
+---- REPORTE DEL DIA 15 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-75   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-81    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-45   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 45.818
+
+---- REPORTE DEL DIA 16 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-78   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: 0.00
+ID: LAP-38   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-63   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 45.844
+
+---- REPORTE DEL DIA 17 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-18   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-11    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-14   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 46.409
+
+---- REPORTE DEL DIA 18 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-48   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-54   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-66    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 46.432
+
+---- REPORTE DEL DIA 19 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-60   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-42   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-89   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 46.964
+
+---- REPORTE DEL DIA 20 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-84   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-8    | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-24   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 47.308
+
+---- REPORTE DEL DIA 21 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-30   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-57   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-94   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 47.305
+
+---- REPORTE DEL DIA 22 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-99   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-17   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 47.294
+
+---- REPORTE DEL DIA 23 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-49   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-70   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-58   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 48.227
+
+---- REPORTE DEL DIA 24 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-2    | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: 0.00
+ID: LAP-88   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-46    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 48.991
+
+---- REPORTE DEL DIA 25 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-72   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: 0.00
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-5    | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 49.058
+
+---- REPORTE DEL DIA 26 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-9    | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-85   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-73   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 48.764
+
+---- REPORTE DEL DIA 27 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-100  | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-82   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-34   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 48.392
+
+---- REPORTE DEL DIA 28 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-20   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 48.175
+
+---- REPORTE DEL DIA 29 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-97   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: 0.00
+ID: PC-6     | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: -25.00
+ID: PC-76    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 48.469
+
+---- REPORTE DEL DIA 30 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-15   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-61    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-43   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 48.805
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 17.22  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.61
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -53.16 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -26.58
+ID: LAP-83   | Tipo: Laptop            | Criticidad: 16.56  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.28
+
+Equipos pendientes de atencion (prioridad mayor a 0): 56
+Riesgo global del laboratorio (promedio de prioridades): 5.3866
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 0.00
+ID: AIO-7    | Tipo: All-In-One        | Criticidad: -51.52 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.76
+ID: PC-56    | Tipo: PC de escritorio  | Criticidad: -51.68 | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: -25.84
+
+Equipos pendientes de atencion (prioridad mayor a 0): 63
+Riesgo global del laboratorio (promedio de prioridades): 10.2971
+
+---- REPORTE DEL DIA 3 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: 10.00
+ID: PC-71    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-13   | Tipo: Laptop            | Criticidad: -0.08  | Dia Mantenimiento: 3  | Incidencias: 0 | Prioridad: -0.04
+
+Equipos pendientes de atencion (prioridad mayor a 0): 71
+Riesgo global del laboratorio (promedio de prioridades): 15.6197
+
+---- REPORTE DEL DIA 4 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-29   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+ID: PC-16    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-39   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 4  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 78
+Riesgo global del laboratorio (promedio de prioridades): 20.8992
+
+---- REPORTE DEL DIA 5 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-62   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -25.00
+ID: AIO-47   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 5  | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 83
+Riesgo global del laboratorio (promedio de prioridades): 24.8824
+
+---- REPORTE DEL DIA 6 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-86    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 0.00
+ID: PC-21    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-80   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 6  | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 86
+Riesgo global del laboratorio (promedio de prioridades): 28.7079
+
+---- REPORTE DEL DIA 7 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-90   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-65   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-77   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 7  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 92
+Riesgo global del laboratorio (promedio de prioridades): 32.5624
+
+---- REPORTE DEL DIA 8 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-32   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-3    | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-50   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 8  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 35.5569
+
+---- REPORTE DEL DIA 9 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-92   | Tipo: All-In-One        | Criticidad: 0.00   | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: 0.00
+ID: PC-41    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: 0.00
+ID: MIC-10   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 9  | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 38.8768
+
+---- REPORTE DEL DIA 10 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-19   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-74   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-69   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 10 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 41.0868
+
+---- REPORTE DEL DIA 11 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-27   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-22   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-35   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 11 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 42.8729
+
+---- REPORTE DEL DIA 12 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-59   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-87   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: -25.00
+ID: LAP-53   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 12 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 44.0373
+
+---- REPORTE DEL DIA 13 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-68   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-96    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-98   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 13 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 45.3758
+
+---- REPORTE DEL DIA 14 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-11    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-33   | Tipo: Laptop            | Criticidad: 0.00   | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: 0.00
+ID: LAP-18   | Tipo: Laptop            | Criticidad: -30.00 | Dia Mantenimiento: 14 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 46.4286
+
+---- REPORTE DEL DIA 15 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-75   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-89   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-81    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 15 | Incidencias: 0 | Prioridad: -25.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 46.9195
+
+---- REPORTE DEL DIA 16 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-38   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-93   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-14   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 16 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 47.1915
+
+---- REPORTE DEL DIA 17 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-45   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: 10.00
+ID: LAP-63   | Tipo: Laptop            | Criticidad: -50.00 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -25.00
+ID: PC-66    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 17 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 47.1545
+
+---- REPORTE DEL DIA 18 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-60   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-42   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: -25.00
+ID: LAP-48   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 18 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 47.261
+
+---- REPORTE DEL DIA 19 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-78   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-1     | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: -25.00
+ID: OSC-54   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 19 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 47.637
+
+---- REPORTE DEL DIA 20 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-5    | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-30   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-57   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 20 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 48.229
+
+---- REPORTE DEL DIA 21 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-17   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-72   | Tipo: All-In-One        | Criticidad: 20.00  | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-24   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 21 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 48.714
+
+---- REPORTE DEL DIA 22 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-49   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-84   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-99   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 22 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 49.074
+
+---- REPORTE DEL DIA 23 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-83   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-8    | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 23 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 97
+Riesgo global del laboratorio (promedio de prioridades): 49.339
+
+---- REPORTE DEL DIA 24 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-82   | Tipo: All-In-One        | Criticidad: -50.00 | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-70   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: 10.00
+ID: AIO-2    | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 24 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 49.291
+
+---- REPORTE DEL DIA 25 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-20   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: -15.00
+ID: OSC-9    | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: 10.00
+ID: PC-46    | Tipo: PC de escritorio  | Criticidad: 20.00  | Dia Mantenimiento: 25 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 96
+Riesgo global del laboratorio (promedio de prioridades): 49.51
+
+---- REPORTE DEL DIA 26 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-26    | Tipo: PC de escritorio  | Criticidad: -50.00 | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: -25.00
+ID: MIC-100  | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: -15.00
+ID: LAP-58   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 26 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 94
+Riesgo global del laboratorio (promedio de prioridades): 49.464
+
+---- REPORTE DEL DIA 27 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: OSC-34   | Tipo: Osciloscopio      | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+ID: AIO-97   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-76    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 27 | Incidencias: 0 | Prioridad: -15.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 49.344
+
+---- REPORTE DEL DIA 28 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: LAP-88   | Tipo: Laptop            | Criticidad: 20.00  | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-64   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: 10.00
+ID: OSC-94   | Tipo: Osciloscopio      | Criticidad: 20.00  | Dia Mantenimiento: 28 | Incidencias: 0 | Prioridad: 10.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 95
+Riesgo global del laboratorio (promedio de prioridades): 49.373
+
+---- REPORTE DEL DIA 29 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: AIO-12   | Tipo: All-In-One        | Criticidad: -30.00 | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-85   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 29 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 49.059
+
+---- REPORTE DEL DIA 30 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -30.00 | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: -15.00
+ID: MIC-15   | Tipo: Microscopio       | Criticidad: -30.00 | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: -15.00
+ID: PC-61    | Tipo: PC de escritorio  | Criticidad: 0.00   | Dia Mantenimiento: 30 | Incidencias: 0 | Prioridad: 0.00
+
+Equipos pendientes de atencion (prioridad mayor a 0): 93
+Riesgo global del laboratorio (promedio de prioridades): 48.914
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: 17.22  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.61
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: 16.84  | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: 8.42
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -33.44 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 56
+Riesgo global del laboratorio (promedio de prioridades): 5.4866
+
+---- REPORTE DEL DIA 1 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-25   | Tipo: Microscopio       | Criticidad: -32.78 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.39
+ID: PC-51    | Tipo: PC de escritorio  | Criticidad: -33.16 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.58
+ID: LAP-83   | Tipo: Laptop            | Criticidad: -33.44 | Dia Mantenimiento: 1  | Incidencias: 0 | Prioridad: -16.72
+
+Equipos pendientes de atencion (prioridad mayor a 0): 54
+Riesgo global del laboratorio (promedio de prioridades): 4.9866
+
+---- REPORTE DEL DIA 2 ----
+
+Equipos atendidos: 3
+
+Resultados:
+ID: MIC-95   | Tipo: Microscopio       | Criticidad: 20.00  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 10.00
+ID: PC-36    | Tipo: PC de escritorio  | Criticidad: 19.74  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 9.87
+ID: OSC-44   | Tipo: Osciloscopio      | Criticidad: 19.06  | Dia Mantenimiento: 2  | Incidencias: 0 | Prioridad: 9.53
+
+Equipos pendientes de atencion (prioridad mayor a 0): 63
+Riesgo global del laboratorio (promedio de prioridades): 11.2731
+
