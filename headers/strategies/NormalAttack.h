@@ -1,0 +1,15 @@
+#ifndef NORMALATTACK_H
+#define NORMALATTACK_H
+
+#include "AttackStrategy.h"
+
+class NormalAttack : public AttackStrategy
+{
+public:
+    NormalAttack();
+    virtual ~NormalAttack();
+
+    virtual void attack(Player& player, int damage) override;
+};
+
+#endif
