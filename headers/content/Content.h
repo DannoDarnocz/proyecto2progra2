@@ -9,7 +9,7 @@ protected:
     bool visible;
 
 public:
-    Content();
+    Content(bool = true);
     virtual ~Content();
 
     bool isVisible() const;

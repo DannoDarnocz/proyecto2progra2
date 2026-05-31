@@ -1,7 +1,7 @@
 #include "../../headers/content/Chest.h"
 #include "../../headers/player/Player.h"
 #include <algorithm>
-
+/*
 Chest::Chest()
 {
 }
@@ -37,9 +37,8 @@ void Chest::interact(Player& player)
 {
     // Give items to player
     for (auto item : items) {
-        player.addToInventory(item);
     }
     items.clear();
 }
-
+*/
 

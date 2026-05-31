@@ -42,5 +42,6 @@ void Cell::interact(Player& player)
 void Cell::dig(Player& player)
 {
     // Implementation for digging a cell
+
 }
 

@@ -3,7 +3,7 @@
 #include <algorithm>
 
 Player::Player(int hp, int level)
-    : hp(hp), level(level), positionX(0), positionY(0), hasKey(false)
+    : hp(hp), level(level), hasKey(false)
 {
 }
 

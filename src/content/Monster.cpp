@@ -1,7 +1,6 @@
 #include "../../headers/content/Monster.h"
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
-#include "../../headers/combat/Combat.h"
 
 Monster::Monster(int hp, int damage, int level, AttackStrategy* strategy)
     : hp(hp), damage(damage), level(level), attackStrategy(strategy)
@@ -67,7 +66,5 @@ void Monster::takeDamage(int amount)
 void Monster::interact(Player& player)
 {
     // Start combat with the player
-    Combat combat(player, *this);
-    combat.run();
 }
 

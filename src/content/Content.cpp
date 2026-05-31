@@ -1,7 +1,7 @@
 #include "../../headers/content/Content.h"
 
-Content::Content()
-    : visible(true)
+Content::Content(bool isVisible)
+    : visible(isVisible)
 {
 }
 

@@ -26,10 +26,6 @@ add_executable(Proyecto_II main.cpp
         headers/player/Player.h
         src/player/Player.cpp
 
-        # Combat Module
-        headers/combat/Combat.h
-        src/combat/Combat.cpp
-
         # Powers Module
         headers/powers/Power.h
         headers/powers/PowerDecorator.h
