@@ -1,23 +1,25 @@
 #include "../../headers/world/Cell.h"
+
+#include <iostream>
+
 #include "../../headers/player/Player.h"
 #include "../../headers/content/Content.h"
 
-Cell::Cell()
-    : content(nullptr), state(CellState::UNEXPLORED)
+Cell::Cell(Content& content, CellState state)
+    : content(content), state(state)
 {
 }
 
 Cell::~Cell()
 {
-    delete content;
 }
 
-Content* Cell::getContent() const
+Content& Cell::getContent() const
 {
     return content;
 }
 
-void Cell::setContent(Content* content)
+void Cell::setContent(Content& content)
 {
     this->content = content;
 }
@@ -34,14 +36,22 @@ void Cell::setState(CellState state)
 
 void Cell::interact(Player& player)
 {
-    if (content != nullptr) {
-        content->interact(player);
+    // if not visible, don't interact yet
+    if (content.isVisible()) {
+        content.interact(player);
     }
 }
 
 void Cell::dig(Player& player)
 {
     // Implementation for digging a cell
-
+    if (state == CellState::UNEXPLORED) {
+        state = CellState::DUG;
+        content->interact(player);
+    }
+    else if (state == CellState::DUG)
+    {
+        std::cout << "But you find out you already dug here.";
+    }
 }
 

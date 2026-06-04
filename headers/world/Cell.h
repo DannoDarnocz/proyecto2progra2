@@ -14,15 +14,15 @@ enum class CellState
 class Cell
 {
 private:
-    Content* content;
+    Content& content;
     CellState state;
 
 public:
-    Cell();
+    Cell(Content&, CellState = CellState::UNEXPLORED); // if nullptr, nothing is in the cell
     ~Cell();
 
-    Content* getContent() const;
-    void setContent(Content* content);
+    Content& getContent() const;
+    void setContent(Content& content);
 
     CellState getState() const;
     void setState(CellState state);

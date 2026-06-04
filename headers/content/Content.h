@@ -1,5 +1,6 @@
 #ifndef CONTENT_H
 #define CONTENT_H
+#include <string>
 
 class Player;
 
@@ -14,6 +15,8 @@ public:
 
     bool isVisible() const;
     void setVisible(bool visible);
+
+    virtual std::string toString() = 0;
 
     virtual void interact(Player& player) = 0;
 };

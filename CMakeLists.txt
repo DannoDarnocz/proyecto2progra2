@@ -15,11 +15,9 @@ add_executable(Proyecto_II main.cpp
         # Content Module
         headers/content/Content.h
         headers/content/Monster.h
-        headers/content/Chest.h
         headers/content/Portal.h
         src/content/Content.cpp
         src/content/Monster.cpp
-        src/content/Chest.cpp
         src/content/Portal.cpp
 
         # Player Module
@@ -27,20 +25,20 @@ add_executable(Proyecto_II main.cpp
         src/player/Player.cpp
 
         # Powers Module
-        headers/powers/Power.h
-        headers/powers/PowerDecorator.h
-        src/powers/Power.cpp
-        src/powers/PowerDecorator.cpp
+        headers/content/PowerUp.h
+        headers/content/PowerUpDecorator.h
+        src/powers/PowerUp.cpp
+        src/powers/PowerUpDecorator.cpp
 
         # Strategies Module
         headers/strategies/AttackStrategy.h
         headers/strategies/NormalAttack.h
-        headers/strategies/PoisonAttack.h
-        headers/strategies/StunAttack.h
+        headers/strategies/HealthLockAttack.h
+        headers/strategies/WeakenerAttack.h
         src/strategies/AttackStrategy.cpp
         src/strategies/NormalAttack.cpp
-        src/strategies/PoisonAttack.cpp
-        src/strategies/StunAttack.cpp
+        src/strategies/HealthLockAttack.cpp
+        src/strategies/WeakenerAttack.cpp
 
         # System Module
         headers/system/EventObserver.h
@@ -50,4 +48,7 @@ add_executable(Proyecto_II main.cpp
         src/system/EventObserver.cpp
         src/system/Logger.cpp
         src/system/MapObserver.cpp
-        src/system/LoggerObserver.cpp)
+        src/system/LoggerObserver.cpp
+        headers/content/Bomb.h
+        src/content/Bomb.cpp
+)

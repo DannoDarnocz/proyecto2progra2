@@ -1,8 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <chrono>
 #include <cctype>
 #include <limits>
+#include <memory>
+#include <thread>
+
 #include "headers/world/Map.h"
 #include "headers/world/Dimension.h"
 #include "headers/world/Cell.h"
@@ -33,7 +37,7 @@ int main()
     }
 
     // Create player at starting position (0, 0) in first dimension
-    Player player(100, 1);
+    unique_ptr<Player> player = make_unique<Player>(100,1);
     int currentX = 0;
     int currentY = 0;
 
@@ -55,7 +59,7 @@ int main()
     while (gameRunning)
     {
         // Display current state
-        displayGameState(player, currentX, currentY, currentDimension);
+        displayGameState(*player, currentX, currentY, currentDimension);
 
         // Get player input
         char input = static_cast<char>(tolower(getPlayerInput()));
@@ -71,7 +75,7 @@ int main()
                     if (newCell)
                     {
                         cout << "\n> You moved up." << endl;
-                        newCell->interact(player);
+                        newCell->interact(*player);
                     }
                 }
                 else
@@ -89,7 +93,7 @@ int main()
                     if (newCell)
                     {
                         cout << "\n> You moved left." << endl;
-                        newCell->interact(player);
+                        newCell->interact(*player);
                     }
                 }
                 else
@@ -107,7 +111,7 @@ int main()
                     if (newCell)
                     {
                         cout << "\n> You moved down." << endl;
-                        newCell->interact(player);
+                        newCell->interact(*player);
                     }
                 }
                 else
@@ -125,7 +129,7 @@ int main()
                     if (newCell)
                     {
                         cout << "\n> You moved right." << endl;
-                        newCell->interact(player);
+                        newCell->interact(*player);
                     }
                 }
                 else
@@ -141,7 +145,7 @@ int main()
                     if (currentCell)
                     {
                         cout << "\n> You attempt to dig..." << endl;
-                        currentCell->dig(player);
+                        currentCell->dig(*player);
                     }
                 }
                 break;
@@ -158,7 +162,7 @@ int main()
         }
 
         // Check if player is dead
-        if (player.getHp() <= 0)
+        if ((*player).getHp() <= 0)
         {
             cout << "\n====== GAME OVER ======" << endl;
             cout << "You have been defeated!" << endl;
@@ -248,7 +252,6 @@ void displayGameState(Player& player, int currentX, int currentY, Dimension* dim
     cout << "\n========================================" << endl;
     cout << "Player Status: HP=" << player.getHp() << " | Level=" << player.getLevel() << endl;
     cout << "Position: (" << currentX << ", " << currentY << ")" << endl;
-    cout << "Has Key: " << (player.hasKeyItem() ? "Yes" : "No") << endl;
     cout << "========================================" << endl;
 
     if (dimension)
@@ -322,6 +325,110 @@ void clearBuffer()
 {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+}
+
+void combat(Player& player, Monster& monster) {
+    // Pre-combat: show stats and let player decide
+    cout << "A " << monster.getType() << " appears!\n";
+    cout << "Monster — HP: " << monster.getHp() << " | Damage: " << monster.getBaseDamage() << "\n";
+    cout << "You    — HP: " << player.getHp() << " | Level: " << player.getLevel() << "\n\n";
+    cout << "Do you want to (F)ight or (R)un? ";
+
+    string choice;
+    getline(cin, choice);
+    if (choice == "r" || choice == "R") {
+        // teleport to random cell in current dimension
+        cout << "You run away in panic and end up somewhere else...\n";
+        // TODO: randomize player position
+        return;
+    }
+
+    cout << "--- COMBAT RULES ---\n"
+    << "Combats are based on reflexes.\n"
+    << "The system randomly decides if you have to ATTACK or DEFEND.\n"
+    << "Press ENTER as quick as possible to ATTACK.\n"
+    << "Type anything and then press ENTER to DEFEND.\n"
+    << "Good luck!\n\n";
+    waitForEnter();
+
+
+    // Combat loop
+    while (player.getHp() > 0 && monster.getHp() > 0) {
+
+        // Random suspense delay before showing action
+        int delay = 500 + rand() % 1500;
+        this_thread::sleep_for(chrono::milliseconds(delay));
+
+        // Randomly decide ATTACK or DEFEND
+        bool shouldAttack = rand() % 2 == 0;
+
+        if (shouldAttack) {
+            cout << "ATTACK! Press ENTER as soon as possible!\n";
+            // start measuring time until player presses ENTER
+            auto start = chrono::steady_clock::now();
+            string input;
+            getline(cin, input);
+            auto elapsed = chrono::duration_cast<chrono::milliseconds>(
+                chrono::steady_clock::now() - start).count();
+
+            if (input.empty() && elapsed < 1000) {
+                // Fast ENTER, player attacks
+                int damage = (elapsed < 300) ? monster.getBaseDamage() * 2
+                           : (elapsed < 600) ? monster.getBaseDamage() * 1.5
+                           : monster.getBaseDamage();
+                monster.takeDamage(damage);
+                cout << "You attacked for " << damage << " damage!\n";
+            } else {
+                // Too slow or wrote something, monster attacks
+                monster.attackPlayer(player);
+                cout << "Too slow! The monster attacks you for " << monster.getBaseDamage() << " damage!\n";
+            }
+
+        } else {
+            cout << "DEFEND! Take your time and type something, then press ENTER.\n";
+            string input;
+            getline(cin, input);
+
+            if (!input.empty()) {
+                // Wrote something, player defends
+                if (player.getDebuff() == PlayerDebuff::HEALTH_LOCK) {
+                    // Player cannot heal due to debuff from previous attack
+                    cout << "Your health is locked and cannot be healed... But the effect went away!\n";
+                    player.setDebuff(PlayerDebuff::NONE); // reset debuff
+                    continue;
+                }
+                else
+                {
+                    // Player recovers HP
+                    int heal = monster.getBaseDamage() / 2;
+                    player.heal(heal);
+                    cout << "You defended and recovered " << heal << " HP!\n";
+                }
+            } else {
+                // Pressed ENTER with nothing, monster attacks
+                monster.attackPlayer(player);
+                cout << "You failed to defend! The monster attacks for " << monster.getBaseDamage() << " damage!\n";
+            }
+        }
+
+        // Show result and wait for ENTER to continue
+        cout << "Your HP: " << player.getHp() << " | Monster HP: " << monster.getHp() << "\n";
+        cout << "Press ENTER to continue...";
+        string pause;
+        getline(cin, pause);
+    }
+
+    // Combat result
+    if (monster.getHp() <= 0) {
+        cout << "You defeated the " << monster.getType() << "!\n"
+        << "Leveled up from " << player.getLevel() << " to " << player.getLevel() + 1 << ".\n";
+        player.levelUp();
+        // TODO: set cell content to nullptr
+    } else {
+        cout << "\nYou were defeated...\n";
+        cout << "--- Adventure Log ---\n";
+        // TODO: print Logger history
+    }
 }
 
 

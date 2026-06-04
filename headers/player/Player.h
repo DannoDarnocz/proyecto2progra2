@@ -1,7 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "../powers/Power.h"
+#include "../content/PowerUp.h"
 #include <vector>
 
 enum class PlayerDebuff
@@ -16,8 +16,7 @@ class Player
 private:
     int hp;
     int level;
-    std::vector<Power*> activePowers;
-    bool hasKey;
+    std::vector<PowerUp*> activePowers;
     PlayerDebuff debuff;
 public:
     Player(int hp, int level);
@@ -25,18 +24,21 @@ public:
 
     int getHp() const;
     void setHp(int hp);
-    void dealDamage(int amount);
+
+    void heal(int amount); // Heal the player by a certain amount
+    void takeDamage(int amount); // Deals damage
 
     int getLevel() const;
     void setLevel(int level);
     void levelUp();
 
-    const std::vector<Power*>& getActivePowers() const;
-    void addPower(Power* power);
-    void removePower(Power* power);
+    PlayerDebuff getDebuff() const;
+    void setDebuff(PlayerDebuff debuff);
 
-    bool hasKeyItem() const;
-    void setKey(bool hasKey);
+    const std::vector<PowerUp*>& getActivePowers() const;
+    void addPower(PowerUp* power);
+    void removePower(PowerUp* power);
+    int calcMaxHealth() const;
 };
 
 #endif

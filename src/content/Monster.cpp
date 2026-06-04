@@ -2,14 +2,18 @@
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
 
-Monster::Monster(int hp, int damage, int level, AttackStrategy* strategy)
-    : hp(hp), damage(damage), level(level), attackStrategy(strategy)
+Monster::Monster(int hp, int damage, int level, AttackStrategy& strategy, std::string type, bool isBoss)
+    : hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss)
 {
 }
 
 Monster::~Monster()
 {
-    delete attackStrategy;
+}
+
+std::string Monster::toString() const
+{
+    return type + " (HP: " + std::to_string(hp) + ", Damage: " + std::to_string(baseDamage) + ", Level: " + std::to_string(level) + ")";
 }
 
 int Monster::getHp() const
@@ -17,19 +21,29 @@ int Monster::getHp() const
     return hp;
 }
 
+std::string Monster::getType() const
+{
+    return type;
+}
+
 void Monster::setHp(int hp)
 {
     this->hp = hp;
 }
 
-int Monster::getDamage() const
+int Monster::getBaseDamage() const
 {
-    return damage;
+    return baseDamage;
 }
 
 void Monster::setDamage(int damage)
 {
-    this->damage = damage;
+    this->baseDamage = damage;
+}
+
+int Monster::getDamage()
+{
+    return baseDamage+(level-1)*10;
 }
 
 int Monster::getLevel() const
@@ -42,17 +56,20 @@ void Monster::setLevel(int level)
     this->level = level;
 }
 
-AttackStrategy* Monster::getAttackStrategy() const
+AttackStrategy& Monster::getAttackStrategy() const
 {
     return attackStrategy;
 }
 
-void Monster::setAttackStrategy(AttackStrategy* strategy)
+void Monster::setAttackStrategy(AttackStrategy& strategy)
 {
-    if (attackStrategy != nullptr) {
-        delete attackStrategy;
-    }
     attackStrategy = strategy;
+}
+
+void Monster::attackPlayer(Player& player)
+{
+    // delegate attack
+    attackStrategy.attack(player,getDamage());
 }
 
 void Monster::takeDamage(int amount)

@@ -1,7 +1,7 @@
 #ifndef ATTACKSTRATEGY_H
 #define ATTACKSTRATEGY_H
 
-class Player;
+#include "../../headers/content/Monster.h"
 
 class AttackStrategy
 {
@@ -9,7 +9,7 @@ public:
     AttackStrategy();
     virtual ~AttackStrategy();
 
-    virtual void attack(Player& player, int damage) = 0;
+    virtual void attack(Player& player, Monster& monster) = 0;
 };
 
 #endif

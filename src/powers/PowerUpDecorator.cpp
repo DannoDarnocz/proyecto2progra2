@@ -1,22 +1,22 @@
-#include "../../headers/powers/PowerDecorator.h"
+#include "../../headers/content/PowerUpDecorator.h"
 #include "../../headers/player/Player.h"
 
-PowerDecorator::PowerDecorator(Power* power)
+PowerUpDecorator::PowerUpDecorator(PowerUp* power)
     : wrappedPower(power)
 {
 }
 
-PowerDecorator::~PowerDecorator()
+PowerUpDecorator::~PowerUpDecorator()
 {
     delete wrappedPower;
 }
 
-Power* PowerDecorator::getWrappedPower() const
+PowerUp* PowerUpDecorator::getWrappedPower() const
 {
     return wrappedPower;
 }
 
-void PowerDecorator::setWrappedPower(Power* power)
+void PowerUpDecorator::setWrappedPower(PowerUp* power)
 {
     if (wrappedPower != nullptr) {
         delete wrappedPower;
@@ -24,7 +24,7 @@ void PowerDecorator::setWrappedPower(Power* power)
     wrappedPower = power;
 }
 
-void PowerDecorator::applyEffect(Player& player)
+void PowerUpDecorator::applyEffect(Player& player)
 {
     if (wrappedPower != nullptr) {
         wrappedPower->applyEffect(player);

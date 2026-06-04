@@ -2,12 +2,13 @@
 #define POWER_H
 
 class Player;
+class Content;
 
-class Power
+class PowerUp
 {
 public:
-    Power();
-    virtual ~Power();
+    PowerUp();
+    virtual ~PowerUp();
 
     virtual void applyEffect(Player& player) = 0;
 };

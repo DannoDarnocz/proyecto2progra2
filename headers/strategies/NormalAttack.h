@@ -9,7 +9,7 @@ public:
     NormalAttack();
     virtual ~NormalAttack();
 
-    virtual void attack(Player& player, int damage) override;
+    virtual void attack(Player& player, Monster& monster) override;
 };
 
 #endif

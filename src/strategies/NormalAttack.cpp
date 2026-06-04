@@ -9,9 +9,9 @@ NormalAttack::~NormalAttack()
 {
 }
 
-void NormalAttack::attack(Player& player, int damage)
+void NormalAttack::attack(Player& player, Monster& monster)
 {
     // Normal attack deals standard damage
-    player.dealDamage(damage);
+    player.takeDamage(monster.getDamage());
 }
 
