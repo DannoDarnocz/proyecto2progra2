@@ -47,7 +47,7 @@ void Cell::dig(Player& player)
     // Implementation for digging a cell
     if (state == CellState::UNEXPLORED) {
         state = CellState::DUG;
-        content->interact(player);
+        content.interact(player);
     }
     else if (state == CellState::DUG)
     {

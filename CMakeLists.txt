@@ -15,10 +15,8 @@ add_executable(Proyecto_II main.cpp
         # Content Module
         headers/content/Content.h
         headers/content/Monster.h
-        headers/content/Portal.h
         src/content/Content.cpp
         src/content/Monster.cpp
-        src/content/Portal.cpp
 
         # Player Module
         headers/player/Player.h

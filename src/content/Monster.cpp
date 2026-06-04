@@ -69,7 +69,7 @@ void Monster::setAttackStrategy(AttackStrategy& strategy)
 void Monster::attackPlayer(Player& player)
 {
     // delegate attack
-    attackStrategy.attack(player,getDamage());
+    attackStrategy.attack(player,*this);
 }
 
 void Monster::takeDamage(int amount)

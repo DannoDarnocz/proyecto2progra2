@@ -12,6 +12,7 @@
 #include "headers/world/Cell.h"
 #include "headers/player/Player.h"
 #include "headers/content/Monster.h"
+#include "headers/system/Logger.h"
 
 using namespace std;
 
@@ -49,6 +50,9 @@ int main()
         cerr << "Invalid starting position. Exiting." << endl;
         return 1;
     }
+
+    // Create logger
+    Logger* logger = Logger::getInstance();
 
     cout << "====== DUNGEON ADVENTURE SIMULATION ======" << endl;
     cout << "Welcome, adventurer!" << endl << endl;
@@ -427,7 +431,8 @@ void combat(Player& player, Monster& monster) {
     } else {
         cout << "\nYou were defeated...\n";
         cout << "--- Adventure Log ---\n";
-        // TODO: print Logger history
+        Logger* logger = Logger::getInstance();
+        logger->log("Player was defeated by a " + monster.getType() + ".");
     }
 }
 
