@@ -7,11 +7,15 @@
 #include <memory>
 #include <thread>
 
+#include "headers/content/Bomb.h"
 #include "headers/world/Map.h"
 #include "headers/world/Dimension.h"
 #include "headers/world/Cell.h"
 #include "headers/player/Player.h"
 #include "headers/content/Monster.h"
+#include "headers/strategies/HealthLockAttack.h"
+#include "headers/strategies/NormalAttack.h"
+#include "headers/strategies/WeakenerAttack.h"
 #include "headers/system/Logger.h"
 
 using namespace std;
@@ -24,11 +28,17 @@ char getPlayerInput();
 void waitForEnter(bool = true);
 int askInput(int, int, bool = true);
 void clearBuffer();
+string monsterNames(int dimension = 0);
+unique_ptr<Content> createBoss(int dimension = 0);
+unique_ptr<Content> createMonster(int dimension = 0);
+void displayMap(Dimension* dimension, int playerX, int playerY);
 
 int main()
 {
+    srand(time(NULL));
+
     // Load map from files
-    Map* gameMap = loadMapFromFiles("map_data.txt");
+    Map* gameMap = loadMapFromFiles("../map_data.txt");
 
     // Check if map was loaded successfully
     if (!gameMap || gameMap->getDimensionCount() == 0)
@@ -57,12 +67,14 @@ int main()
     cout << "====== DUNGEON ADVENTURE SIMULATION ======" << endl;
     cout << "Welcome, adventurer!" << endl << endl;
 
+
     bool gameRunning = true;
 
     // Main game loop
     while (gameRunning)
     {
         // Display current state
+        displayMap(currentDimension, currentX, currentY);
         displayGameState(*player, currentX, currentY, currentDimension);
 
         // Get player input
@@ -71,73 +83,62 @@ int main()
         switch (input)
         {
             case 'w':
-                // Move up (decrease Y)
-                if (currentY > 0)
-                {
-                    currentY--;
+                // Move up (decrease X) {Rows are X}
+                if (currentX > 0){
+                    currentX--;
                     Cell* newCell = currentDimension->getCell(currentX, currentY);
-                    if (newCell)
-                    {
+                    if (newCell){
+                        if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
                         cout << "\n> You moved up." << endl;
                         newCell->interact(*player);
                     }
                 }
-                else
-                {
+                else{
                     cout << "\n> You cannot move further up. You are at the boundary." << endl;
                 }
                 break;
 
             case 'a':
-                // Move left (decrease X)
-                if (currentX > 0)
-                {
-                    currentX--;
+                // Move left (decrease Y) {Columns are Y}
+                if (currentY > 0) {
+                    currentY--;
                     Cell* newCell = currentDimension->getCell(currentX, currentY);
-                    if (newCell)
-                    {
+                    if (newCell) {
+                        if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
                         cout << "\n> You moved left." << endl;
                         newCell->interact(*player);
                     }
-                }
-                else
-                {
+                } else {
                     cout << "\n> You cannot move further left. You are at the boundary." << endl;
                 }
                 break;
 
             case 's':
-                // Move down (increase Y)
-                if (currentY < currentDimension->getCols() - 1)
-                {
-                    currentY++;
+                // Move down (increase X) {Rows are X}
+                if (currentX < currentDimension->getRows() - 1){
+                    currentX++;
                     Cell* newCell = currentDimension->getCell(currentX, currentY);
-                    if (newCell)
-                    {
+                    if (newCell){
+                        if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
                         cout << "\n> You moved down." << endl;
                         newCell->interact(*player);
                     }
-                }
-                else
-                {
+                } else {
                     cout << "\n> You cannot move further down. You are at the boundary." << endl;
                 }
                 break;
 
             case 'd':
-                // Move right (increase X)
-                if (currentX < currentDimension->getRows() - 1)
-                {
-                    currentX++;
+                // Move right (increase Y) {Columns are Y}
+                if (currentY < currentDimension->getCols() - 1){
+                    currentY++;
                     Cell* newCell = currentDimension->getCell(currentX, currentY);
-                    if (newCell)
-                    {
+                    if (newCell){
+                        if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
                         cout << "\n> You moved right." << endl;
                         newCell->interact(*player);
                     }
-                }
-                else
-                {
+                } else{
                     cout << "\n> You cannot move further right. You are at the boundary." << endl;
                 }
                 break;
@@ -146,8 +147,7 @@ int main()
                 // Dig current cell
                 {
                     Cell* currentCell = currentDimension->getCell(currentX, currentY);
-                    if (currentCell)
-                    {
+                    if (currentCell) {
                         cout << "\n> You attempt to dig..." << endl;
                         currentCell->dig(*player);
                     }
@@ -200,18 +200,63 @@ Map* loadMapFromFiles(const string& dimensionsFile)
         {
             for (int j = 0; j < 5; j++)
             {
-                Cell* cell = new Cell();
-                dimension->setCell(i, j, cell);
+                if (i==0 && j==0) {
+                    dimension->setCell(i,j,new Cell());
+                    continue;
+                }
+                int roll = rand() % 3;  // 0 = empty, 1 = bomb, 2 = monster
+                std::unique_ptr<Content> content = nullptr;
+                if (roll == 1) { content = std::make_unique<Bomb>();}
+                if (roll == 2) { content = createMonster(0);} //0 Default
+                dimension->setCell(i, j, new Cell(std::move(content)));
+            }
+        }
+        map->addDimension(dimension);
+        cout << "Using default settings: 1D [5x5]\n";
+        return map;
+    }
+
+    string token;
+    int numDimensions;
+    file >> token >> numDimensions; // Read "DIMENSIONS 3"
+
+    for (int d = 0; d < numDimensions; d++) //The amount of dimensions of the game
+    {
+        int rows, cols;
+        file >> token >> rows >> cols; // Read "DIM 8 10"
+
+        Dimension* dimension = new Dimension(rows, cols);
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                char cell;  //Each character represent something in the map
+                file >> cell;  //Read Character { '.' = Empty, 'B' = Bomb, 'M' = Monster, 'J'|'K'|'F' = BOSS}
+
+                if (i == 0 && j == 0)
+                {
+                    dimension->setCell(i, j, new Cell());
+                    continue;
+                }
+
+                unique_ptr<Content> content = nullptr;
+
+                if (cell == 'B')
+                    content = make_unique<Bomb>();
+                else if (cell == 'M')
+                    content = createMonster(d);
+                else if (cell == 'J' || cell == 'K' || cell == 'F')
+                    content = createBoss(d);
+
+                dimension->setCell(i, j, new Cell(move(content)));
             }
         }
 
         map->addDimension(dimension);
-        return map;
     }
-
-    // TODO: Parse file and create dimensions and cells
     file.close();
-
+    cout << "Using custom settings: 3D [8x10][10x12][5x12]\n";
     return map;
 }
 
@@ -242,7 +287,19 @@ void displayCellInfo(Cell* cell, int x, int y)
     Content* content = cell->getContent();
     if (content && content->isVisible())
     {
-        // TODO: polymorphic thing here
+        cout << content->toString() << endl;
+    }
+    else if (content && !content->isVisible())
+    {
+        Bomb* bomb = dynamic_cast<Bomb*>(content);
+        Monster* monster = dynamic_cast<Monster*>(content);
+
+        if (bomb && cell->getState() == CellState::DUG)
+            cout << "Bomb fragments are scattered here." << endl;
+        else if (monster && monster->getHp() <= 0)
+            cout << "Remains of a " << monster->getType() << " lie here." << endl;
+        else
+            cout << "No visible content." << endl;
     }
     else
     {
@@ -436,4 +493,99 @@ void combat(Player& player, Monster& monster) {
     }
 }
 
+string monsterNames(int dimension) {
+    if (dimension == 0) {
+        int roll = rand() % 3;
+        switch (roll) {
+            case 0: return "Slime";
+            case 1: return "Zombie";
+            case 2: return "Goblin";
+            default: return "Unknown";
+        }
+    } else {
+        int roll = rand() % 3;
+        switch (roll) {
+            case 0: return "Skeleton";
+            case 1: return "Possesed Armor";
+            case 2: return "Demon";
+            default: return "Unknown";
+        }
+    }
+}
 
+unique_ptr<Content> createMonster(int dimension)
+{
+    auto strategy = make_shared<NormalAttack>();
+    int baseHp  = 100 + dimension * 50;
+    int baseDmg = 5   + dimension * 10;
+    int level   = 1   + dimension * 2;
+    return make_unique<Monster>(
+        rand() % 50 + baseHp,
+        rand() % 15 + baseDmg,
+        rand() % 3  + level,
+        strategy,
+        monsterNames(dimension));
+}
+
+unique_ptr<Content> createBoss(int dimension)
+{
+    auto strategy = make_shared<NormalAttack>();
+    switch (dimension)
+    {
+        case 0: return make_unique<Monster>(200, 25, 3, strategy, "Stone Golem", true);
+        case 1: return make_unique<Monster>(350, 40, 6, strategy, "Dark Knight", true);
+        case 2: return make_unique<Monster>(600, 60, 10, strategy, "Demon Lord", true);
+        default: return make_unique<Monster>(200, 25, 3, strategy, "Unknown Boss", true);
+    }
+}
+
+void displayMap(Dimension* dimension, int playerX, int playerY)
+{
+    cout << "\n--- MAP ---" << endl;
+    for (int i = 0; i < dimension->getRows(); i++){
+        for (int j = 0; j < dimension->getCols(); j++){
+            if (i == playerX && j == playerY) {
+                cout << "P ";
+                continue;
+            }
+
+            Cell* cell = dimension->getCell(i, j);
+            if (cell == nullptr) { cout << "? "; continue; }
+
+            CellState state = cell->getState();
+
+            if (state == CellState::UNEXPLORED) {
+                cout << ". ";
+                continue;
+            }
+
+            // EXPLORED or DUG
+            Content* content = cell->getContent();
+
+            if (content && content->isVisible()) {
+                Monster* m = dynamic_cast<Monster*>(content);
+                if (m) {
+                    cout << (m->isBossQ() ? "J " : "M ");
+                }
+                else {
+                    cout << ". ";
+                }
+            }
+            else if (content && !content->isVisible()) {
+                Bomb* bomb = dynamic_cast<Bomb*>(content);
+
+                if (bomb && state == CellState::DUG)
+                    cout << "B ";
+                else
+                    cout << (state == CellState::DUG ? "X " : ". ");
+            }
+            else
+            {
+                // sin contenido o contenido invisible
+                cout << (state == CellState::DUG ? "X " : ". ");
+            }
+        }
+        cout << endl;
+    }
+    cout << "-----------" << endl;
+}

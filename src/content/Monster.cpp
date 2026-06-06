@@ -1,17 +1,20 @@
 #include "../../headers/content/Monster.h"
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
+#include "../../headers/strategies/HealthLockAttack.h"
+#include "../../headers/strategies/WeakenerAttack.h"
 
-Monster::Monster(int hp, int damage, int level, AttackStrategy& strategy, std::string type, bool isBoss)
-    : hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss)
+Monster::Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss, bool modifyStrategy)
+    : Content(true), hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss), modifyStrategy(modifyStrategy)
 {
+    this->maxHp = this->hp;
 }
 
 Monster::~Monster()
 {
 }
 
-std::string Monster::toString() const
+std::string Monster::toString()
 {
     return type + " (HP: " + std::to_string(hp) + ", Damage: " + std::to_string(baseDamage) + ", Level: " + std::to_string(level) + ")";
 }
@@ -56,12 +59,12 @@ void Monster::setLevel(int level)
     this->level = level;
 }
 
-AttackStrategy& Monster::getAttackStrategy() const
+AttackStrategy* Monster::getAttackStrategy() const
 {
-    return attackStrategy;
+    return attackStrategy.get();
 }
 
-void Monster::setAttackStrategy(AttackStrategy& strategy)
+void Monster::setAttackStrategy(std::shared_ptr<AttackStrategy> strategy)
 {
     attackStrategy = strategy;
 }
@@ -69,19 +72,30 @@ void Monster::setAttackStrategy(AttackStrategy& strategy)
 void Monster::attackPlayer(Player& player)
 {
     // delegate attack
-    attackStrategy.attack(player,*this);
+    if (attackStrategy) { attackStrategy->attack(player,*this); }
 }
 
 void Monster::takeDamage(int amount)
 {
     hp -= amount;
-    if (hp < 0) {
-        hp = 0;
+    if (hp < 0) { hp = 0; }
+    if (!modifyStrategy && hp <= maxHp/2) {
+        modifyStrategy = true;
+        int roll = rand() % 2;
+        if (roll=0) {
+            setAttackStrategy(std::make_shared<WeakenerAttack>());
+        } else {
+            setAttackStrategy(std::make_shared<HealthLockAttack>());
+        }
     }
 }
 
 void Monster::interact(Player& player)
 {
     // Start combat with the player
+}
+
+bool Monster::isBossQ() {
+    return isBoss;
 }
 

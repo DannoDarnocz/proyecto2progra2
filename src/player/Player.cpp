@@ -41,8 +41,8 @@ int Player::calcMaxHealth() const
 void Player::heal(int amount)
 {
     hp += amount;
-    if (hp < Player::calcMaxHealth()) {
-        hp = 0;
+    if (hp > Player::calcMaxHealth()) {
+        hp = Player::calcMaxHealth();
     }
 }
 

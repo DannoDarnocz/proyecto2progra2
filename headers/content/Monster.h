@@ -1,6 +1,8 @@
 #ifndef MONSTER_H
 #define MONSTER_H
 
+#include <memory>
+
 #include "Content.h"
 
 class AttackStrategy;
@@ -11,12 +13,14 @@ private:
     int hp;
     int baseDamage;
     int level;
+    int maxHp;
     std::string type;
-    AttackStrategy& attackStrategy;
+    std::shared_ptr<AttackStrategy> attackStrategy;
     bool isBoss;
+    bool modifyStrategy;
 
 public:
-    Monster(int hp, int damage, int level, AttackStrategy& strategy, std::string type, bool isBoss = false);
+    Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss = false, bool modifyStrategy = false);
     virtual ~Monster();
 
     int getHp() const;
@@ -24,7 +28,6 @@ public:
 
     int getBaseDamage() const;
     void setDamage(int damage);
-
 
     int getDamage();
 
@@ -34,14 +37,16 @@ public:
     std::string getType() const;
 
     void attackPlayer(Player& player);
-    AttackStrategy& getAttackStrategy() const;
-    void setAttackStrategy(AttackStrategy& strategy);
+    AttackStrategy* getAttackStrategy() const;
+    void setAttackStrategy(std::shared_ptr<AttackStrategy> strategy);
 
     void takeDamage(int amount);
 
-    std::string toString() const;
+    std::string toString() override;
 
     virtual void interact(Player& player) override;
+
+    bool isBossQ();
 };
 
 #endif

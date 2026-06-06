@@ -2,7 +2,7 @@
 #include "../../headers/world/Cell.h"
 
 Dimension::Dimension(int rows, int cols)
-    : rows(rows), cols(cols), boss(nullptr), factory(nullptr)
+    : rows(rows), cols(cols), boss(nullptr)
 {
     matrix.resize(rows);
     for (int i = 0; i < rows; ++i) {
@@ -44,15 +44,6 @@ void Dimension::setBoss(Content* boss)
     this->boss = boss;
 }
 
-MonsterFactory* Dimension::getFactory() const
-{
-    return factory;
-}
-
-void Dimension::setFactory(MonsterFactory* factory)
-{
-    this->factory = factory;
-}
 
 int Dimension::getRows() const
 {

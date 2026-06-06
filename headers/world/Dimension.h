@@ -5,7 +5,6 @@
 #include <vector>
 
 class Cell;
-class MonsterFactory;
 
 class Dimension
 {
@@ -14,7 +13,6 @@ private:
     int rows;
     int cols;
     Content* boss;
-    MonsterFactory* factory;
 
 public:
     Dimension(int rows, int cols);
@@ -25,9 +23,6 @@ public:
 
     Content* getBoss() const;
     void setBoss(Content* boss);
-
-    MonsterFactory* getFactory() const;
-    void setFactory(MonsterFactory* factory);
 
     int getRows() const;
     int getCols() const;
