@@ -457,8 +457,8 @@ void clearBuffer()
 int combat(Player& player, Monster& monster) {
     // Pre-combat: show stats and let player decide
     cout << "A " << monster.getType() << " appears!\n";
-    cout << "Monster - HP: " << monster.getHp() << " | Damage: " << monster.getBaseDamage() << "\n";
-    cout << "You - HP: " << player.getHp() << " | Level: " << player.getLevel() << "\n\n";
+    cout << "Monster: " << monster.toString() << "\n";
+    cout << "You: " << player.toString()<<  "\n\n";
     cout << "Do you want to (F)ight or (R)un? ";
 
     string choice;
@@ -502,15 +502,21 @@ int combat(Player& player, Monster& monster) {
 
             if (input.empty() && elapsed < 1000) {
                 // Fast ENTER, player attacks
-                int damage = (elapsed < 300) ? monster.getBaseDamage() * 2
-                           : (elapsed < 600) ? monster.getBaseDamage() * 1.5
+                int damage = (elapsed < 300) ? player.calcDamage() * 1.5
+                           : (elapsed < 600) ? player.calcDamage()
                            : monster.getBaseDamage();
                 monster.takeDamage(damage);
                 cout << "You attacked for " << damage << " damage!\n";
             } else {
                 // Too slow or wrote something, monster attacks
                 monster.attackPlayer(player);
-                cout << "Too slow! The monster attacks you for " << monster.getDamage() << " damage!\n";
+                std::string strategyName = monster.getAttackStrategyName();
+                cout << "You were too slow..." <<endl;
+                if (!strategyName.empty()) {
+                    cout << "The monster uses " << strategyName << "! ";
+                }
+                cout << "The monster attacks you for " << monster.getDamage() << " damage!\n";
+
             }
 
         } else {
@@ -524,7 +530,6 @@ int combat(Player& player, Monster& monster) {
                     // Player cannot heal due to debuff from previous attack
                     cout << "Your health is locked and cannot be healed... But the effect went away!\n";
                     player.setDebuff(PlayerDebuff::NONE); // reset debuff
-                    continue;
                 }
                 else
                 {
@@ -536,7 +541,12 @@ int combat(Player& player, Monster& monster) {
             } else {
                 // Pressed ENTER with nothing, monster attacks
                 monster.attackPlayer(player);
-                cout << "You failed to defend! The monster attacks for " << monster.getDamage() << " damage!\n";
+                std::string strategyName = monster.getAttackStrategyName();
+                cout << "You didn't type anything..." <<endl;
+                if (!strategyName.empty()) {
+                    cout << "The monster uses " << strategyName << "! ";
+                }
+                cout << "It attacks you for " << monster.getDamage() << " damage!\n";
             }
         }
 

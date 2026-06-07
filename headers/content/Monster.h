@@ -39,6 +39,7 @@ public:
     void attackPlayer(Player& player);
     AttackStrategy* getAttackStrategy() const;
     void setAttackStrategy(std::shared_ptr<AttackStrategy> strategy);
+    std::string getAttackStrategyName() const;
 
     void takeDamage(int amount);
 

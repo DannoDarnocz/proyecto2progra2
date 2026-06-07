@@ -32,6 +32,11 @@ void Player::takeDamage(int amount)
     }
 }
 
+int Player::calcDamage() const
+{
+    return 15+(level-1)*10;
+}
+
 int Player::calcMaxHealth() const
 {
     return 100+(level-1)*15;

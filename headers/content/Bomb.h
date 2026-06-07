@@ -1,10 +1,10 @@
 //
 // Created by Daniel on 03/06/2026.
 //
-#include "Content.h"
+
 #ifndef PROYECTO_II_BOMB_H
 #define PROYECTO_II_BOMB_H
-
+#include "Content.h"
 class Player;
 
 class Bomb : public Content

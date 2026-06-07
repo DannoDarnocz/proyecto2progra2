@@ -1,12 +1,14 @@
 #include "../../headers/content/Monster.h"
 
 #include <iostream>
+#include <typeinfo>
 #include "../../headers/system/Logger.h"
 
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
 #include "../../headers/strategies/HealthLockAttack.h"
 #include "../../headers/strategies/WeakenerAttack.h"
+#include "../../headers/strategies/NormalAttack.h"
 
 Monster::Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss, bool modifyStrategy)
     : Content(true), hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss), modifyStrategy(modifyStrategy)
@@ -20,7 +22,7 @@ Monster::~Monster()
 
 std::string Monster::toString()
 {
-    return type + " (HP: " + std::to_string(hp) + ", Damage: " + std::to_string(baseDamage) + ", Level: " + std::to_string(level) + ")";
+    return "HP=" + std::to_string(hp) + " | Base Damage=" + std::to_string(baseDamage) + " | True Damage=" + std::to_string(getDamage()) + " | Level=" + std::to_string(level);
 }
 
 int Monster::getHp() const
@@ -71,6 +73,20 @@ AttackStrategy* Monster::getAttackStrategy() const
 void Monster::setAttackStrategy(std::shared_ptr<AttackStrategy> strategy)
 {
     attackStrategy = strategy;
+}
+
+std::string Monster::getAttackStrategyName() const
+{
+    if (!attackStrategy) return "";
+
+    if (dynamic_cast<NormalAttack*>(attackStrategy.get())) {
+        return "Normal Attack";
+    } else if (dynamic_cast<WeakenerAttack*>(attackStrategy.get())) {
+        return "Weakener Attack";
+    } else if (dynamic_cast<HealthLockAttack*>(attackStrategy.get())) {
+        return "Health Lock Attack";
+    }
+    return "";
 }
 
 void Monster::attackPlayer(Player& player)

@@ -30,6 +30,7 @@ public:
     void heal(int amount); // Heal the player by a certain amount
     void takeDamage(int amount); // Deals damage
 
+    int calcDamage() const;
     int getLevel() const;
     void setLevel(int level);
     void levelUp();

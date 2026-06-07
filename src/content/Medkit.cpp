@@ -9,7 +9,7 @@
 #include "../../headers/player/Player.h"
 #include "../../headers/system/Logger.h"
 
-int Medkit::interact(Player& player) // TODO: implement logger through parameter to specify what was obtained
+int Medkit::interact(Player& player)
 {
     player.setHp(player.calcMaxHealth()); // Heal the player fully
     std::cout << "Excellent! You found a Medkit and healed to 100% HP!" << std::endl;
