@@ -39,14 +39,8 @@ add_executable(Proyecto_II main.cpp
         src/strategies/WeakenerAttack.cpp
 
         # System Module
-        headers/system/EventObserver.h
         headers/system/Logger.h
-        headers/system/MapObserver.h
-        headers/system/LoggerObserver.h
-        src/system/EventObserver.cpp
         src/system/Logger.cpp
-        src/system/MapObserver.cpp
-        src/system/LoggerObserver.cpp
         headers/content/Bomb.h
         src/content/Bomb.cpp
         headers/content/Medkit.h
@@ -69,4 +63,6 @@ add_executable(Proyecto_II main.cpp
         src/exceptions/ErrorPuntero.cpp
         src/exceptions/ErrorRango.cpp
         src/exceptions/ErrorValor.cpp
+        headers/content/PowerUpHealth.h
+        headers/content/PowerUpAttack.h
 )

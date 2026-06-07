@@ -1,6 +1,7 @@
 #include "../../headers/content/Monster.h"
 
 #include <iostream>
+#include "../../headers/system/Logger.h"
 
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
@@ -95,8 +96,11 @@ void Monster::takeDamage(int amount)
 
 int Monster::interact(Player& player)
 {
+
     // Return 2 to indicate this is a monster
-    std::cout << "A wild " << type << " appears! Prepare for battle!\n";
+    Logger* logger = Logger::getInstance(); //get logger instance
+    logger->log("Encountered a " + type);
+
     return 2;
 }
 

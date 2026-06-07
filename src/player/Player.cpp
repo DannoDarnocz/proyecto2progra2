@@ -9,9 +9,9 @@ Player::Player(int hp, int level)
 
 Player::~Player()
 {
-    for (auto power : activePowers) {
+    /*for (auto power : activePowers) {
         delete power;
-    }
+    }*/
 }
 
 int Player::getHp() const
@@ -39,7 +39,7 @@ int Player::calcMaxHealth() const
 
 std::string Player::toString() const
 {
-    return "HP=" + std::to_string(hp) + " | Level=" + std::to_string(level)+ " | # of active powerups: " + std::to_string(activePowers.size()) + " | Debuff: " + (debuff == PlayerDebuff::NONE ? "None" : (debuff == PlayerDebuff::WEAKNESS ? "Weakness" : "Health Lock"));
+    return "HP=" + std::to_string(hp) + " | Level=" + std::to_string(level)+/* " | # of active powerups: " + std::to_string(activePowers.size()) +*/ " | Debuff: " + (debuff == PlayerDebuff::NONE ? "None" : (debuff == PlayerDebuff::WEAKNESS ? "Weakness" : "Health Lock"));
 }
 
 
@@ -77,7 +77,7 @@ void Player::setDebuff(PlayerDebuff debuff)
 {
     this->debuff = debuff;
 }
-
+/*
 const std::vector<PowerUp*>& Player::getActivePowers() const
 {
     return activePowers;
@@ -96,6 +96,6 @@ void Player::removePower(PowerUp* power)
     if (it != activePowers.end()) {
         activePowers.erase(it);
     }
-}
+}*/
 
 

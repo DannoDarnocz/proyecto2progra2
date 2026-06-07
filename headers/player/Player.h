@@ -18,7 +18,7 @@ class Player
 private:
     int hp;
     int level;
-    std::vector<PowerUp*> activePowers;
+    //std::vector<PowerUp*> activePowers;
     PlayerDebuff debuff;
 public:
     Player(int hp, int level);
@@ -37,9 +37,9 @@ public:
     PlayerDebuff getDebuff() const;
     void setDebuff(PlayerDebuff debuff);
 
-    const std::vector<PowerUp*>& getActivePowers() const;
+    /*const std::vector<PowerUp*>& getActivePowers() const;
     void addPower(PowerUp* power);
-    void removePower(PowerUp* power);
+    void removePower(PowerUp* power);*/
     int calcMaxHealth() const;
 
     std::string toString() const;

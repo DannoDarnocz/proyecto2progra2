@@ -1,4 +1,4 @@
-#ifndef POWERDECORATOR_H
+/*#ifndef POWERDECORATOR_H
 #define POWERDECORATOR_H
 
 #include "PowerUp.h"
@@ -18,4 +18,4 @@ public:
     virtual void applyEffect(Player& player) override;
 };
 
-#endif
+#endif*/

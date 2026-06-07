@@ -3,6 +3,7 @@
 //
 
 #include "../../headers/content/Bomb.h"
+#include "../../headers/system/Logger.h"
 
 #include <iostream>
 
@@ -14,7 +15,11 @@ int Bomb::interact(Player& player)
     player.takeDamage(player.getHp()*0.3);
     if (player.getHp() < 1) { player.setHp(1); }  // HP always stays in 1 to prevent death of the player
     std::cout << "Boom! The bomb explodes and deals 30% damage to you!" << std::endl;
-    return consumable;  // Return 1 if consumable, 0 if not
+
+    Logger* logger = Logger::getInstance(); //get logger instance
+    logger->log("Dug into a bomb.");
+
+    return 1;  // Return 1 if consumable, 0 if not
 }
 
 std::string Bomb::toString()

@@ -1,4 +1,5 @@
 #include "../../headers/world/Cell.h"
+#include "../../headers/system/Logger.h"
 
 #include <iostream>
 
@@ -39,8 +40,11 @@ void Cell::setState(CellState state)
 int Cell::interact(Player& player)
 {
     // If content is empty, it can search anything
-    if (content == nullptr) {
-        std::cout << "Nothing here.\n"; return -1;
+    if (content == nullptr || !content->isVisible()) {
+        std::cout << "Nothing here.\n";
+        Logger* logger = Logger::getInstance();
+        logger->log("Found nothing.");
+        return -1;
     }
     // if not visible, don't interact yet
     if (content->isVisible()) {
@@ -50,11 +54,13 @@ int Cell::interact(Player& player)
 
 void Cell::dig(Player& player)
 {
+    Logger* logger = Logger::getInstance();
     // Implementation for digging a cell
     if (state == CellState::UNEXPLORED || state == CellState::EXPLORED) {
         state = CellState::DUG;
         if (content==nullptr) {
             std::cout << "You dig but find nothing.\n";
+            logger->log("Dug but found nothing.");
         }else {
             content->interact(player);
         }

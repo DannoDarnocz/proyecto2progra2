@@ -34,7 +34,7 @@ string monsterNames(int dimension = 0);
 unique_ptr<Content> createBoss(int dimension = 0);
 unique_ptr<Content> createMonster(int dimension = 0);
 void displayMap(Dimension* dimension, int playerX, int playerY);
-bool combat(Player& player, Monster& monster); // 0 if ran away, 1 if finished by either one dying
+int combat(Player& player, Monster& monster); // 0 if ran away, 1 if finished by either one dying
 
 int main()
 {
@@ -86,6 +86,7 @@ int main()
 
         // stores cell that player moves to
         Cell* newCell = nullptr;
+        string moveDirection;
 
         switch (input)
         {
@@ -93,8 +94,7 @@ int main()
                 // Move up (decrease X) {Rows are X}
                 if (currentX > 0){
                     currentX--;
-                    cout << "\n> You moved up." << endl;
-                    logger->log("Moved up.");
+                    moveDirection="up";
                 }
                 else{
                     cout << "\n> You cannot move further up. You are at the boundary." << endl;
@@ -107,15 +107,7 @@ int main()
                 // Move left (decrease Y) {Columns are Y}
                 if (currentY > 0) {
                     currentY--;
-                    cout << "\n> You moved left." << endl;
-                    try
-                    {
-                        logger->log("Moved left.");
-                    }
-                    catch (const exception& e)
-                    {
-                        cerr << e.what() << endl;
-                    }
+                    moveDirection="left";
                 } else {
                     cout << "\n> You cannot move further left. You are at the boundary." << endl;
                     continue;
@@ -126,15 +118,7 @@ int main()
                 // Move down (increase X) {Rows are X}
                 if (currentX < currentDimension->getRows() - 1){
                     currentX++;
-                    cout << "\n> You moved down." << endl;
-                    try
-                    {
-                        logger->log("Moved down.");
-                    }
-                    catch (const exception& e)
-                    {
-                        cerr << e.what() << endl;
-                    }
+                    moveDirection="down";
                 } else {
                     cout << "\n> You cannot move further down. You are at the boundary." << endl;
 
@@ -146,15 +130,7 @@ int main()
                 // Move right (increase Y) {Columns are Y}
                 if (currentY < currentDimension->getCols() - 1){
                     currentY++;
-                    cout << "\n> You moved right." << endl;
-                    try
-                    {
-                        logger->log("Moved right.");
-                    }
-                    catch (const exception& e)
-                    {
-                        cerr << e.what() << endl;
-                    }
+                    moveDirection="right";
                 } else{
                     cout << "\n> You cannot move further right. You are at the boundary." << endl;
                     continue;
@@ -167,15 +143,6 @@ int main()
                     if (currentCell) {
                         cout << "\n> You attempt to dig..." << endl;
                         currentCell->dig(*player);
-
-                        try
-                        {
-                            logger->log("Dug.");
-                        }
-                        catch (const exception& e)
-                        {
-                            cerr << e.what() << endl;
-                        }
                     }
                 }
                 continue;
@@ -191,19 +158,31 @@ int main()
                 continue; // skip
         }
 
-        // interacts if new cell is valid
+        // do stuff if player moved to a valid new cell
+        try
+        {
+            logger->log("Moved "+moveDirection+" to ("+to_string(currentX)+"," + to_string(currentY) +").");
+        }
+        catch (const exception& e)
+        {
+            cerr << e.what() << endl;
+        }
+
+        // interact if new cell is valid
         newCell = currentDimension->getCell(currentX, currentY);
         if (newCell){
             if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
 
             int interactResult = newCell->interact(*player);
             // -1 = nothing, 0 = not consumable, 1 = consumable, 2 = monster
-            if (interactResult==0)
-            {
-            }
-            else if (interactResult == 1) {
-                logger->log("Interacted with consumable.");
-                logger->log("New player status: " + player->toString());
+            if (interactResult == 1) {
+                try
+                {
+                    logger->log("New player status: " + player->toString());
+                } catch (ErrorArchivo& e)
+                {
+                    cerr << e.what() << endl;
+                }
                 newCell->setContent(nullptr); // destroy content if consumable
             } else if (interactResult == 2) {
                 Monster* monster = nullptr;
@@ -211,8 +190,7 @@ int main()
                 // iniciate combat if possible
                 if (monster = dynamic_cast<Monster*>(newCell->getContent()))
                 {
-                    int combatResult;
-                    combatResult = combat(*player, *monster);
+                    int combatResult = combat(*player, *monster);
                     switch (combatResult)
                     {
                         case -1: // lost
@@ -221,6 +199,7 @@ int main()
                         case 0:// ran away, spawn in another cell
                             currentX=rand() % currentDimension->getRows();
                             currentY=rand() % currentDimension->getCols();
+                            logger->log("Player ran away from " + monster->getType() + " and ended up in (" + to_string(currentX) + "," + to_string(currentY) + ").");
                             cout << "You escaped but ended up in a random cell! (whatever is in there will not harm you until you enter again)"<< endl << endl;
                         break;
                         case 1: // won
@@ -243,7 +222,7 @@ int main()
             cout << "You have been defeated!" << endl;
 
             // log final state
-            logger->log("Player defeated.");
+            logger->log("Player died.");
             logger->log("\nGame state:");
             logger->log(displayGameState(*player, currentX,currentY,currentDimension,false)); // do not show controls
             gameRunning = false;
@@ -475,7 +454,7 @@ void clearBuffer()
 }
 
 //return 0 if escaped, return 1 if player won, return -1 if player lost
-bool combat(Player& player, Monster& monster) {
+int combat(Player& player, Monster& monster) {
     // Pre-combat: show stats and let player decide
     cout << "A " << monster.getType() << " appears!\n";
     cout << "Monster - HP: " << monster.getHp() << " | Damage: " << monster.getBaseDamage() << "\n";
@@ -503,11 +482,14 @@ bool combat(Player& player, Monster& monster) {
     while (player.getHp() > 0 && monster.getHp() > 0) {
 
         // Random suspense delay before showing action
-        int delay = 500 + rand() % 1500;
+        cout << "Hold your horses...\n";
+        int delay = 100 + rand() % 3500;
         this_thread::sleep_for(chrono::milliseconds(delay));
 
+        bool shouldAttack;
         // Randomly decide ATTACK or DEFEND
-        bool shouldAttack = rand() % 2 == 0;
+        shouldAttack = rand() % 2 == 0;
+
 
         if (shouldAttack) {
             cout << "ATTACK! Press ENTER as soon as possible!\n";
@@ -528,7 +510,7 @@ bool combat(Player& player, Monster& monster) {
             } else {
                 // Too slow or wrote something, monster attacks
                 monster.attackPlayer(player);
-                cout << "Too slow! The monster attacks you for " << monster.getBaseDamage() << " damage!\n";
+                cout << "Too slow! The monster attacks you for " << monster.getDamage() << " damage!\n";
             }
 
         } else {
@@ -554,7 +536,7 @@ bool combat(Player& player, Monster& monster) {
             } else {
                 // Pressed ENTER with nothing, monster attacks
                 monster.attackPlayer(player);
-                cout << "You failed to defend! The monster attacks for " << monster.getBaseDamage() << " damage!\n";
+                cout << "You failed to defend! The monster attacks for " << monster.getDamage() << " damage!\n";
             }
         }
 
