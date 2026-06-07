@@ -1,4 +1,7 @@
 #include "../../headers/content/Monster.h"
+
+#include <iostream>
+
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
 #include "../../headers/strategies/HealthLockAttack.h"
@@ -82,7 +85,7 @@ void Monster::takeDamage(int amount)
     if (!modifyStrategy && hp <= maxHp/2) {
         modifyStrategy = true;
         int roll = rand() % 2;
-        if (roll=0) {
+        if (roll==0) {
             setAttackStrategy(std::make_shared<WeakenerAttack>());
         } else {
             setAttackStrategy(std::make_shared<HealthLockAttack>());
@@ -90,9 +93,11 @@ void Monster::takeDamage(int amount)
     }
 }
 
-void Monster::interact(Player& player)
+int Monster::interact(Player& player)
 {
-    // Start combat with the player
+    // Return 2 to indicate this is a monster
+    std::cout << "A wild " << type << " appears! Prepare for battle!\n";
+    return 2;
 }
 
 bool Monster::isBossQ() {

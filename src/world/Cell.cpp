@@ -21,6 +21,7 @@ Content* Cell::getContent() const
 
 void Cell::setContent(std::unique_ptr<Content> newContent)
 {
+    // deletes if nullptr
     this->content = std::move(newContent);
 }
 
@@ -34,15 +35,16 @@ void Cell::setState(CellState state)
     this->state = state;
 }
 
-void Cell::interact(Player& player)
+// boolean returns true if content should be destroyed after being used
+int Cell::interact(Player& player)
 {
     // If content is empty, it can search anything
     if (content == nullptr) {
-        std::cout << "Nothing here.\n"; return;
+        std::cout << "Nothing here.\n"; return -1;
     }
     // if not visible, don't interact yet
     if (content->isVisible()) {
-        content->interact(player);
+        return content->interact(player);
     }
 }
 

@@ -37,6 +37,11 @@ int Player::calcMaxHealth() const
     return 100+(level-1)*15;
 }
 
+std::string Player::toString() const
+{
+    return "HP=" + std::to_string(hp) + " | Level=" + std::to_string(level)+ " | # of active powerups: " + std::to_string(activePowers.size()) + " | Debuff: " + (debuff == PlayerDebuff::NONE ? "None" : (debuff == PlayerDebuff::WEAKNESS ? "Weakness" : "Health Lock"));
+}
+
 
 void Player::heal(int amount)
 {

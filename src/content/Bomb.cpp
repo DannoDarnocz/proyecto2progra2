@@ -8,12 +8,13 @@
 
 #include "../../headers/player/Player.h"
 
-void Bomb::interact(Player& player)
+int Bomb::interact(Player& player)
 {
     // Bomb explodes and deals 30% damage (never kills the player)
     player.takeDamage(player.getHp()*0.3);
     if (player.getHp() < 1) { player.setHp(1); }  // HP always stays in 1 to prevent death of the player
     std::cout << "Boom! The bomb explodes and deals 30% damage to you!" << std::endl;
+    return consumable;  // Return 1 if consumable, 0 if not
 }
 
 std::string Bomb::toString()

@@ -28,7 +28,7 @@ public:
     CellState getState() const;
     void setState(CellState state);
 
-    void interact(Player& player);
+    int interact(Player& player);
     void dig(Player& player);
 };
 

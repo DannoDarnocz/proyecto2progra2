@@ -1,7 +1,7 @@
 #include "../../headers/content/Content.h"
 
-Content::Content(bool isVisible)
-    : visible(isVisible)
+Content::Content(bool isVisible, bool isConsumable)
+    : visible(isVisible),consumable(isConsumable)
 {
 }
 
@@ -18,4 +18,7 @@ void Content::setVisible(bool visible)
 {
     this->visible = visible;
 }
-
+bool Content::isConsumable() const
+{
+    return consumable;
+}

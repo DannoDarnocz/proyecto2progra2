@@ -25,8 +25,8 @@ add_executable(Proyecto_II main.cpp
         # Powers Module
         headers/content/PowerUp.h
         headers/content/PowerUpDecorator.h
-        src/powers/PowerUp.cpp
-        src/powers/PowerUpDecorator.cpp
+        src/content/PowerUp.cpp
+        src/content/PowerUpDecorator.cpp
 
         # Strategies Module
         headers/strategies/AttackStrategy.h
@@ -49,4 +49,24 @@ add_executable(Proyecto_II main.cpp
         src/system/LoggerObserver.cpp
         headers/content/Bomb.h
         src/content/Bomb.cpp
+        headers/content/Medkit.h
+        src/content/Medkit.cpp
+        headers/exceptions/ErrorArchivo.h
+        headers/exceptions/ErrorArchivoEscritura.h
+        headers/exceptions/ErrorArchivoLectura.h
+        headers/exceptions/ErrorCast.h
+        headers/exceptions/ErrorDecimal.h
+        headers/exceptions/ErrorNegativo.h
+        headers/exceptions/ErrorPuntero.h
+        headers/exceptions/ErrorRango.h
+        headers/exceptions/ErrorValor.h
+        src/exceptions/ErrorArchivo.cpp
+        src/exceptions/ErrorArchivoEscritura.cpp
+        src/exceptions/ErrorArchivoLectura.cpp
+        src/exceptions/ErrorCast.cpp
+        src/exceptions/ErrorDecimal.cpp
+        src/exceptions/ErrorNegativo.cpp
+        src/exceptions/ErrorPuntero.cpp
+        src/exceptions/ErrorRango.cpp
+        src/exceptions/ErrorValor.cpp
 )

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/ErrorArchivo (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorArchivo (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorArchivo.h&quot;&#10;&#10;ErrorArchivo::ErrorArchivo() : msg(&quot;Ha ocurrido un error durante la manipulacion del archivo.&quot;) {}&#10;&#10;ErrorArchivo::ErrorArchivo(string mensaje) : msg(&quot;Ha ocurrido un error durante la manipulacion del archivo.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorArchivo::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorArchivo::obtenerMensaje() const {&#10;    return msg;&#10;}&#10;" />
+              <option name="updatedContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorArchivo.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorArchivo::ErrorArchivo() : msg(&quot;An error occurred while manipulating the file.&quot;) {}&#10;&#10;ErrorArchivo::ErrorArchivo(string mensaje) : msg(&quot;An error occurred while manipulating the file.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorArchivo::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorArchivo::obtenerMensaje() const {&#10;    return msg;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorArchivoLectura (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorArchivoLectura (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorArchivoLectura.h&quot;&#10;&#10;ErrorArchivoLectura::ErrorArchivoLectura() : ErrorArchivo(&quot;Ha ocurrido un error durante la lectura del archivo.&quot;) {&#10;    msg = &quot;Ha ocurrido un error durante la lectura del archivo.&quot;;&#10;}&#10;&#10;ErrorArchivoLectura::ErrorArchivoLectura(string mensaje) : ErrorArchivo(&quot;&quot;) {&#10;    msg = &quot;Ha ocurrido un error durante la lectura del archivo.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorArchivoLectura::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}" />
+              <option name="updatedContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorArchivoLectura.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorArchivoLectura::ErrorArchivoLectura() : ErrorArchivo(&quot;An error occurred while reading the file.&quot;) {&#10;    msg = &quot;An error occurred while reading the file.&quot;;&#10;}&#10;&#10;ErrorArchivoLectura::ErrorArchivoLectura(string mensaje) : ErrorArchivo(&quot;&quot;) {&#10;    msg = &quot;An error occurred while reading the file.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorArchivoLectura::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorCast (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorCast (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorCast.h&quot;&#10;&#10;ErrorCast::ErrorCast() : msg(&quot;El casteo no se pudo hacer de forma correcta.&quot;) {}&#10;&#10;ErrorCast::ErrorCast(string mensaje) : msg(&quot;El casteo no se pudo hacer de forma correcta.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorCast::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorCast::obtenerMensaje() const {&#10;    return msg;&#10;}&#10;" />
+              <option name="updatedContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorCast.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorCast::ErrorCast() : msg(&quot;The cast could not be performed correctly.&quot;) {}&#10;&#10;ErrorCast::ErrorCast(string mensaje) : msg(&quot;The cast could not be performed correctly.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorCast::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorCast::obtenerMensaje() const {&#10;    return msg;&#10;}&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorDecimal (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorDecimal (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorDecimal.h&quot;&#10;&#10;ErrorDecimal::ErrorDecimal() : ErrorValor(&quot;El valor no puede ser decimal.&quot;) {&#10;    msg = &quot;El valor no puede ser decimal.&quot;;&#10;}&#10;&#10;ErrorDecimal::ErrorDecimal(string mensaje) : ErrorValor(&quot;&quot;) {&#10;    msg = &quot;El valor no puede ser decimal.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorDecimal::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;" />
+              <option name="updatedContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorDecimal.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorDecimal::ErrorDecimal() : ErrorValor(&quot;The value cannot be decimal.&quot;) {&#10;    msg = &quot;The value cannot be decimal.&quot;;&#10;}&#10;&#10;ErrorDecimal::ErrorDecimal(string mensaje) : ErrorValor(&quot;&quot;) {&#10;    msg = &quot;The value cannot be decimal.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorDecimal::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorNegativo (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorNegativo (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorNegativo.h&quot;&#10;&#10;ErrorNegativo::ErrorNegativo() : ErrorValor(&quot;El valor debe de ser positivo.&quot;) {&#10;    msg = &quot;El valor debe de ser positivo.&quot;;&#10;}&#10;&#10;ErrorNegativo::ErrorNegativo(string mensaje) : ErrorValor(&quot;&quot;) {&#10;    msg = &quot;El valor debe de ser positivo.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorNegativo::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}" />
+              <option name="updatedContent" value="//&#10;// Created by axela on 9/4/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorNegativo.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorNegativo::ErrorNegativo() : ErrorValor(&quot;The value must be positive.&quot;) {&#10;    msg = &quot;The value must be positive.&quot;;&#10;}&#10;&#10;ErrorNegativo::ErrorNegativo(string mensaje) : ErrorValor(&quot;&quot;) {&#10;    msg = &quot;The value must be positive.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorNegativo::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorPuntero (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorPuntero (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by Daniel on 17/04/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorPuntero.h&quot;&#10;&#10;ErrorPuntero::ErrorPuntero() : msg(&quot;El puntero al cual se ha intentado acceder es nulo&quot;) {}&#10;&#10;ErrorPuntero::ErrorPuntero(string mensaje) : msg(&quot;El puntero al cual se ha intentado acceder es nulo&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorPuntero::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorPuntero::obtenerMensaje() const {&#10;    return msg;&#10;}&#10;&#10;" />
+              <option name="updatedContent" value="//&#10;// Created by Daniel on 17/04/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorPuntero.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorPuntero::ErrorPuntero() : msg(&quot;The pointer that was attempted to be accessed is null.&quot;) {}&#10;&#10;ErrorPuntero::ErrorPuntero(string mensaje) : msg(&quot;The pointer that was attempted to be accessed is null.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorPuntero::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorPuntero::obtenerMensaje() const {&#10;    return msg;&#10;}&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorRango (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorRango (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by Daniel on 15/04/2026.&#10;//&#10;//&#10;#include &quot;../../headers/exceptions/ErrorRango.h&quot;&#10;&#10;ErrorRango::ErrorRango() : ErrorValor(&quot;El valor esta fuera del rango permitido.&quot;) {&#10;    msg = &quot;El valor esta fuera del rango permitido.&quot;;&#10;}&#10;&#10;ErrorRango::ErrorRango(string mensaje) : ErrorValor(&quot;&quot;) {&#10;    msg = &quot;El valor esta fuera del rango permitido.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorRango::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}" />
+              <option name="updatedContent" value="//&#10;// Created by Daniel on 15/04/2026.&#10;//&#10;//&#10;#include &quot;../../headers/exceptions/ErrorRango.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorRango::ErrorRango() : ErrorValor(&quot;The value is out of the allowed range.&quot;) {&#10;    msg = &quot;The value is out of the allowed range.&quot;;&#10;}&#10;&#10;ErrorRango::ErrorRango(string mensaje) : ErrorValor(&quot;&quot;) {&#10;    msg = &quot;The value is out of the allowed range.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;);&#10;}&#10;&#10;const char* ErrorRango::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/ErrorValor (snapshot).cpp">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/ErrorValor (snapshot).cpp" />
+              <option name="originalContent" value="//&#10;// Created by Daniel on 15/04/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorValor.h&quot;&#10;&#10;ErrorValor::ErrorValor() : msg(&quot;El valor ingresado es invalido.&quot;) {}&#10;&#10;ErrorValor::ErrorValor(string mensaje) : msg(&quot;El valor ingresado es invalido.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorValor::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorValor::obtenerMensaje() const {&#10;    return msg;&#10;}" />
+              <option name="updatedContent" value="//&#10;// Created by Daniel on 15/04/2026.&#10;//&#10;&#10;#include &quot;../../headers/exceptions/ErrorValor.h&quot;&#10;&#10;// Store the complete message in the msg member variable during construction&#10;// to avoid memory leaks from temporary string objects in what()&#10;ErrorValor::ErrorValor() : msg(&quot;The entered value is invalid.&quot;) {}&#10;&#10;ErrorValor::ErrorValor(string mensaje) : msg(&quot;The entered value is invalid.&quot; + (mensaje.empty() ? string() : &quot; (&quot; + mensaje + &quot;)&quot;)) {}&#10;&#10;const char* ErrorValor::what() const noexcept&#10;{&#10;    return msg.c_str();&#10;}&#10;&#10;string ErrorValor::obtenerMensaje() const {&#10;    return msg;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

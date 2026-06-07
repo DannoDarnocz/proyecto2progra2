@@ -44,7 +44,7 @@ public:
 
     std::string toString() override;
 
-    virtual void interact(Player& player) override;
+    int interact(Player& player) override;
 
     bool isBossQ();
 };

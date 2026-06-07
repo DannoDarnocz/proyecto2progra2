@@ -1,6 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <string>
+
 #include "../content/PowerUp.h"
 #include <vector>
 
@@ -23,7 +25,7 @@ public:
     ~Player();
 
     int getHp() const;
-    void setHp(int hp);
+    void setHp(int hp); // sets hp without checking, unsafe
 
     void heal(int amount); // Heal the player by a certain amount
     void takeDamage(int amount); // Deals damage
@@ -39,6 +41,8 @@ public:
     void addPower(PowerUp* power);
     void removePower(PowerUp* power);
     int calcMaxHealth() const;
+
+    std::string toString() const;
 };
 
 #endif

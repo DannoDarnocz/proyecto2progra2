@@ -10,8 +10,8 @@ class Player;
 class Bomb : public Content
 {
 public:
-    Bomb(bool isVisible = false):Content(isVisible){}; // not visible by default
-    void interact(Player& player) override;
+    Bomb(bool isVisible = false, bool isConsumable = true):Content(isVisible, isConsumable){}; // not visible by default
+    int interact(Player& player) override;
     std::string toString() override;
 };
 

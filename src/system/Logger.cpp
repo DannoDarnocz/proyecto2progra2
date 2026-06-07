@@ -1,4 +1,5 @@
 #include "../../headers/system/Logger.h"
+#include "../../headers/exceptions/ErrorArchivoLectura.h"
 #include <iostream>
 #include <ctime>
 
@@ -26,8 +27,7 @@ void Logger::log(const std::string& event)
     std::ofstream logFile(logFilePath, std::ios::app);
 
     if (!logFile.is_open()) {
-        std::cerr << "Failed to open log file" << std::endl;
-        return;
+        throw(ErrorArchivoLectura("Could not open log file for writing."));
     }
 
     logFile << event << std::endl;
