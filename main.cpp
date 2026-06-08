@@ -350,11 +350,14 @@ void displayCellInfo(Cell* cell, int x, int y)
     {
         Bomb* bomb = dynamic_cast<Bomb*>(content);
         Monster* monster = dynamic_cast<Monster*>(content);
+        Medkit* medkit = dynamic_cast<Medkit*>(content);
 
         if (bomb && cell->getState() == CellState::DUG)
             cout << "Bomb fragments are scattered here." << endl;
         else if (monster && monster->getHp() <= 0)
             cout << "Remains of a " << monster->getType() << " lie here." << endl;
+        else if (medkit && cell->getState() == CellState::DUG)
+            cout << "Medical supplies and bandages of unknown origin lie on the ground." << endl;
         else
             cout << "No visible content." << endl;
     }
@@ -592,9 +595,9 @@ string monsterNames(int dimension) {
 unique_ptr<Content> createMonster(int dimension)
 {
     auto strategy = make_shared<NormalAttack>();
-    int baseHp  = 100 + dimension * 50;
+    int baseHp  = 30 + dimension * 50;
     int baseDmg = 5   + dimension * 10;
-    int level   = 1   + dimension * 2;
+    int level   = 1   + dimension * 3;
     return make_unique<Monster>(
         rand() % 50 + baseHp,
         rand() % 15 + baseDmg,
@@ -640,8 +643,12 @@ void displayMap(Dimension* dimension, int playerX, int playerY)
 
             if (content && content->isVisible()) {
                 Monster* m = dynamic_cast<Monster*>(content);
+                Medkit* k = dynamic_cast<Medkit*>(content);
                 if (m) {
                     cout << (m->isBossQ() ? "J " : "M ");
+                }
+                else if (k && (state == CellState::EXPLORED || state == CellState::DUG)) {
+                    cout << "H ";
                 }
                 else {
                     cout << ". ";
@@ -657,7 +664,7 @@ void displayMap(Dimension* dimension, int playerX, int playerY)
             }
             else
             {
-                // sin contenido o contenido invisible
+                // Without content
                 cout << (state == CellState::DUG ? "X " : ". ");
             }
         }

@@ -6,7 +6,7 @@
 Logger* Logger::instance = nullptr;
 
 Logger::Logger()
-    : logFilePath("log.txt")
+    : logFilePath("../log.txt")
 {
 }
 
