@@ -57,3 +57,9 @@ int Map::getDimensionCount() const
     return (int)dimensions.size();
 }
 
+void Map::releaseDimension(int index) {
+    if (index >= 0 && index < (int)dimensions.size() && dimensions[index] != nullptr) {
+        delete dimensions[index];
+        dimensions[index] = nullptr;
+    }
+}

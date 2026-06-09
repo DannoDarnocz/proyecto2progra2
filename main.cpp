@@ -35,6 +35,7 @@ unique_ptr<Content> createBoss(int dimension = 0);
 unique_ptr<Content> createMonster(int dimension = 0);
 void displayMap(Dimension* dimension, int playerX, int playerY);
 int combat(Player& player, Monster& monster); // 0 if ran away, 1 if finished by either one dying
+void slowPrint(const string& text, int delayMs = 50);
 
 int main()
 {
@@ -183,7 +184,6 @@ int main()
                 {
                     cerr << e.what() << endl;
                 }
-                newCell->setContent(nullptr); // destroy content if consumable
             } else if (interactResult == 2) {
                 Monster* monster = nullptr;
 
@@ -204,6 +204,34 @@ int main()
                         break;
                         case 1: // won
                             logger->log("Player defeated " + monster->getType());
+                            // If monster was bossType special event occur
+                            if (monster->isBossQ()) {
+                                int nextIndex = gameMap->getCurrentDimensionIndex()+1;
+                                if (nextIndex < gameMap->getDimensionCount()) {
+                                    slowPrint("\n====== DIMENSION CLEARED ======");
+                                    this_thread::sleep_for(chrono::milliseconds(400));
+                                    slowPrint("The boss collapses to the ground...");
+                                    this_thread::sleep_for(chrono::milliseconds(300));
+                                    slowPrint("A portal opens before you... you step through.");
+                                    this_thread::sleep_for(chrono::milliseconds(500));
+                                    gameMap->releaseDimension(gameMap->getCurrentDimensionIndex());
+                                    gameMap->changeDimension(nextIndex);
+                                    currentDimension = gameMap->getCurrentDimension();
+                                    currentX = 0; currentY = 0;
+                                    logger->log("Player advanced to dimension " + to_string(nextIndex));
+                                }
+                                else {
+                                    slowPrint("\n====== YOU WIN ======");
+                                    this_thread::sleep_for(chrono::milliseconds(500));
+                                    slowPrint("The final boss crumbles into dust.");
+                                    this_thread::sleep_for(chrono::milliseconds(300));
+                                    slowPrint("Silence falls. The adventure is over.");
+                                    this_thread::sleep_for(chrono::milliseconds(800));
+                                    slowPrint("You made it.");
+                                    logger->log("Player completed the game.");
+                                    gameRunning = false;
+                                }
+                            }
                         break;
                     }
                 }
@@ -352,12 +380,12 @@ void displayCellInfo(Cell* cell, int x, int y)
         Monster* monster = dynamic_cast<Monster*>(content);
         Medkit* medkit = dynamic_cast<Medkit*>(content);
 
-        if (bomb && cell->getState() == CellState::DUG)
+        if (medkit && (cell->getState() == CellState::DUG))
+            cout << "A dusty medkit sits here. No expiration date. Probably fine." << endl;
+        else if (bomb && cell->getState() == CellState::DUG)
             cout << "Bomb fragments are scattered here." << endl;
         else if (monster && monster->getHp() <= 0)
             cout << "Remains of a " << monster->getType() << " lie here." << endl;
-        else if (medkit && cell->getState() == CellState::DUG)
-            cout << "Medical supplies and bandages of unknown origin lie on the ground." << endl;
         else
             cout << "No visible content." << endl;
     }
@@ -612,7 +640,7 @@ unique_ptr<Content> createBoss(int dimension)
     switch (dimension)
     {
         case 0: return make_unique<Monster>(200, 25, 3, strategy, "Stone Golem", true);
-        case 1: return make_unique<Monster>(350, 40, 6, strategy, "Dark Knight", true);
+        case 1: return make_unique<Monster>(400, 40, 6, strategy, "Dark Knight", true);
         case 2: return make_unique<Monster>(600, 60, 10, strategy, "Demon Lord", true);
         default: return make_unique<Monster>(200, 25, 3, strategy, "Unknown Boss", true);
     }
@@ -643,12 +671,8 @@ void displayMap(Dimension* dimension, int playerX, int playerY)
 
             if (content && content->isVisible()) {
                 Monster* m = dynamic_cast<Monster*>(content);
-                Medkit* k = dynamic_cast<Medkit*>(content);
                 if (m) {
                     cout << (m->isBossQ() ? "J " : "M ");
-                }
-                else if (k && (state == CellState::EXPLORED || state == CellState::DUG)) {
-                    cout << "H ";
                 }
                 else {
                     cout << ". ";
@@ -656,9 +680,13 @@ void displayMap(Dimension* dimension, int playerX, int playerY)
             }
             else if (content && !content->isVisible()) {
                 Bomb* bomb = dynamic_cast<Bomb*>(content);
+                Medkit* k = dynamic_cast<Medkit*>(content);
 
                 if (bomb && state == CellState::DUG)
                     cout << "B ";
+                else if (k && state == CellState::DUG) {
+                    cout << "H ";
+                }
                 else
                     cout << (state == CellState::DUG ? "X " : ". ");
             }
@@ -671,4 +699,15 @@ void displayMap(Dimension* dimension, int playerX, int playerY)
         cout << endl;
     }
     cout << "-----------" << endl;
+    cout << "[Bomb = B | Monster = M | Medkit = H | Player = P | Boss = J]" << endl;
+}
+
+void slowPrint(const string& text, int delayMs)
+{
+    for (char c : text)
+    {
+        cout << c << flush;
+        this_thread::sleep_for(chrono::milliseconds(delayMs));
+    }
+    cout << endl;
 }

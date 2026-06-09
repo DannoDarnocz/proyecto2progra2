@@ -22,6 +22,7 @@ public:
     void setCurrentDimensionIndex(int index);
 
     void changeDimension(int index);
+    void releaseDimension(int index);
     int getDimensionCount() const;
 };
 

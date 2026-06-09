@@ -10,7 +10,7 @@
 class Medkit : public Content
 {
 public:
-    Medkit(bool isVisible = true, bool isConsumable = true):Content(isVisible,isConsumable){}; // visible by default, consumable by default
+    Medkit(bool isVisible = false, bool isConsumable = true):Content(isVisible,isConsumable){}; // visible by default, consumable by default
     std::string toString() override;
     int interact(Player& player) override;
 };
