@@ -65,4 +65,6 @@ add_executable(Proyecto_II main.cpp
         src/exceptions/ErrorValor.cpp
         headers/content/PowerUpHealth.h
         headers/content/PowerUpAttack.h
+        headers/system/GameHelper.h
+        src/system/GameHelper.cpp
 )

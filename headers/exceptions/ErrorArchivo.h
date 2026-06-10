@@ -14,8 +14,7 @@ class ErrorArchivo : public exception {
     protected:
     string msg;
     public:
-    ErrorArchivo();
-    ErrorArchivo(string mensaje);
+    ErrorArchivo(string specificMsg = "");
     const char* what() const noexcept override;
     string obtenerMensaje() const;
 };

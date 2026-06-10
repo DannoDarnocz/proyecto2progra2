@@ -420,3 +420,53 @@ Found nothing.
 Restored full health with a medkit
 Moved right to (0,3).
 Found nothing.
+
+ --- New game started ---
+Moved down to (1,0).
+Found nothing.
+Moved right to (1,1).
+Encountered a Slime
+Player defeated Slime
+Moved left to (1,0).
+Found nothing.
+Moved right to (1,1).
+Encountered a Slime
+Player defeated Slime
+Moved left to (1,0).
+Found nothing.
+Moved down to (2,0).
+Found nothing.
+Moved down to (3,0).
+Found nothing.
+Moved down to (4,0).
+Found nothing.
+Moved down to (5,0).
+Found nothing.
+Moved down to (6,0).
+Found nothing.
+Moved down to (7,0).
+Found nothing.
+Moved right to (7,1).
+Found nothing.
+Moved right to (7,2).
+Found nothing.
+Moved right to (7,3).
+Found nothing.
+Moved right to (7,4).
+Found nothing.
+Moved right to (7,5).
+Found nothing.
+Moved right to (7,6).
+Found nothing.
+Moved right to (7,7).
+Found nothing.
+Moved right to (7,8).
+Found nothing.
+Moved right to (7,9).
+Encountered a Stone Golem
+Player was defeated by Stone Golem
+Player died.
+
+Game state:
+
+ --- New game started ---

@@ -9,8 +9,7 @@
 
 class ErrorArchivoEscritura : public ErrorArchivo {
 public:
-    ErrorArchivoEscritura();
-    ErrorArchivoEscritura(string mensaje);
+    ErrorArchivoEscritura(string specificMsg = "");
     const char* what() const noexcept override;
 };
 

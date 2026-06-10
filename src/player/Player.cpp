@@ -5,6 +5,7 @@
 Player::Player(int hp, int level)
     : hp(hp), level(level)
 {
+    debuff = PlayerDebuff::NONE;
 }
 
 Player::~Player()

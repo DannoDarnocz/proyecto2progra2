@@ -6,12 +6,9 @@
 
 // Store the complete message in the msg member variable during construction
 // to avoid memory leaks from temporary string objects in what()
-ErrorArchivoLectura::ErrorArchivoLectura() {
-    msg = "An error occurred while reading the file.";
-}
 
-ErrorArchivoLectura::ErrorArchivoLectura(string mensaje) {
-    msg = "An error occurred while reading the file." + (mensaje.empty() ? string() : " (" + mensaje + ")");
+ErrorArchivoLectura::ErrorArchivoLectura(string specificMsg) {
+    msg = "An error occurred while reading the file." + (specificMsg.empty() ? "" : " (" + specificMsg + ")");
 }
 
 const char* ErrorArchivoLectura::what() const noexcept

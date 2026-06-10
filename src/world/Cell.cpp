@@ -36,20 +36,18 @@ void Cell::setState(CellState state)
     this->state = state;
 }
 
-// boolean returns true if content should be destroyed after being used
+// boolean returns whatever content throws when interacting (should be destroyed after being used)
 int Cell::interact(Player& player)
 {
-    // If content is empty, it can search anything
-    if (content == nullptr || !content->isVisible()) {
-        std::cout << "Nothing here.\n";
-        Logger* logger = Logger::getInstance();
-        logger->log("Found nothing.");
-        return -1;
-    }
-    // if not visible, don't interact yet
-    if (content->isVisible()) {
+    // if it has something and it's visible, interact right away
+    if (content && content->isVisible()) {
         return content->interact(player);
     }
+
+    std::cout << "Nothing here.\n";
+    Logger* logger = Logger::getInstance();
+    logger->log("Found nothing.");
+    return -1;
 }
 
 void Cell::dig(Player& player)

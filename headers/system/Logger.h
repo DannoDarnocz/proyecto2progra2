@@ -6,24 +6,17 @@
 #include <memory>
 
 
-class Logger // Singleton
+class Logger // Singleton returns pointer to the instance that is actually just a local static object to avoid memory leaks, instead of using a single instance that is stored as member of static
 {
 private:
-    static Logger* instance;
     std::string logFilePath;
-
     Logger();
-
 public:
-    ~Logger();
 
-    static Logger* getInstance();
+    static  Logger* getInstance();
 
     void log(const std::string& event);
-
-    // Delete copy constructor and assignment operator
-    Logger(const Logger&) = delete;
-    Logger& operator=(const Logger&) = delete;
+    void log(const std::string& event,const std::string&); // different route
 };
 
 #endif

@@ -3,23 +3,14 @@
 #include <iostream>
 #include <ctime>
 
-Logger* Logger::instance = nullptr;
-
 Logger::Logger()
     : logFilePath("../log.txt")
 {
 }
 
-Logger::~Logger()
-{
-}
-
-Logger* Logger::getInstance()
-{
-    if (instance == nullptr) {
-        instance = new Logger();
-    }
-    return instance;
+Logger* Logger::getInstance() {
+    static Logger instance;
+    return &instance;
 }
 
 void Logger::log(const std::string& event)
@@ -34,3 +25,14 @@ void Logger::log(const std::string& event)
     logFile.close();
 }
 
+void Logger::log(const std::string& event,const std::string& otherLogPath)
+{
+    std::ofstream logFile(otherLogPath, std::ios::app);
+
+    if (!logFile.is_open()) {
+        throw(ErrorArchivoLectura("Could not open log file for writing."));
+    }
+
+    logFile << event << std::endl;
+    logFile.close();
+}
