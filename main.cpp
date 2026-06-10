@@ -15,7 +15,7 @@
 #include "headers/world/Cell.h"
 #include "headers/player/Player.h"
 #include "headers/content/Monster.h"
-#include "headers/exceptions/ErrorArchivo.h"
+#include "headers/exceptions/FileException.h"
 #include "headers/strategies/HealthLockAttack.h"
 #include "headers/strategies/NormalAttack.h"
 #include "headers/strategies/WeakenerAttack.h"
@@ -55,7 +55,14 @@ int main()
 
     // Create logger
     Logger* logger = Logger::getInstance();
-    logger->log("\n --- New game started ---");
+    try
+    {
+        logger->log("\n --- New game started ---");
+    }
+    catch (ErrorArchivo& e)
+    {
+        std::cerr << e.what() << endl;
+    }
 
     cout << "====== BLOCK WORLD ======" << endl;
     cout << "Welcome, adventurer!" << endl << endl;
@@ -140,8 +147,15 @@ int main()
             case 'q':
                 // Quit game
                 cout << "\n> Exiting game. Goodbye!" << endl;
-                logger-> log("Player quitted game.");
-                logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+                try
+                {
+                    logger->log("Player quitted game.");
+                    logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+                }
+                catch (ErrorArchivo& e)
+                {
+                    std::cerr << e.what() << endl;
+                }
                 gameRunning = false;
                 continue;
 
@@ -153,7 +167,7 @@ int main()
         // do stuff if player moved to a valid new cell
         try
         {
-            logger->log("Moved "+moveDirection+" to ("+to_string(currentX)+"," + to_string(currentY) +").");
+            logger->log("\nMoved "+moveDirection+" to ("+to_string(currentX)+"," + to_string(currentY) +").");
         }
         catch (const exception& e)
         {
@@ -175,6 +189,7 @@ int main()
                 {
                     cerr << e.what() << endl;
                 }
+                newCell->setContent(nullptr); // remove content if consumable
             } else if (interactResult == 2) {
                 Monster* monster = nullptr;
                 // TODO: should not interact again with monster after defeated
@@ -185,16 +200,37 @@ int main()
                     switch (combatResult)
                     {
                         case -1: // lost
+                        try
+                        {
                             logger->log("Player was defeated by " + monster->getType());
+                        }catch (ErrorArchivo& e)
+                        {
+                            std::cerr << e.what() << endl;
+                        }
                         break;
                         case 0:// ran away, spawn in another cell
                             currentX=rand() % currentDimension->getRows();
                             currentY=rand() % currentDimension->getCols();
-                            logger->log("Player ran away from " + monster->getType() + " and ended up in (" + to_string(currentX) + "," + to_string(currentY) + ").");
+
+                            try
+                            {
+                                logger->log("Player ran away from " + monster->getType() + " and ended up in (" + to_string(currentX) + "," + to_string(currentY) + ").");
+                            }catch (ErrorArchivo& e)
+                            {
+                                std::cerr << e.what() << endl;
+                            }
+
                             cout << "You escaped but ended up in a random cell! (whatever is in there will not harm you until you enter again)"<< endl << endl;
                         break;
                         case 1: // won
-                            logger->log("Player defeated " + monster->getType());
+                            try
+                            {
+                                logger->log("Player defeated " + monster->getType());
+                            }
+                            catch (ErrorArchivo& e)
+                            {
+                                std::cerr << e.what() << endl;
+                            }
                             // If monster was bossType special event occur
                             if (monster->isBossQ()) {
                                 int nextIndex = gameMap->getCurrentDimensionIndex()+1;
@@ -209,7 +245,14 @@ int main()
                                     gameMap->changeDimension(nextIndex);
                                     currentDimension = gameMap->getCurrentDimension();
                                     currentX = 0; currentY = 0;
-                                    logger->log("Player advanced to dimension " + to_string(nextIndex));
+                                    try
+                                    {
+                                        logger->log("Player advanced to dimension " + to_string(nextIndex));
+                                    }
+                                    catch (ErrorArchivo& e)
+                                    {
+                                        std::cerr << e.what() << endl;
+                                    }
                                 }
                                 else {
                                     GameHelper::slowPrint("\n====== YOU WIN ======");
@@ -219,8 +262,15 @@ int main()
                                     GameHelper::slowPrint("Silence falls. The adventure is over.");
                                     this_thread::sleep_for(chrono::milliseconds(800));
                                     GameHelper::slowPrint("You made it.");
-                                    logger->log("Player completed the game.");
-                                    logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+                                    try
+                                    {
+                                        logger->log("Player completed the game.");
+                                        logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+                                    }
+                                    catch (ErrorArchivo& e)
+                                    {
+                                        std::cerr << e.what() << endl;
+                                    }
                                     gameRunning = false;
                                 }
                             }
@@ -244,9 +294,16 @@ int main()
             cout << "You have been defeated!" << endl;
 
             // log final state
-            logger->log("Player died.");
-            logger->log("\nGame state:");
-            logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+            try
+            {
+                logger->log("Player died.");
+                logger->log("\nGame state:");
+                logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+            }
+            catch (ErrorArchivo& e)
+            {
+                std::cerr << e.what() << endl;
+            }
             gameRunning = false;
         }
 

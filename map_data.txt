@@ -1,14 +1,14 @@
 DIMENSIONS 3
 
 DIM 8 10
-. . H . . . . H . .
-. M . B . . B . . .
+. + H . . . . H . .
+. M . B + . B . + .
 . . B . M . . B H .
-. B . H . B . M . .
-. . . M B . . . B .
-H B . . H . M . . .
-. . B . . M . . B .
-. . H . . . . H . J
+. B . H . B . M + .
+. + . M B . + . B .
+H B . . H . M . + .
++ . B . . M . . B .
+. . H . + . . H . J
 
 DIM 10 12
 . . H . . . . . . . H .

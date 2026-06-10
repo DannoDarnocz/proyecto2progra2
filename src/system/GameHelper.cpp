@@ -70,6 +70,8 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
                     content = make_unique<Medkit>();
                 else if (cell == 'M')
                     content = createMonster(d);
+                else if (cell == '+')
+                    content = make_unique<PowerUp>();
                 else if (cell == 'J' || cell == 'K' || cell == 'F')
                     content = createBoss(d);
 
@@ -120,7 +122,7 @@ void GameHelper::displayCellInfo(Cell* cell, int x, int y)
         Medkit* medkit = dynamic_cast<Medkit*>(content);
 
         if (medkit && (cell->getState() == CellState::DUG))
-            cout << "A dusty medkit sits here. No expiration date. Probably fine." << endl;
+            cout << "An opened medkit lies here. Nothing useful left..." << endl;
         else if (bomb && cell->getState() == CellState::DUG)
             cout << "Bomb fragments are scattered here." << endl;
         else if (monster && monster->getHp() <= 0)
@@ -140,7 +142,7 @@ string GameHelper::displayGameState(Player& player, int currentX, int currentY, 
     stringstream s;
 
     s << "\n========================================" << endl;
-    s << "Player Status: HP=" << player.getHp() << " | Level=" << player.getLevel() << endl;
+    s << "Player Status: " << player.toString() << endl;
     s << "Position: (" << currentX << ", " << currentY << ")" << endl;
     s << "========================================" << endl;
 
@@ -237,6 +239,15 @@ int GameHelper::combat(Player& player, Monster& monster) {
         // teleport to random cell in current dimension
         cout << "You run away in panic and end up somewhere else...\n";
         return 0;
+    }
+
+    if (monster.isBossQ())
+    {
+        // give random powerup before battle
+        cout << "You suddenly feel a rush of determination...\n";
+        PowerUp newPower; // temp power just to interact and give random
+        newPower.interact(player);
+        waitForEnter();
     }
 
     cout << "--- COMBAT RULES ---\n"

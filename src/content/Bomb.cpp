@@ -4,6 +4,7 @@
 
 #include "../../headers/content/Bomb.h"
 #include "../../headers/system/Logger.h"
+#include "../../headers/exceptions/FileException.h"
 
 #include <iostream>
 
@@ -17,7 +18,14 @@ int Bomb::interact(Player& player)
     std::cout << "Boom! The bomb explodes and deals 30% damage to you!" << std::endl;
 
     Logger* logger = Logger::getInstance(); //get logger instance
-    logger->log("Dug into a bomb.");
+    try
+    {
+        logger->log("Dug into a bomb.");
+    }
+    catch (ErrorArchivo& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
 
     return 1;  // Return 1 if consumable, 0 if not
 }

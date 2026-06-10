@@ -24,9 +24,6 @@ add_executable(Proyecto_II main.cpp
 
         # Powers Module
         headers/content/PowerUp.h
-        headers/content/PowerUpDecorator.h
-        src/content/PowerUp.cpp
-        src/content/PowerUpDecorator.cpp
 
         # Strategies Module
         headers/strategies/AttackStrategy.h
@@ -45,26 +42,34 @@ add_executable(Proyecto_II main.cpp
         src/content/Bomb.cpp
         headers/content/Medkit.h
         src/content/Medkit.cpp
-        headers/exceptions/ErrorArchivo.h
-        headers/exceptions/ErrorArchivoEscritura.h
-        headers/exceptions/ErrorArchivoLectura.h
+        headers/exceptions/FileException.h
+        headers/exceptions/FileExceptionOut.h
+        headers/exceptions/FileExceptionIn.h
         headers/exceptions/ErrorCast.h
         headers/exceptions/ErrorDecimal.h
         headers/exceptions/ErrorNegativo.h
         headers/exceptions/ErrorPuntero.h
         headers/exceptions/ErrorRango.h
         headers/exceptions/ErrorValor.h
-        src/exceptions/ErrorArchivo.cpp
-        src/exceptions/ErrorArchivoEscritura.cpp
-        src/exceptions/ErrorArchivoLectura.cpp
+        src/exceptions/FileException.cpp
+        src/exceptions/FileExceptionOut.cpp
+        src/exceptions/FileExceptionIn.cpp
         src/exceptions/ErrorCast.cpp
         src/exceptions/ErrorDecimal.cpp
         src/exceptions/ErrorNegativo.cpp
         src/exceptions/ErrorPuntero.cpp
         src/exceptions/ErrorRango.cpp
         src/exceptions/ErrorValor.cpp
-        headers/content/PowerUpHealth.h
-        headers/content/PowerUpAttack.h
         headers/system/GameHelper.h
         src/system/GameHelper.cpp
+        headers/player/IStats.h
+        headers/player/BaseStats.h
+        src/player/BaseStats.cpp
+        headers/player/StatsDecorator.h
+        src/player/StatsDecorator.cpp
+        headers/player/ExtraHealthStats.h
+        src/player/ExtraHealthStats.cpp
+        headers/player/ExtraDamageStats.h
+        src/player/ExtraDamageStats.cpp
+        src/content/PowerUp.cpp
 )

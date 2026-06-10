@@ -1,10 +1,13 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <memory>
 #include <string>
 
 #include "../content/PowerUp.h"
 #include <vector>
+
+#include "IStats.h"
 
 enum class PlayerDebuff
 {
@@ -18,11 +21,10 @@ class Player
 private:
     int hp;
     int level;
-    //std::vector<PowerUp*> activePowers;
+    std::unique_ptr<IStats> stats;
     PlayerDebuff debuff;
 public:
     Player(int hp, int level);
-    ~Player();
 
     int getHp() const;
     void setHp(int hp); // sets hp without checking, unsafe
@@ -37,6 +39,10 @@ public:
 
     PlayerDebuff getDebuff() const;
     void setDebuff(PlayerDebuff debuff);
+
+    void clearPowerUps();
+    void addHealthPowerUp();
+    void addDamagePowerUp();
 
     /*const std::vector<PowerUp*>& getActivePowers() const;
     void addPower(PowerUp* power);

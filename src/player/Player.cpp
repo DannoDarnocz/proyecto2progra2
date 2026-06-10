@@ -1,18 +1,16 @@
 #include "../../headers/player/Player.h"
 #include "../../headers/content/PowerUp.h"
+#include "../../headers/player/ExtraHealthStats.h"
+#include "../../headers/player/ExtraDamageStats.h"
+#include "../../headers/player/BaseStats.h"
 #include <algorithm>
 
 Player::Player(int hp, int level)
     : hp(hp), level(level)
 {
+    // Initialize stats with default BaseStats to avoid null pointer dereference
+    stats = std::make_unique<BaseStats>();
     debuff = PlayerDebuff::NONE;
-}
-
-Player::~Player()
-{
-    /*for (auto power : activePowers) {
-        delete power;
-    }*/
 }
 
 int Player::getHp() const
@@ -35,17 +33,33 @@ void Player::takeDamage(int amount)
 
 int Player::calcDamage() const
 {
-    return 15+(level-1)*10;
+    return stats->calcDamage(level);
 }
 
 int Player::calcMaxHealth() const
 {
-    return 100+(level-1)*15;
+    return stats->calcMaxHealth(level);
 }
 
 std::string Player::toString() const
 {
-    return "HP=" + std::to_string(hp) + " | Level=" + std::to_string(level)+/* " | # of active powerups: " + std::to_string(activePowers.size()) +*/ " | Debuff: " + (debuff == PlayerDebuff::NONE ? "None" : (debuff == PlayerDebuff::WEAKNESS ? "Weakness" : "Health Lock"));
+    std::string s;
+
+    s = "HP="
+    + std::to_string(hp)
+    + " | Level=" + std::to_string(level);
+
+    // if no active powerups, just use "no active powerups"
+    if (dynamic_cast<BaseStats*>(stats.get())) {
+        s+= " | No active powerups";
+    }
+    else
+    {
+        s+= " | Active powerups: " + stats->toString();
+    }
+
+    s = s + " | Debuff: " + (debuff == PlayerDebuff::NONE ? "None" : (debuff == PlayerDebuff::WEAKNESS ? "Weakness" : "Health Lock"));
+    return s;
 }
 
 
@@ -83,25 +97,24 @@ void Player::setDebuff(PlayerDebuff debuff)
 {
     this->debuff = debuff;
 }
-/*
-const std::vector<PowerUp*>& Player::getActivePowers() const
+
+void Player::clearPowerUps()
 {
-    return activePowers;
+    // automatically deletes pointer
+    stats = nullptr;
 }
 
-void Player::addPower(PowerUp* power)
-{
-    if (power != nullptr) {
-        activePowers.push_back(power);
-    }
+void Player::addHealthPowerUp() {
+    // create new decorator for its own stats
+    stats = std::make_unique<ExtraHealthStats>(std::move(stats));
+
+    // automatically adjust +30 hp
+    heal(30);
 }
 
-void Player::removePower(PowerUp* power)
-{
-    auto it = std::find(activePowers.begin(), activePowers.end(), power);
-    if (it != activePowers.end()) {
-        activePowers.erase(it);
-    }
-}*/
+void Player::addDamagePowerUp() {
+    // create new decorator for its own stats
+    stats = std::make_unique<ExtraDamageStats>(std::move(stats));
+}
 
 

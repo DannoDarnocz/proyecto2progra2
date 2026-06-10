@@ -1,5 +1,6 @@
 #include "../../headers/world/Cell.h"
 #include "../../headers/system/Logger.h"
+#include "../../headers/exceptions/FileException.h"
 
 #include <iostream>
 
@@ -46,7 +47,14 @@ int Cell::interact(Player& player)
 
     std::cout << "Nothing here.\n";
     Logger* logger = Logger::getInstance();
-    logger->log("Found nothing.");
+    try
+    {
+        logger->log("Found nothing.");
+    }
+    catch (ErrorArchivo& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
     return -1;
 }
 
@@ -58,7 +66,14 @@ void Cell::dig(Player& player)
         state = CellState::DUG;
         if (content==nullptr) {
             std::cout << "You dig but find nothing.\n";
-            logger->log("Dug but found nothing.");
+            try
+            {
+                logger->log("Dug but found nothing.");
+            }
+            catch (ErrorArchivo& e)
+            {
+                std::cerr << e.what() << std::endl;
+            }
         }else {
             content->interact(player);
         }
