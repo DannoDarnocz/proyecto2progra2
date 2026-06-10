@@ -2,7 +2,7 @@
 // Created by axela on 9/4/2026.
 //
 
-#include "../../headers/exceptions/ErrorArchivoEscritura.h"
+#include "../../headers/exceptions/FileExceptionOut.h"
 
 
 // Store the complete message in the msg member variable during construction

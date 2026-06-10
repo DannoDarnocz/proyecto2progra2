@@ -5,7 +5,7 @@
 #ifndef PROYECTO_1_ERRORARCHIVOESCRITURA_H
 #define PROYECTO_1_ERRORARCHIVOESCRITURA_H
 
-#include "ErrorArchivo.h"
+#include "FileException.h"
 
 class ErrorArchivoEscritura : public ErrorArchivo {
 public:

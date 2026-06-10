@@ -1,5 +1,5 @@
 #include "../../headers/system/Logger.h"
-#include "../../headers/exceptions/ErrorArchivoLectura.h"
+#include "../../headers/exceptions/FileExceptionIn.h"
 #include <iostream>
 #include <ctime>
 

@@ -4,7 +4,7 @@
 
 #ifndef PROYECTO_1_ERRORARCHIVOLECTURA_H
 #define PROYECTO_1_ERRORARCHIVOLECTURA_H
-#include "ErrorArchivo.h"
+#include "FileException.h"
 
 
 class ErrorArchivoLectura : public ErrorArchivo
