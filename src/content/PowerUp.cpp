@@ -21,7 +21,7 @@ int PowerUp::interact(Player& player)
             {
                 logger->log("Player obtained a health power-up. Max HP increased +30%.");
             }
-            catch (ErrorArchivo& e)
+            catch (FileException& e)
             {
                 std::cerr << e.what() << std::endl;
             }
@@ -34,7 +34,7 @@ int PowerUp::interact(Player& player)
             {
                 logger->log("Player obtained a damage power-up. Damage increased +20%.");
             }
-            catch (ErrorArchivo& e)
+            catch (FileException& e)
             {
                 std::cerr << e.what() << std::endl;
             }
@@ -48,7 +48,7 @@ int PowerUp::interact(Player& player)
             {
                 logger->log("Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.");
             }
-            catch (ErrorArchivo& e)
+            catch (FileException& e)
             {
                 std::cerr << e.what() << std::endl;
             }

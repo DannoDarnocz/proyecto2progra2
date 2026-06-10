@@ -22,7 +22,7 @@ int Bomb::interact(Player& player)
     {
         logger->log("Dug into a bomb.");
     }
-    catch (ErrorArchivo& e)
+    catch (FileException& e)
     {
         std::cerr << e.what() << std::endl;
     }

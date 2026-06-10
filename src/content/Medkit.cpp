@@ -19,7 +19,7 @@ int Medkit::interact(Player& player)
     {
         logger->log("Restored full health with a medkit");
     }
-    catch (ErrorArchivo& e)
+    catch (FileException& e)
     {
         std::cerr << e.what() << std::endl;
     }

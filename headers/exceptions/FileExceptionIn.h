@@ -7,10 +7,10 @@
 #include "FileException.h"
 
 
-class ErrorArchivoLectura : public ErrorArchivo
+class FileExceptionIn : public FileException
 {
 public:
-    ErrorArchivoLectura(string specificMsg = "");
+    FileExceptionIn(string specificMsg = "");
     const char* what() const noexcept override;
 };
 

@@ -101,7 +101,12 @@ void Player::setDebuff(PlayerDebuff debuff)
 void Player::clearPowerUps()
 {
     // automatically deletes pointer
-    stats = nullptr;
+    stats = std::make_unique<BaseStats>();
+    //restores hp to normal max after battle
+    if (hp>calcMaxHealth())
+    {
+        hp=calcMaxHealth();
+    }
 }
 
 void Player::addHealthPowerUp() {

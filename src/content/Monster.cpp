@@ -122,7 +122,7 @@ int Monster::interact(Player& player)
     {
         logger->log("Encountered a " + type);
     }
-    catch (ErrorArchivo& e)
+    catch (FileException& e)
     {
         std::cerr << e.what() << std::endl;
     }

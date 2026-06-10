@@ -904,3 +904,81 @@ Moved left to (1,0).
 Found nothing.
 
  --- New game started ---
+
+ --- New game started ---
+
+Moved down to (1,0).
+Found nothing.
+
+Moved down to (2,0).
+Found nothing.
+
+Moved down to (3,0).
+Found nothing.
+
+Moved down to (4,0).
+Found nothing.
+
+Moved down to (5,0).
+Found nothing.
+
+Moved down to (6,0).
+Player obtained a damage power-up. Damage increased +20%.
+New player status: HP=100 | Level=1 | Active powerups: +20% more damage,  | Debuff: None
+
+Moved down to (7,0).
+Found nothing.
+
+Moved right to (7,1).
+Found nothing.
+
+Moved right to (7,2).
+Found nothing.
+
+Moved right to (7,3).
+Found nothing.
+
+Moved right to (7,4).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=130 | Level=1 | Active powerups: +20% more damage, +30% max health, +20% more damage,  | Debuff: None
+
+Moved right to (7,5).
+Found nothing.
+
+Moved right to (7,6).
+Found nothing.
+
+Moved right to (7,7).
+Found nothing.
+
+Moved right to (7,8).
+Found nothing.
+
+Moved right to (7,9).
+Encountered a Stone Golem
+Player ran away from Stone Golem and ended up in (5,9).
+
+Moved left to (5,8).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=160 | Level=1 | Active powerups: +20% more damage, +30% max health, +20% more damage, +30% max health, +20% more damage,  | Debuff: None
+
+Moved left to (5,7).
+Found nothing.
+
+Moved left to (5,6).
+Encountered a Slime
+Player defeated Slime
+
+Moved left to (5,5).
+Found nothing.
+
+Moved right to (5,6).
+Found nothing.
+
+ --- New game started ---
+
+Moved down to (1,0).
+Found nothing.
+
+Moved right to (1,1).
+Encountered a Zombie

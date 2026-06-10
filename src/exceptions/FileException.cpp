@@ -6,13 +6,13 @@
 
 // Store the complete message in the msg member variable during construction
 // to avoid memory leaks from temporary string objects in what()
-ErrorArchivo::ErrorArchivo(string specificMsg) : msg("An error occurred while manipulating the file." + (specificMsg.empty() ? "" : " (" +specificMsg + ")")) {}
+FileException::FileException(string specificMsg) : msg("An error occurred while manipulating the file." + (specificMsg.empty() ? "" : " (" +specificMsg + ")")) {}
 
-const char* ErrorArchivo::what() const noexcept
+const char* FileException::what() const noexcept
 {
     return msg.c_str();
 }
 
-string ErrorArchivo::obtenerMensaje() const {
+string FileException::obtenerMensaje() const {
     return msg;
 }

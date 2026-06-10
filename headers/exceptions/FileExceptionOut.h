@@ -7,9 +7,9 @@
 
 #include "FileException.h"
 
-class ErrorArchivoEscritura : public ErrorArchivo {
+class FileExceptionOut : public FileException {
 public:
-    ErrorArchivoEscritura(string specificMsg = "");
+    FileExceptionOut(string specificMsg = "");
     const char* what() const noexcept override;
 };
 

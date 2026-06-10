@@ -72,4 +72,6 @@ add_executable(Proyecto_II main.cpp
         headers/player/ExtraDamageStats.h
         src/player/ExtraDamageStats.cpp
         src/content/PowerUp.cpp
+        headers/system/GameController.h
+        src/system/GameController.cpp
 )

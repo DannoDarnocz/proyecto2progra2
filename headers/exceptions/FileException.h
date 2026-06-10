@@ -10,11 +10,11 @@
 
 using namespace std;
 
-class ErrorArchivo : public exception {
+class FileException : public exception {
     protected:
     string msg;
     public:
-    ErrorArchivo(string specificMsg = "");
+    FileException(string specificMsg = "");
     const char* what() const noexcept override;
     string obtenerMensaje() const;
 };

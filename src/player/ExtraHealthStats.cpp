@@ -5,7 +5,7 @@
 #include "../../headers/player/ExtraHealthStats.h"
 
 int ExtraHealthStats::calcMaxHealth(int level) const{
-    return wrappedStats->calcMaxHealth(level) * 1.3; // 20% more max health
+    return wrappedStats->calcMaxHealth(level) * 1.3; // 30% more max health
 }
 
 std::string ExtraHealthStats::toString() const

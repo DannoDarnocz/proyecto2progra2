@@ -8,11 +8,11 @@
 // Store the complete message in the msg member variable during construction
 // to avoid memory leaks from temporary string objects in what()
 
-ErrorArchivoEscritura::ErrorArchivoEscritura(string specificMsg) : ErrorArchivo("") {
+FileExceptionOut::FileExceptionOut(string specificMsg) : FileException("") {
     msg = "An error occurred while writing to the file." + (specificMsg.empty() ? "": " (" + specificMsg + ")");
 }
 
-const char* ErrorArchivoEscritura::what() const noexcept
+const char* FileExceptionOut::what() const noexcept
 {
     return msg.c_str();
 }

@@ -51,7 +51,7 @@ int Cell::interact(Player& player)
     {
         logger->log("Found nothing.");
     }
-    catch (ErrorArchivo& e)
+    catch (FileException& e)
     {
         std::cerr << e.what() << std::endl;
     }
@@ -70,7 +70,7 @@ void Cell::dig(Player& player)
             {
                 logger->log("Dug but found nothing.");
             }
-            catch (ErrorArchivo& e)
+            catch (FileException& e)
             {
                 std::cerr << e.what() << std::endl;
             }
