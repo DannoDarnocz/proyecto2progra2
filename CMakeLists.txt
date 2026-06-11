@@ -74,4 +74,6 @@ add_executable(Proyecto_II main.cpp
         src/content/PowerUp.cpp
         headers/system/GameController.h
         src/system/GameController.cpp
+        headers/strategies/LeechAttack.h
+        src/strategies/LeechAttack.cpp
 )

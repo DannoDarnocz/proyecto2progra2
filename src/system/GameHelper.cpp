@@ -226,7 +226,7 @@ void GameHelper::clearBuffer()
 }
 
 //return 0 if escaped, return 1 if player won, return -1 if player lost
-int GameHelper::combat(Player& player, Monster& monster) {
+int GameHelper::combat(Player& player, Monster& monster, int& damageDealt, int& damageTaken, int& amountDebuffs) {
     // Pre-combat: show stats and let player decide
     cout << "A " << monster.getType() << " appears!\n";
     cout << "Monster: " << monster.toString() << "\n";
@@ -297,17 +297,18 @@ int GameHelper::combat(Player& player, Monster& monster) {
                                : monster.getBaseDamage();
                     monster.takeDamage(damage);
                     cout << "You attacked for " << damage << " damage!\n";
+                    damageDealt = damageDealt + damage;
                 }
             } else {
                 // Too slow or wrote something, monster attacks
-                monster.attackPlayer(player);
+                monster.attackPlayer(player,amountDebuffs);
                 std::string strategyName = monster.getAttackStrategyName();
                 cout << "You were too slow..." <<endl;
                 if (!strategyName.empty()) {
                     cout << "The monster uses " << strategyName << "! ";
                 }
                 cout << "The monster attacks you for " << monster.getDamage() << " damage!\n";
-
+                damageTaken = damageTaken + monster.getDamage();
             }
 
         } else {
@@ -331,13 +332,14 @@ int GameHelper::combat(Player& player, Monster& monster) {
                 }
             } else {
                 // Pressed ENTER with nothing, monster attacks
-                monster.attackPlayer(player);
+                monster.attackPlayer(player,amountDebuffs);
                 std::string strategyName = monster.getAttackStrategyName();
                 cout << "You didn't type anything..." <<endl;
                 if (!strategyName.empty()) {
                     cout << "The monster uses " << strategyName << "! ";
                 }
                 cout << "It attacks you for " << monster.getDamage() << " damage!\n";
+                damageTaken = damageTaken + monster.getDamage();
             }
         }
 

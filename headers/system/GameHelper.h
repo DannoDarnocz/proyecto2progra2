@@ -38,6 +38,6 @@ namespace GameHelper
     unique_ptr<Content> createBoss(int dimension = 0);
     unique_ptr<Content> createMonster(int dimension = 0);
     void displayMap(Dimension* dimension, int playerX, int playerY);
-    int combat(Player& player, Monster& monster); // 0 if ran away, 1 if finished by either one dying
+    int combat(Player& player, Monster& monster, int& damageDealt, int& damageTaken, int& amountDebuffs); // 0 if ran away, 1 if finished by either one dying
     void slowPrint(const string& text, int delayMs = 50);
 };

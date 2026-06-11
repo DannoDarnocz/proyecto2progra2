@@ -28,8 +28,8 @@ public:
     CellState getState() const;
     void setState(CellState state);
 
-    int interact(Player& player);
-    void dig(Player& player);
+    int interact(Player& player, int& amountPowerUps);
+    void dig(Player& player, int& amountDug, int& medkitFound, int& bombFound);
 };
 
 #endif

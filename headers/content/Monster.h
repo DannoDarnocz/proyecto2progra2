@@ -18,9 +18,10 @@ private:
     std::shared_ptr<AttackStrategy> attackStrategy;
     bool isBoss;
     bool modifyStrategy;
+    bool strategyDebuffPlayer;
 
 public:
-    Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss = false, bool modifyStrategy = false);
+    Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss = false, bool modifyStrategy = false, bool strategyDebuffPlayer = false);
     virtual ~Monster();
 
     int getHp() const;
@@ -36,7 +37,7 @@ public:
 
     std::string getType() const;
 
-    void attackPlayer(Player& player);
+    void attackPlayer(Player& player, int& amountDebuffs);
     AttackStrategy* getAttackStrategy() const;
     void setAttackStrategy(std::shared_ptr<AttackStrategy> strategy);
     std::string getAttackStrategyName() const;

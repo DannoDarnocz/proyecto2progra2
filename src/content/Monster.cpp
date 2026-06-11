@@ -8,11 +8,12 @@
 #include "../../headers/player/Player.h"
 #include "../../headers/strategies/AttackStrategy.h"
 #include "../../headers/strategies/HealthLockAttack.h"
+#include "../../headers/strategies/LeechAttack.h"
 #include "../../headers/strategies/WeakenerAttack.h"
 #include "../../headers/strategies/NormalAttack.h"
 
-Monster::Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss, bool modifyStrategy)
-    : Content(true), hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss), modifyStrategy(modifyStrategy)
+Monster::Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss, bool modifyStrategy, bool strategyDebuffPlayer)
+    : Content(true), hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss), modifyStrategy(modifyStrategy), strategyDebuffPlayer(strategyDebuffPlayer)
 {
     this->maxHp = this->hp;
 }
@@ -90,10 +91,13 @@ std::string Monster::getAttackStrategyName() const
     return "";
 }
 
-void Monster::attackPlayer(Player& player)
+void Monster::attackPlayer(Player& player, int& amountDebuffs)
 {
     // delegate attack
-    if (attackStrategy) { attackStrategy->attack(player,*this); }
+    if (attackStrategy) {
+        attackStrategy->attack(player,*this);
+        if (strategyDebuffPlayer) {amountDebuffs++;}
+    }
 }
 
 void Monster::takeDamage(int amount)
@@ -102,11 +106,15 @@ void Monster::takeDamage(int amount)
     if (hp < 0) { hp = 0; }
     if (!modifyStrategy && hp <= maxHp/2) {
         modifyStrategy = true;
-        int roll = rand() % 2;
+        int roll = rand() % 3;
         if (roll==0) {
             setAttackStrategy(std::make_shared<WeakenerAttack>());
-        } else {
+            strategyDebuffPlayer = true;
+        } else if (roll==1) {
             setAttackStrategy(std::make_shared<HealthLockAttack>());
+            strategyDebuffPlayer = true;
+        } else {
+            setAttackStrategy(std::make_shared<LeechAttack>());
         }
     }
 }

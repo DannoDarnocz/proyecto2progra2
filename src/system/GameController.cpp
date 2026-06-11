@@ -47,6 +47,17 @@ int GameController::runGame() {
 
 
     bool gameRunning = true;
+    int totalKills = 0;
+    int totalEscapes = 0;
+    int damageDealt = 0;
+    int damageTaken = 0;
+    int bossesKilled = 0;
+    int debuffApplied = 0;
+    int cellVisited = 0;
+    int cellDug = 0;
+    int bombExploded = 0;
+    int medkitFound = 0;
+    int powerUpCollected = 0;
 
     // Main game loop
     while (gameRunning)
@@ -70,6 +81,7 @@ int GameController::runGame() {
                 if (currentX > 0){
                     currentX--;
                     moveDirection="up";
+                    cellVisited++;
                 }
                 else{
                     cout << "\n> You cannot move further up. You are at the boundary." << endl;
@@ -83,6 +95,7 @@ int GameController::runGame() {
                 if (currentY > 0) {
                     currentY--;
                     moveDirection="left";
+                    cellVisited++;
                 } else {
                     cout << "\n> You cannot move further left. You are at the boundary." << endl;
                     continue;
@@ -94,6 +107,7 @@ int GameController::runGame() {
                 if (currentX < currentDimension->getRows() - 1){
                     currentX++;
                     moveDirection="down";
+                    cellVisited++;
                 } else {
                     cout << "\n> You cannot move further down. You are at the boundary." << endl;
 
@@ -106,6 +120,7 @@ int GameController::runGame() {
                 if (currentY < currentDimension->getCols() - 1){
                     currentY++;
                     moveDirection="right";
+                    cellVisited++;
                 } else{
                     cout << "\n> You cannot move further right. You are at the boundary." << endl;
                     continue;
@@ -117,7 +132,7 @@ int GameController::runGame() {
                     Cell* currentCell = currentDimension->getCell(currentX, currentY);
                     if (currentCell) {
                         cout << "\n> You attempt to dig..." << endl;
-                        currentCell->dig(*player);
+                        currentCell->dig(*player,cellDug, medkitFound, bombExploded);
                     }
                 }
                 continue;
@@ -128,7 +143,23 @@ int GameController::runGame() {
                 try
                 {
                     logger->log("Player quitted game.");
-                    logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+                    logger->exportReport(
+                        GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
+                        "../final_report.txt",
+                        false,
+                        player->getLevel(),
+                        gameMap->getCurrentDimensionIndex(),
+                        totalKills,
+                        totalEscapes,
+                        damageDealt,
+                        damageTaken,
+                        bossesKilled,
+                        debuffApplied,
+                        cellVisited,
+                        cellDug,
+                        bombExploded,
+                        medkitFound,
+                        powerUpCollected); //Writes general information
                 }
                 catch (FileException& e)
                 {
@@ -157,7 +188,7 @@ int GameController::runGame() {
         if (newCell){
             if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
 
-            int interactResult = newCell->interact(*player);
+            int interactResult = newCell->interact(*player, powerUpCollected);
             // -1 = nothing, 0 = not consumable, 1 = consumable, 2 = monster
             if (interactResult == 1) {
                 try
@@ -173,7 +204,7 @@ int GameController::runGame() {
                 // iniciate combat if possible
                 if (monster = dynamic_cast<Monster*>(newCell->getContent()))
                 {
-                    int combatResult = GameHelper::combat(*player, *monster);
+                    int combatResult = GameHelper::combat(*player, *monster,damageDealt,damageTaken,debuffApplied);
                     switch (combatResult)
                     {
                         case -1: // lost
@@ -188,6 +219,7 @@ int GameController::runGame() {
                         case 0:// ran away, spawn in another cell
                             currentX=rand() % currentDimension->getRows();
                             currentY=rand() % currentDimension->getCols();
+                            totalEscapes++;
 
                             try
                             {
@@ -202,6 +234,7 @@ int GameController::runGame() {
                         case 1: // won
                             try
                             {
+                                totalKills++;
                                 logger->log("Player defeated " + monster->getType());
                                 monster->setVisible(false); // invisible to player now, gets deleted after going to another dimension
                                 player->clearPowerUps(); // clear powerups after combat win
@@ -212,6 +245,7 @@ int GameController::runGame() {
                             }
                             // If monster was bossType special event occur
                             if (monster->isBossQ()) {
+                                bossesKilled++;
                                 int nextIndex = gameMap->getCurrentDimensionIndex()+1;
                                 if (nextIndex < gameMap->getDimensionCount()) {
                                     GameHelper::slowPrint("\n====== DIMENSION CLEARED ======");
@@ -241,10 +275,25 @@ int GameController::runGame() {
                                     GameHelper::slowPrint("Silence falls. The adventure is over.");
                                     this_thread::sleep_for(chrono::milliseconds(800));
                                     GameHelper::slowPrint("You made it.");
-                                    try
-                                    {
+                                    try {
                                         logger->log("Player completed the game.");
-                                        logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
+                                        logger->exportReport(
+                                            GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
+                                            "../final_report.txt",
+                                            true,
+                                            player->getLevel(),
+                                            gameMap->getCurrentDimensionIndex(),
+                                            totalKills,
+                                            totalEscapes,
+                                            damageDealt,
+                                            damageTaken,
+                                            bossesKilled,
+                                            debuffApplied,
+                                            cellVisited,
+                                            cellDug,
+                                            bombExploded,
+                                            medkitFound,
+                                            powerUpCollected); //Writes general information
                                     }
                                     catch (FileException& e)
                                     {
@@ -273,13 +322,27 @@ int GameController::runGame() {
             cout << "You have been defeated!" << endl;
 
             // log final state
-            try
-            {
+            try {
                 logger->log("Player died.");
                 logger->log("\nGame state:");
-                logger->log(GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false), "../final_report.txt"); // do not show controls
-            }
-            catch (FileException& e)
+                logger->exportReport(
+                    GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
+                    "../final_report.txt",
+                    false,
+                    player->getLevel(),
+                    gameMap->getCurrentDimensionIndex(),
+                    totalKills,
+                    totalEscapes,
+                    damageDealt,
+                    damageTaken,
+                    bossesKilled,
+                    debuffApplied,
+                    cellVisited,
+                    cellDug,
+                    bombExploded,
+                    medkitFound,
+                    powerUpCollected); //Writes general information
+            }catch (FileException& e)
             {
                 std::cerr << e.what() << endl;
             }

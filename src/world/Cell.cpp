@@ -4,8 +4,10 @@
 
 #include <iostream>
 
+#include "../../headers/content/Bomb.h"
 #include "../../headers/player/Player.h"
 #include "../../headers/content/Content.h"
+#include "../../headers/content/Medkit.h"
 
 Cell::Cell(std::unique_ptr<Content> content, CellState state)
     : content(std::move(content)), state(state)
@@ -38,10 +40,11 @@ void Cell::setState(CellState state)
 }
 
 // boolean returns whatever content throws when interacting (should be destroyed after being used)
-int Cell::interact(Player& player)
+int Cell::interact(Player& player, int& amountPowerUps)
 {
     // if it has something and it's visible, interact right away
     if (content && content->isVisible()) {
+        if (dynamic_cast<PowerUp*>(content.get())) { amountPowerUps++; }
         return content->interact(player);
     }
 
@@ -58,12 +61,13 @@ int Cell::interact(Player& player)
     return -1;
 }
 
-void Cell::dig(Player& player)
+void Cell::dig(Player& player, int& amountDug, int& medkitFound, int& bombFound)
 {
     Logger* logger = Logger::getInstance();
     // Implementation for digging a cell
     if (state == CellState::UNEXPLORED || state == CellState::EXPLORED) {
         state = CellState::DUG;
+        amountDug++;
         if (content==nullptr) {
             std::cout << "You dig but find nothing.\n";
             try
@@ -76,6 +80,8 @@ void Cell::dig(Player& player)
             }
         }else {
             content->interact(player);
+            if (dynamic_cast<Bomb*>(content.get())) { bombFound++; }
+            if (dynamic_cast<Medkit*>(content.get())) { medkitFound++; }
         }
     }
     else if (state == CellState::DUG)
