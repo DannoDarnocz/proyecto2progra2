@@ -40,4 +40,5 @@ namespace GameHelper
     void displayMap(Dimension* dimension, int playerX, int playerY);
     int combat(Player& player, Monster& monster, int& damageDealt, int& damageTaken, int& amountDebuffs); // 0 if ran away, 1 if finished by either one dying
     void slowPrint(const string& text, int delayMs = 50);
+    void safelog(const string& message);
 };

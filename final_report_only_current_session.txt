@@ -7,8 +7,8 @@
 ----------------------------------------
 
 ========================================
-Player Status: HP=0 | Level=3 | No active powerups | Debuff: None
-Position: (6, 0)
+Player Status: HP=91 | Level=1 | Active powerups: +20% more damage, +30% max health,  | Debuff: None
+Position: (1, 3)
 ========================================
 
 Full log available at: log.txt
@@ -16,31 +16,31 @@ Full log available at: log.txt
 [FINAL RESULT]
 ----------------------------------------
 Outcome:       DEFEAT
-Level reached: 3
-Dimension:     2
+Level reached: 1
+Dimension:     1
 
 [COMBAT STATS]
 ----------------------------------------
-Monsters killed:  2
+Monsters killed:  0
 Times escaped:    0
-Bosses defeated:  1
-Debuffs received: 2
-Damage dealt:     289
-Damage taken:     192
+Bosses defeated:  0
+Debuffs received: 0
+Damage dealt:     0
+Damage taken:     0
 
 [EXPLORATION STATS]
 ----------------------------------------
-Cells visited:    30
-Cells dug:        5
+Cells visited:    4
+Cells dug:        2
 Bombs exploded:   1
 Medkits found:    1
-Power-ups collected: 3
+Power-ups collected: 1
 
 [PROGRESSION]
 ----------------------------------------
-Final level:      3
-Dimension reached: 2
-Dimensions cleared: 1
+Final level:      1
+Dimension reached: 1
+Dimensions cleared: 0
 Map cleared: No
 
 ========================================

@@ -1427,3 +1427,41 @@ Player was defeated by Possesed Armor
 Player died.
 
 Game state:
+
+ --- New game started ---
+
+ --- New game started ---
+
+Moved right to (0,1).
+Player obtained a health power-up. Max HP increased +30%.
+New player status: HP=130 | Level=1 | Active powerups: +30% max health,  | Debuff: None
+
+Moved right to (0,2).
+Found nothing.
+Restored full health with a medkit
+
+Moved right to (0,3).
+Found nothing.
+
+Moved down to (1,3).
+Found nothing.
+Dug into a bomb.
+Player quitted game.
+
+ --- New game started ---
+
+Moved right to (0,1).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=130 | Level=1 | Active powerups: +20% more damage, +30% max health,  | Debuff: None
+
+Moved right to (0,2).
+Found nothing.
+Restored full health with a medkit
+
+Moved right to (0,3).
+Found nothing.
+
+Moved down to (1,3).
+Found nothing.
+Dug into a bomb.
+Player quitted game.

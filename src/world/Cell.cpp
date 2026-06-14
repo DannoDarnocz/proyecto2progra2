@@ -6,6 +6,7 @@
 
 #include "../../headers/player/Player.h"
 #include "../../headers/content/Content.h"
+#include "../../headers/system/GameHelper.h"
 
 Cell::Cell(std::unique_ptr<Content> content, CellState state)
     : content(std::move(content)), state(state)
@@ -47,15 +48,7 @@ InteractResult Cell::interact(Player& player, int& amountPowerUps)
     }
 
     std::cout << "Nothing here.\n";
-    Logger* logger = Logger::getInstance();
-    try
-    {
-        logger->log("Found nothing.");
-    }
-    catch (FileException& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    GameHelper::safelog("Found nothing.");
     return InteractResult::NOTHING;
 }
 
@@ -68,14 +61,7 @@ void Cell::dig(Player& player, int& amountDug, int& medkitFound, int& bombFound)
         amountDug++;
         if (content==nullptr) {
             std::cout << "You dig but find nothing.\n";
-            try
-            {
-                logger->log("Dug but found nothing.");
-            }
-            catch (FileException& e)
-            {
-                std::cerr << e.what() << std::endl;
-            }
+            GameHelper::safelog("Dug but found nothing.");
         }else {
             content->interact(player);
             if (content->getContentType() == ContentType::BOMB) { bombFound++; }

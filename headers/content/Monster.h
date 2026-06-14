@@ -14,8 +14,8 @@ private:
     int baseDamage;
     int level;
     int maxHp;
-    std::string type;
     std::shared_ptr<AttackStrategy> attackStrategy;
+    std::string type;
     bool isBoss;
     bool modifyStrategy;
     bool strategyDebuffPlayer;

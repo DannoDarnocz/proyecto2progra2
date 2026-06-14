@@ -9,14 +9,7 @@ int GameController::runGame() {
 
     // Create logger
     Logger* logger = Logger::getInstance();
-    try
-    {
-        logger->log("\n --- New game started ---");
-    }
-    catch (FileException& e)
-    {
-        std::cerr << e.what() << endl;
-    }
+    GameHelper::safelog("\n --- New game started ---");
 
     // Load map from files
     Map* gameMap = nullptr;
@@ -27,8 +20,7 @@ int GameController::runGame() {
     catch (const FileException& e)
     {
         cerr << "Error loading map: " << e.what() << endl;
-        try { logger->log(string("Map loading failed: ") + e.what()); }
-        catch (const FileException&) { /*logger itself failed*/ }
+        GameHelper::safelog(string("Map loading failed: ") + e.what());
         return 1;
     }
 
@@ -185,14 +177,7 @@ int GameController::runGame() {
         }
 
         // do stuff if player moved to a valid new cell
-        try
-        {
-            logger->log("\nMoved "+moveDirection+" to ("+to_string(currentX)+"," + to_string(currentY) +").");
-        }
-        catch (const exception& e)
-        {
-            cerr << e.what() << endl;
-        }
+        GameHelper::safelog("\nMoved "+moveDirection+" to ("+to_string(currentX)+"," + to_string(currentY) +").");
 
         // interact if new cell is valid
         newCell = currentDimension->getCell(currentX, currentY);
@@ -202,13 +187,7 @@ int GameController::runGame() {
             InteractResult interactResult = newCell->interact(*player, powerUpCollected);
             // -1 = nothing, 0 = not consumable, 1 = consumable, 2 = monster
             if (interactResult == InteractResult::CONSUMABLE) {
-                try
-                {
-                    logger->log("New player status: " + player->toString());
-                } catch (FileException& e)
-                {
-                    cerr << e.what() << endl;
-                }
+                GameHelper::safelog("New player status: " + player->toString());
                 newCell->setContent(nullptr); // remove content if consumable
             } else if (interactResult == InteractResult::MONSTER) {
                 Monster* monster = nullptr;
@@ -219,29 +198,17 @@ int GameController::runGame() {
                     switch (combatResult)
                     {
                         case -1: // lost
-                        try
-                        {
-                            logger->log("Player was defeated by " + monster->getType());
-                        }catch (FileException& e)
-                        {
-                            std::cerr << e.what() << endl;
-                        }
-                        break;
+                            GameHelper::safelog("Player was defeated by " + monster->getType());
+                            break;
                         case 0:// ran away, spawn in another cell
                             currentX=rand() % currentDimension->getRows();
                             currentY=rand() % currentDimension->getCols();
                             totalEscapes++;
 
-                            try
-                            {
-                                logger->log("Player ran away from " + monster->getType() + " and ended up in (" + to_string(currentX) + "," + to_string(currentY) + ").");
-                            }catch (FileException& e)
-                            {
-                                std::cerr << e.what() << endl;
-                            }
+                            GameHelper::safelog("Player ran away from " + monster->getType() + " and ended up in (" + to_string(currentX) + "," + to_string(currentY) + ").");
 
                             cout << "You escaped but ended up in a random cell! (whatever is in there will not harm you until you enter again)"<< endl << endl;
-                        break;
+                            break;
                         case 1: // won
                             try
                             {
@@ -269,14 +236,7 @@ int GameController::runGame() {
                                     gameMap->changeDimension(nextIndex);
                                     currentDimension = gameMap->getCurrentDimension();
                                     currentX = 0; currentY = 0;
-                                    try
-                                    {
-                                        logger->log("Player advanced to dimension " + to_string(nextIndex));
-                                    }
-                                    catch (FileException& e)
-                                    {
-                                        std::cerr << e.what() << endl;
-                                    }
+                                    GameHelper::safelog("Player advanced to dimension " + to_string(nextIndex));
                                 }
                                 else {
                                     GameHelper::slowPrint("\n====== YOU WIN ======");

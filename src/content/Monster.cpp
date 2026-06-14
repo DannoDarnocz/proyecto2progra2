@@ -12,6 +12,7 @@
 #include "../../headers/strategies/WeakenerAttack.h"
 #include "../../headers/strategies/NormalAttack.h"
 #include "../../headers/system/GameConstants.h"
+#include "../../headers/system/GameHelper.h"
 
 Monster::Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss, bool modifyStrategy, bool strategyDebuffPlayer)
     : Content(true), hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss), modifyStrategy(modifyStrategy), strategyDebuffPlayer(strategyDebuffPlayer)
@@ -121,15 +122,7 @@ InteractResult Monster::interact(Player& player)
     if (hp<=0) return InteractResult::NOT_CONSUMABLE;
 
     // Return 2 to indicate this is a monster
-    Logger* logger = Logger::getInstance(); //get logger instance
-    try
-    {
-        logger->log("Encountered a " + type);
-    }
-    catch (FileException& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    GameHelper::safelog("Encountered a " + type);
 
     return InteractResult::MONSTER;
 }

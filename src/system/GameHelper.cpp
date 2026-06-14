@@ -501,3 +501,14 @@ void GameHelper::slowPrint(const string& text, int delayMs)
     }
     cout << endl;
 }
+
+void GameHelper::safelog(const string &message) {
+    try
+    {
+        Logger::getInstance()->log(message);
+    }
+    catch (const FileException& e)
+    {
+        cerr << e.what() << endl;
+    }
+}

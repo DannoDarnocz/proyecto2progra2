@@ -9,20 +9,13 @@
 #include "../../headers/player/Player.h"
 #include "../../headers/system/Logger.h"
 #include "../../headers/exceptions/FileException.h"
+#include "../../headers/system/GameHelper.h"
 
 InteractResult Medkit::interact(Player& player)
 {
     player.setHp(player.calcMaxHealth()); // Heal the player fully
     std::cout << "Excellent! You found a Medkit and healed to 100% HP!" << std::endl;
-    Logger* logger = Logger::getInstance(); //get logger instance
-    try
-    {
-        logger->log("Restored full health with a medkit");
-    }
-    catch (FileException& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    GameHelper::safelog("Restored full health with a medkit");
     return InteractResult::CONSUMABLE;  // Medkit is always consumable
 }
 
