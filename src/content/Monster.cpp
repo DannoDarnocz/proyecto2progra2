@@ -11,6 +11,7 @@
 #include "../../headers/strategies/LeechAttack.h"
 #include "../../headers/strategies/WeakenerAttack.h"
 #include "../../headers/strategies/NormalAttack.h"
+#include "../../headers/system/GameConstants.h"
 
 Monster::Monster(int hp, int damage, int level, std::shared_ptr<AttackStrategy> strategy, std::string type, bool isBoss, bool modifyStrategy, bool strategyDebuffPlayer)
     : Content(true), hp(hp), baseDamage(damage), level(level), attackStrategy(strategy),type(type), isBoss(isBoss), modifyStrategy(modifyStrategy), strategyDebuffPlayer(strategyDebuffPlayer)
@@ -30,6 +31,10 @@ std::string Monster::toString()
 int Monster::getHp() const
 {
     return hp;
+}
+
+int Monster::getMaxHp() const {
+    return maxHp;
 }
 
 std::string Monster::getType() const
@@ -54,7 +59,7 @@ void Monster::setDamage(int damage)
 
 int Monster::getDamage()
 {
-    return baseDamage+(level-1)*10;
+    return baseDamage+(level-1)*GameConstants::MONSTER_DAMAGE_PER_LEVEL;
 }
 
 int Monster::getLevel() const
@@ -79,16 +84,7 @@ void Monster::setAttackStrategy(std::shared_ptr<AttackStrategy> strategy)
 
 std::string Monster::getAttackStrategyName() const
 {
-    if (!attackStrategy) return "";
-
-    if (dynamic_cast<NormalAttack*>(attackStrategy.get())) {
-        return "Normal Attack";
-    } else if (dynamic_cast<WeakenerAttack*>(attackStrategy.get())) {
-        return "Weakener Attack";
-    } else if (dynamic_cast<HealthLockAttack*>(attackStrategy.get())) {
-        return "Health Lock Attack";
-    }
-    return "";
+    return attackStrategy ? attackStrategy->getName() : "";
 }
 
 void Monster::attackPlayer(Player& player, int& amountDebuffs)
@@ -119,10 +115,10 @@ void Monster::takeDamage(int amount)
     }
 }
 
-int Monster::interact(Player& player)
+InteractResult Monster::interact(Player& player)
 {
     // If HP is already 0, then the player defeated it previously. Do not engage in combat
-    if (hp<=0) return 0;
+    if (hp<=0) return InteractResult::NOT_CONSUMABLE;
 
     // Return 2 to indicate this is a monster
     Logger* logger = Logger::getInstance(); //get logger instance
@@ -135,7 +131,7 @@ int Monster::interact(Player& player)
         std::cerr << e.what() << std::endl;
     }
 
-    return 2;
+    return InteractResult::MONSTER;
 }
 
 bool Monster::isBossQ() {

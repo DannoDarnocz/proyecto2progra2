@@ -2,7 +2,7 @@
 #include "../../headers/world/Cell.h"
 
 Dimension::Dimension(int rows, int cols)
-    : rows(rows), cols(cols), boss(nullptr)
+    : rows(rows), cols(cols)
 {
     matrix.resize(rows);
     for (int i = 0; i < rows; ++i) {
@@ -33,17 +33,6 @@ void Dimension::setCell(int x, int y, Cell* cell)
         matrix[x][y] = cell;
     }
 }
-
-Content* Dimension::getBoss() const
-{
-    return boss;
-}
-
-void Dimension::setBoss(Content* boss)
-{
-    this->boss = boss;
-}
-
 
 int Dimension::getRows() const
 {

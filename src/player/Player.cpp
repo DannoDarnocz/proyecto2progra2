@@ -5,6 +5,8 @@
 #include "../../headers/player/BaseStats.h"
 #include <algorithm>
 
+#include "../../headers/system/GameConstants.h"
+
 Player::Player(int hp, int level)
     : hp(hp), level(level)
 {
@@ -114,7 +116,7 @@ void Player::addHealthPowerUp() {
     stats = std::make_unique<ExtraHealthStats>(std::move(stats));
 
     // automatically adjust +30 hp
-    heal(30);
+    heal(GameConstants::HEALTH_POWERUP_HEAL_AMOUNT);
 }
 
 void Player::addDamagePowerUp() {

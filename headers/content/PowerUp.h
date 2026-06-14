@@ -10,9 +10,10 @@ class PowerUp : public Content
 public:
     PowerUp(bool isVisible = true, bool isConsumable = true):Content(isVisible,isConsumable){}; // visible by default, consumable by default
 
-    int interact(Player& player) override;
+    InteractResult interact(Player& player) override;
 
     std::string toString() override;
+    ContentType getContentType() const override { return ContentType::POWERUP; }
 };
 
 #endif

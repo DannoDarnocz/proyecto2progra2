@@ -10,7 +10,7 @@
 #include "../../headers/system/Logger.h"
 #include "../../headers/exceptions/FileException.h"
 
-int Medkit::interact(Player& player)
+InteractResult Medkit::interact(Player& player)
 {
     player.setHp(player.calcMaxHealth()); // Heal the player fully
     std::cout << "Excellent! You found a Medkit and healed to 100% HP!" << std::endl;
@@ -23,7 +23,7 @@ int Medkit::interact(Player& player)
     {
         std::cerr << e.what() << std::endl;
     }
-    return 1;  // Medkit is always consumable
+    return InteractResult::CONSUMABLE;  // Medkit is always consumable
 }
 
 std::string Medkit::toString()

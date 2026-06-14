@@ -14,6 +14,7 @@ public:
     virtual ~LeechAttack();
 
     virtual void attack(Player& player, Monster& monster) override;
+    std::string getName() const override { return "Leech Attack"; }
 };
 
 #endif //PROYECTO_II_LEECHATTACK_H

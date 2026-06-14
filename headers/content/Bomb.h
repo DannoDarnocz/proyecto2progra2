@@ -11,8 +11,9 @@ class Bomb : public Content
 {
 public:
     Bomb(bool isVisible = false, bool isConsumable = true):Content(isVisible, isConsumable){}; // not visible by default
-    int interact(Player& player) override;
+    InteractResult interact(Player& player) override;
     std::string toString() override;
+    ContentType getContentType() const override { return ContentType::BOMB; }
 };
 
 #endif //PROYECTO_II_BOMB_H

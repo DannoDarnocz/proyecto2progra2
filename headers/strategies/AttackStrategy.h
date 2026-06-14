@@ -10,6 +10,7 @@ public:
     virtual ~AttackStrategy();
 
     virtual void attack(Player& player, Monster& monster) = 0;
+    virtual std::string getName() const = 0;
 };
 
 #endif

@@ -9,11 +9,12 @@
 #include <iostream>
 
 #include "../../headers/player/Player.h"
+#include "../../headers/system/GameConstants.h"
 
-int Bomb::interact(Player& player)
+InteractResult Bomb::interact(Player& player)
 {
     // Bomb explodes and deals 30% damage (never kills the player)
-    player.takeDamage(player.getHp()*0.3);
+    player.takeDamage(player.getHp()*GameConstants::BOMB_DAMAGE);
     if (player.getHp() < 1) { player.setHp(1); }  // HP always stays in 1 to prevent death of the player
     std::cout << "Boom! The bomb explodes and deals 30% damage to you!" << std::endl;
 
@@ -27,7 +28,7 @@ int Bomb::interact(Player& player)
         std::cerr << e.what() << std::endl;
     }
 
-    return 1;  // Return 1 if consumable, 0 if not
+    return InteractResult::CONSUMABLE;
 }
 
 std::string Bomb::toString()

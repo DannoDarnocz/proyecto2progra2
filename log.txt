@@ -1180,3 +1180,250 @@ Moved up to (1,1).
 Encountered a Slime
 Player defeated Slime
 Player quitted game.
+
+ --- New game started ---
+
+Moved right to (0,1).
+Player obtained a health power-up. Max HP increased +30%.
+New player status: HP=130 | Level=1 | Active powerups: +30% max health,  | Debuff: None
+
+Moved right to (0,2).
+Found nothing.
+
+Moved right to (0,3).
+Found nothing.
+
+Moved right to (0,4).
+Found nothing.
+
+Moved right to (0,5).
+Found nothing.
+
+Moved right to (0,6).
+Found nothing.
+
+Moved right to (0,7).
+Found nothing.
+
+Moved right to (0,8).
+Found nothing.
+
+Moved right to (0,9).
+Found nothing.
+
+Moved down to (1,9).
+Found nothing.
+
+Moved down to (2,9).
+Found nothing.
+
+Moved down to (3,9).
+Found nothing.
+
+Moved down to (4,9).
+Found nothing.
+
+Moved down to (5,9).
+Found nothing.
+
+Moved down to (6,9).
+Found nothing.
+
+Moved down to (7,9).
+Encountered a Stone Golem
+Player obtained a damage power-up. Damage increased +20%.
+Player defeated Stone Golem
+Player advanced to dimension 1
+
+ --- New game started ---
+
+ --- New game started ---
+
+ --- New game started ---
+
+ --- New game started ---
+
+ --- New game started ---
+
+Moved right to (0,1).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=130 | Level=1 | Active powerups: +20% more damage, +30% max health,  | Debuff: None
+
+Moved right to (0,2).
+Found nothing.
+
+Moved down to (1,2).
+Found nothing.
+
+Moved right to (1,3).
+Found nothing.
+Dug into a bomb.
+
+Moved left to (1,2).
+Found nothing.
+
+Moved left to (1,1).
+Encountered a Goblin
+
+ --- New game started ---
+
+Moved down to (1,0).
+Found nothing.
+
+Moved right to (1,1).
+Encountered a Zombie
+Player defeated Zombie
+
+Moved right to (1,2).
+Found nothing.
+
+Moved up to (0,2).
+Found nothing.
+
+Moved right to (0,3).
+Found nothing.
+
+Moved down to (1,3).
+Found nothing.
+Dug into a bomb.
+
+Moved down to (2,3).
+Found nothing.
+
+Moved down to (3,3).
+Found nothing.
+
+Moved down to (4,3).
+Encountered a Zombie
+Player defeated Zombie
+
+Moved up to (3,3).
+Found nothing.
+
+Moved left to (3,2).
+Found nothing.
+
+Moved up to (2,2).
+Found nothing.
+
+Moved up to (1,2).
+Found nothing.
+
+Moved up to (0,2).
+Found nothing.
+Restored full health with a medkit
+
+Moved right to (0,3).
+Found nothing.
+
+Moved right to (0,4).
+Found nothing.
+Player quitted game.
+
+ --- New game started ---
+
+Moved right to (0,1).
+Player obtained a health power-up. Max HP increased +30%.
+New player status: HP=130 | Level=1 | Active powerups: +30% max health,  | Debuff: None
+
+Moved right to (0,2).
+Found nothing.
+
+Moved down to (1,2).
+Found nothing.
+
+Moved up to (0,2).
+Found nothing.
+Restored full health with a medkit
+
+Moved right to (0,3).
+Found nothing.
+Dug but found nothing.
+
+Moved right to (0,4).
+Found nothing.
+
+Moved down to (1,4).
+Player obtained a health power-up. Max HP increased +30%.
+New player status: HP=160 | Level=1 | Active powerups: +30% max health, +30% max health,  | Debuff: None
+Dug but found nothing.
+
+Moved left to (1,3).
+Found nothing.
+Dug into a bomb.
+
+Moved left to (1,2).
+Found nothing.
+
+Moved left to (1,1).
+Encountered a Goblin
+Player defeated Goblin
+
+Moved right to (1,2).
+Found nothing.
+
+Moved right to (1,3).
+Found nothing.
+
+Moved right to (1,4).
+Found nothing.
+
+Moved right to (1,5).
+Found nothing.
+
+Moved right to (1,6).
+Found nothing.
+
+Moved right to (1,7).
+Found nothing.
+
+Moved right to (1,8).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=142 | Level=2 | Active powerups: +20% more damage, +30% max health,  | Debuff: None
+
+Moved right to (1,9).
+Found nothing.
+
+Moved down to (2,9).
+Found nothing.
+
+Moved down to (3,9).
+Found nothing.
+
+Moved down to (4,9).
+Found nothing.
+
+Moved down to (5,9).
+Found nothing.
+
+Moved down to (6,9).
+Found nothing.
+
+Moved down to (7,9).
+Encountered a Stone Golem
+Player obtained a damage power-up. Damage increased +20%.
+Player defeated Stone Golem
+Player advanced to dimension 1
+
+Moved down to (1,0).
+Found nothing.
+
+Moved down to (2,0).
+Found nothing.
+Dug but found nothing.
+
+Moved down to (3,0).
+Found nothing.
+
+Moved down to (4,0).
+Found nothing.
+
+Moved down to (5,0).
+Found nothing.
+
+Moved down to (6,0).
+Encountered a Possesed Armor
+Player was defeated by Possesed Armor
+Player died.
+
+Game state:

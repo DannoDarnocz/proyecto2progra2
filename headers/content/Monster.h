@@ -26,6 +26,7 @@ public:
 
     int getHp() const;
     void setHp(int hp);
+    int getMaxHp() const;
 
     int getBaseDamage() const;
     void setDamage(int damage);
@@ -46,9 +47,10 @@ public:
 
     std::string toString() override;
 
-    int interact(Player& player) override;
+    InteractResult interact(Player& player) override;
 
     bool isBossQ();
+    ContentType getContentType() const override { return ContentType::MONSTER; }
 };
 
 #endif

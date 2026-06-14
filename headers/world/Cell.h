@@ -2,6 +2,8 @@
 #define CELL_H
 #include <memory>
 
+#include "../content/Content.h"
+
 class Player;
 class Content;
 
@@ -28,7 +30,7 @@ public:
     CellState getState() const;
     void setState(CellState state);
 
-    int interact(Player& player, int& amountPowerUps);
+    InteractResult interact(Player& player, int& amountPowerUps);
     void dig(Player& player, int& amountDug, int& medkitFound, int& bombFound);
 };
 

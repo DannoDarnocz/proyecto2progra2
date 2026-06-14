@@ -3,13 +3,16 @@
 //
 
 #include "../../headers/player/BaseStats.h"
+
+#include "../../headers/system/GameConstants.h"
+
 int BaseStats::calcMaxHealth(int lvl) const
 {
-    return 100+(lvl-1)*15;
+    return GameConstants::BASE_PLAYER_HP+(lvl-1)*GameConstants::PLAYER_HP_PER_LEVEL;
 }
 int BaseStats::calcDamage(int lvl) const
 {
-    return 15+(lvl-1)*10;
+    return GameConstants::BASE_PLAYER_DAMAGE+(lvl-1)*GameConstants::PLAYER_DAMAGE_PER_LEVEL;
 }
 
 std::string BaseStats::toString() const

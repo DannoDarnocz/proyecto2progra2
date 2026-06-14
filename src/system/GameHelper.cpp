@@ -4,6 +4,8 @@
 
 #include "../../headers/system/GameHelper.h"
 
+#include "../../headers/exceptions/FileExceptionIn.h"
+
 // Load map from input file (placeholder implementation)
 Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
 {
@@ -40,12 +42,18 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
 
     string token;
     int numDimensions;
-    file >> token >> numDimensions; // Read "DIMENSIONS 3"
+    if (!(file >> token >> numDimensions) || token != "DIMENSIONS" || numDimensions <= 0)
+    {
+        throw FileExceptionIn("Invalid or missing 'DIMENSIONS' header in map_data.txt");
+    } // Read "DIMENSIONS 3"
 
     for (int d = 0; d < numDimensions; d++) //The amount of dimensions of the game
     {
         int rows, cols;
-        file >> token >> rows >> cols; // Read "DIM 8 10"
+        if (!(file >> token >> rows >> cols) || token != "DIM" || rows <= 0 || cols <= 0)
+        {
+            throw FileExceptionIn("Invalid or missing 'DIM' header for dimension " + to_string(d));
+        } // Read "DIM 3,8" as example
 
         Dimension* dimension = new Dimension(rows, cols);
 
@@ -53,8 +61,16 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
         {
             for (int j = 0; j < cols; j++)
             {
+
+
                 char cell;  //Each character represent something in the map
-                file >> cell;  //Read Character { '.' = Empty, 'B' = Bomb, 'M' = Monster, 'J'|'K'|'F' = BOSS}
+                if (!(file >> cell))
+                {
+                    delete dimension;
+                    throw FileExceptionIn(
+                        "Unexpected end of file or invalid character at dimension "
+                        + to_string(d) + ", cell (" + to_string(i) + "," + to_string(j) + ")");
+                }  //Read Character { '.' = Empty, 'B' = Bomb, 'M' = Monster, 'J'|'K'|'F' = BOSS}
 
                 if (i == 0 && j == 0)
                 {
@@ -64,9 +80,11 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
 
                 unique_ptr<Content> content = nullptr;
 
-                if (cell == 'B')
+                if (cell == '.')
+                    content = nullptr;
+                else if (cell == 'B')
                     content = make_unique<Bomb>();
-                if (cell == 'H')
+                else if (cell == 'H')
                     content = make_unique<Medkit>();
                 else if (cell == 'M')
                     content = createMonster(d);
@@ -74,6 +92,8 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
                     content = make_unique<PowerUp>();
                 else if (cell == 'J' || cell == 'K' || cell == 'F')
                     content = createBoss(d);
+                else
+                    throw FileExceptionIn("Unknown cell character '" + string(1, cell) + "' at dimension " + to_string(d) + ", cell (" + to_string(i) + "," + to_string(j) + ")");
 
                 dimension->setCell(i, j, new Cell(std::move(content)));
             }
@@ -117,22 +137,32 @@ void GameHelper::displayCellInfo(Cell* cell, int x, int y)
     }
     else if (content && !content->isVisible())
     {
-        Bomb* bomb = dynamic_cast<Bomb*>(content);
-        Monster* monster = dynamic_cast<Monster*>(content);
-        Medkit* medkit = dynamic_cast<Medkit*>(content);
-
-        if (medkit && (cell->getState() == CellState::DUG))
-            cout << "An opened medkit lies here. Nothing useful left..." << endl;
-        else if (bomb && cell->getState() == CellState::DUG)
-            cout << "Bomb fragments are scattered here." << endl;
-        else if (monster && monster->getHp() <= 0)
-            cout << "Remains of a " << monster->getType() << " lie here." << endl;
-        else
-            cout << "No visible content." << endl;
-    }
-    else
-    {
-        cout << "No visible content." << endl;
+        switch (content->getContentType())
+        {
+            case ContentType::MEDKIT:
+                if (cell->getState() == CellState::DUG)
+                    cout << "An opened medkit lies here. Nothing useful left..." << endl;
+                else
+                    cout << "No visible content." << endl;
+                break;
+            case ContentType::BOMB:
+                if (cell->getState() == CellState::DUG)
+                    cout << "Bomb fragments are scattered here." << endl;
+                else
+                    cout << "No visible content." << endl;
+                break;
+            case ContentType::MONSTER:
+            {
+                Monster* monster = dynamic_cast<Monster*>(content);
+                if (monster->getHp() <= 0)
+                    cout << "Remains of a " << monster->getType() << " lie here." << endl;
+                else
+                    cout << "No visible content." << endl;
+                break;
+            }
+            default:
+                cout << "No visible content." << endl;
+        }
     }
 }
 
@@ -432,8 +462,8 @@ void GameHelper::displayMap(Dimension* dimension, int playerX, int playerY)
             Content* content = cell->getContent();
 
             if (content && content->isVisible()) {
-                Monster* m = dynamic_cast<Monster*>(content);
-                if (m) {
+                if (content->getContentType() == ContentType::MONSTER) {
+                    Monster* m = dynamic_cast<Monster*>(content);
                     cout << (m->isBossQ() ? "J " : "M ");
                 }
                 else {
@@ -441,14 +471,12 @@ void GameHelper::displayMap(Dimension* dimension, int playerX, int playerY)
                 }
             }
             else if (content && !content->isVisible()) {
-                Bomb* bomb = dynamic_cast<Bomb*>(content);
-                Medkit* k = dynamic_cast<Medkit*>(content);
+                ContentType type = content->getContentType();
 
-                if (bomb && state == CellState::DUG)
+                if (type == ContentType::BOMB && state == CellState::DUG)
                     cout << "B ";
-                else if (k && state == CellState::DUG) {
+                else if (type == ContentType::MEDKIT && state == CellState::DUG)
                     cout << "H ";
-                }
                 else
                     cout << (state == CellState::DUG ? "X " : ". ");
             }

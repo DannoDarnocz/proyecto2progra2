@@ -9,7 +9,7 @@
 #include "../../headers/system/Logger.h"
 #include "../../headers/exceptions/FileException.h"
 
-int PowerUp::interact(Player& player)
+InteractResult PowerUp::interact(Player& player)
 {
     Logger* logger=Logger::getInstance();
     int randomPowerUp = rand()%3;
@@ -55,7 +55,7 @@ int PowerUp::interact(Player& player)
             std::cout << "You got a health and damage power-up! Max HP (+30%) and damage (20%) increased.\n";
             break;
     }
-    return consumable;
+    return consumable ? InteractResult::CONSUMABLE : InteractResult::NOT_CONSUMABLE;
 }
 
 std::string PowerUp::toString()

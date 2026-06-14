@@ -7,8 +7,30 @@
 int GameController::runGame() {
     srand(time(NULL));
 
+    // Create logger
+    Logger* logger = Logger::getInstance();
+    try
+    {
+        logger->log("\n --- New game started ---");
+    }
+    catch (FileException& e)
+    {
+        std::cerr << e.what() << endl;
+    }
+
     // Load map from files
-    Map* gameMap = GameHelper::loadMapFromFiles("../map_data.txt");
+    Map* gameMap = nullptr;
+    try
+    {
+        gameMap = GameHelper::loadMapFromFiles("../map_data.txt");
+    }
+    catch (const FileException& e)
+    {
+        cerr << "Error loading map: " << e.what() << endl;
+        try { logger->log(string("Map loading failed: ") + e.what()); }
+        catch (const FileException&) { /*logger itself failed*/ }
+        return 1;
+    }
 
     // Check if map was loaded successfully
     if (!gameMap || gameMap->getDimensionCount() == 0)
@@ -29,17 +51,6 @@ int GameController::runGame() {
     {
         cerr << "Invalid starting position. Exiting." << endl;
         return 1;
-    }
-
-    // Create logger
-    Logger* logger = Logger::getInstance();
-    try
-    {
-        logger->log("\n --- New game started ---");
-    }
-    catch (FileException& e)
-    {
-        std::cerr << e.what() << endl;
     }
 
     cout << "====== BLOCK WORLD ======" << endl;
@@ -188,9 +199,9 @@ int GameController::runGame() {
         if (newCell){
             if (newCell->getState() == CellState::UNEXPLORED) { newCell->setState(CellState::EXPLORED); }
 
-            int interactResult = newCell->interact(*player, powerUpCollected);
+            InteractResult interactResult = newCell->interact(*player, powerUpCollected);
             // -1 = nothing, 0 = not consumable, 1 = consumable, 2 = monster
-            if (interactResult == 1) {
+            if (interactResult == InteractResult::CONSUMABLE) {
                 try
                 {
                     logger->log("New player status: " + player->toString());
@@ -199,7 +210,7 @@ int GameController::runGame() {
                     cerr << e.what() << endl;
                 }
                 newCell->setContent(nullptr); // remove content if consumable
-            } else if (interactResult == 2) {
+            } else if (interactResult == InteractResult::MONSTER) {
                 Monster* monster = nullptr;
                 // iniciate combat if possible
                 if (monster = dynamic_cast<Monster*>(newCell->getContent()))

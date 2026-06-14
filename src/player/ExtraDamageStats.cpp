@@ -4,9 +4,11 @@
 
 #include "../../headers/player/ExtraDamageStats.h"
 
+#include "../../headers/system/GameConstants.h"
+
 int ExtraDamageStats::calcDamage(int level) const
 {
-    return wrappedStats->calcDamage(level) * 1.2; // 20% more damage
+    return wrappedStats->calcDamage(level) * GameConstants::EXTRA_DAMAGE_MULTIPLIER; // 20% more damage
 }
 
 std::string ExtraDamageStats::toString() const

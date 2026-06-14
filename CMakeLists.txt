@@ -45,21 +45,9 @@ add_executable(Proyecto_II main.cpp
         headers/exceptions/FileException.h
         headers/exceptions/FileExceptionOut.h
         headers/exceptions/FileExceptionIn.h
-        headers/exceptions/ErrorCast.h
-        headers/exceptions/ErrorDecimal.h
-        headers/exceptions/ErrorNegativo.h
-        headers/exceptions/ErrorPuntero.h
-        headers/exceptions/ErrorRango.h
-        headers/exceptions/ErrorValor.h
         src/exceptions/FileException.cpp
         src/exceptions/FileExceptionOut.cpp
         src/exceptions/FileExceptionIn.cpp
-        src/exceptions/ErrorCast.cpp
-        src/exceptions/ErrorDecimal.cpp
-        src/exceptions/ErrorNegativo.cpp
-        src/exceptions/ErrorPuntero.cpp
-        src/exceptions/ErrorRango.cpp
-        src/exceptions/ErrorValor.cpp
         headers/system/GameHelper.h
         src/system/GameHelper.cpp
         headers/player/IStats.h
@@ -76,4 +64,5 @@ add_executable(Proyecto_II main.cpp
         src/system/GameController.cpp
         headers/strategies/LeechAttack.h
         src/strategies/LeechAttack.cpp
+        headers/system/GameConstants.h
 )

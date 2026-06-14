@@ -25,7 +25,7 @@ std::string StatsDecorator::toString() const
 }
 std::string StatsDecorator::toStringOnlyAttack() const
 {
-    return wrappedStats->toString();
+    return wrappedStats->toStringOnlyAttack();
 }
 std::string StatsDecorator::toStringOnlyHealth() const
 {
