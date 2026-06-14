@@ -23,7 +23,6 @@ public:
     int calcMaxHealth(int) const override;
 
     int calcDamage(int) const override;
-    void emptyStats();
     IStats& getWrappedStats();
 };
 

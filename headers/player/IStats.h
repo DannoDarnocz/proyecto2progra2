@@ -5,6 +5,8 @@
 #ifndef PROYECTO_II_ISTATS_H
 #define PROYECTO_II_ISTATS_H
 
+#include <string>
+
 class IStats
 {
 public:

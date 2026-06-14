@@ -10,10 +10,6 @@ int StatsDecorator::calcDamage(int level) const {
     return wrappedStats->calcDamage(level);
 }
 
-void StatsDecorator::emptyStats()
-{
-    getWrappedStats();
-};
 IStats& StatsDecorator::getWrappedStats()
 {
     return *wrappedStats;

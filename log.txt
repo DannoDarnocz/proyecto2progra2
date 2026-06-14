@@ -1465,3 +1465,7 @@ Moved down to (1,3).
 Found nothing.
 Dug into a bomb.
 Player quitted game.
+
+ --- New game started ---
+
+ --- New game started ---
