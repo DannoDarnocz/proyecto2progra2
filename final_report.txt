@@ -388,3 +388,51 @@ Map cleared: No
 ========================================
 
 
+
+========================================
+      BLOCK WORLD - FINAL REPORT
+========================================
+
+[SESSION INFO]
+----------------------------------------
+
+========================================
+Player Status: HP=100 | Level=1 | No active powerups | Debuff: None
+Position: (0, 0)
+========================================
+
+Full log available at: log.txt
+
+[FINAL RESULT]
+----------------------------------------
+Outcome:       QUIT
+Level reached: 1
+Dimension:     1
+
+[COMBAT STATS]
+----------------------------------------
+Monsters killed:  0
+Times escaped:    0
+Bosses defeated:  0
+Debuffs received: 0
+Damage dealt:     0
+Damage taken:     0
+
+[EXPLORATION STATS]
+----------------------------------------
+Cells visited:    0
+Cells dug:        0
+Bombs exploded:   0
+Medkits found:    0
+Power-ups collected: 0
+
+[PROGRESSION]
+----------------------------------------
+Final level:      1
+Dimension reached: 1
+Dimensions cleared: 1
+Map cleared: Yes
+
+========================================
+
+

@@ -37,7 +37,8 @@ void Logger::log(const std::string& event,const std::string& otherLogPath) //Del
     logFile.close();
 }
 
-void Logger::exportReport(const std::string& event, const std::string& otherLogPath, bool outcome,
+//outcome: -1 exit, 0 died, 1 won
+void Logger::exportReport(const std::string& event, const std::string& otherLogPath, int outcome,
         int level, int indexDimension, int totalKills, int totalEscapes, int damageDealt,
         int damageTaken, int bossesKilled, int debuffApplied, int cellVisited, int cellDug,
         int bombExploded, int medkitFound, int powerUpCollected)
@@ -55,7 +56,22 @@ void Logger::exportReport(const std::string& event, const std::string& otherLogP
 
     s << "\n[FINAL RESULT]\n";
     s << "----------------------------------------\n";
-    s << "Outcome:       " << (outcome ? "VICTORY" : "DEFEAT") << "\n";
+
+    s << "Outcome:       ";
+    switch(outcome)
+    {
+        case -1:
+            s << "QUIT";
+        break;
+        case 0:
+            s << "DEFEAT";
+        break;
+        case 1:
+            s << "VICTORY";
+        break;
+    }
+
+    s << "\n";
     s << "Level reached: " << level << "\n";
     s << "Dimension:     " << indexDimension + 1 << "\n";
 

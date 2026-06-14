@@ -1635,3 +1635,6 @@ Encountered a Stone Golem
 Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
 
  --- New game started ---
+
+ --- New game started ---
+Player quit game.

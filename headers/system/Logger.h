@@ -21,7 +21,7 @@ public:
     void exportReport(
         const std::string& playerInfo,
         const std::string& route,
-        bool outcome = false,
+        int outcome = 0,
         int level = 1,
         int indexDimension = 0,
         int totalKills = 0,

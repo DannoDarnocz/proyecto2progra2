@@ -15,7 +15,7 @@ Full log available at: log.txt
 
 [FINAL RESULT]
 ----------------------------------------
-Outcome:       DEFEAT
+Outcome:       QUIT
 Level reached: 1
 Dimension:     1
 
@@ -40,8 +40,8 @@ Power-ups collected: 0
 ----------------------------------------
 Final level:      1
 Dimension reached: 1
-Dimensions cleared: 0
-Map cleared: No
+Dimensions cleared: 1
+Map cleared: Yes
 
 ========================================
 

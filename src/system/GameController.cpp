@@ -149,7 +149,7 @@ int GameController::runGame() {
                     logger->exportReport(
                         GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
                         "../final_report.txt",
-                        false,
+                        -1,
                         player->getLevel(),
                         gameMap->getCurrentDimensionIndex(),
                         totalKills,
@@ -252,7 +252,7 @@ int GameController::runGame() {
                                         logger->exportReport(
                                             GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
                                             "../final_report.txt",
-                                            true,
+                                            1,
                                             player->getLevel(),
                                             gameMap->getCurrentDimensionIndex(),
                                             totalKills,
@@ -300,7 +300,7 @@ int GameController::runGame() {
                 logger->exportReport(
                     GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
                     "../final_report.txt",
-                    false,
+                    0,
                     player->getLevel(),
                     gameMap->getCurrentDimensionIndex(),
                     totalKills,
