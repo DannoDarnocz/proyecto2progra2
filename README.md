@@ -24,5 +24,5 @@ And during runtime, the program generates two files on the project folder:
 The whole game is played inside the console, so it is recommended that you adjust the console height to your liking, since the default height is too low and will obstruct most of the interface.
 
 ## Project structure
-Main.cpp is responsible for managing the game logic with different functions for portions of code that are reused multiple times or complex situations, like the combat logic, on a separate mainspace for legibility.
+GameController is responsible for managing the game logic. GameHelper has different functions for portions of code that are reused multiple times or complex situations, like the combat logic.
 

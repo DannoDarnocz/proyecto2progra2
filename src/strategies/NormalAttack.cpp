@@ -9,9 +9,14 @@ NormalAttack::~NormalAttack()
 {
 }
 
-void NormalAttack::attack(Player& player, Monster& monster)
+int NormalAttack::strategyDamage(Monster& monster)
 {
     // Normal attack deals standard damage
-    player.takeDamage(monster.getDamage());
+    return monster.getDamage();
+}
+
+void NormalAttack::attack(Player& player, Monster& monster)
+{
+    player.takeDamage(strategyDamage(monster));
 }
 

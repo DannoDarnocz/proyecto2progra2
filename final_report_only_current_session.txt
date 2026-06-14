@@ -7,8 +7,8 @@
 ----------------------------------------
 
 ========================================
-Player Status: HP=91 | Level=1 | Active powerups: +20% more damage, +30% max health,  | Debuff: None
-Position: (1, 3)
+Player Status: HP=100 | Level=1 | No active powerups | Debuff: None
+Position: (0, 0)
 ========================================
 
 Full log available at: log.txt
@@ -30,11 +30,11 @@ Damage taken:     0
 
 [EXPLORATION STATS]
 ----------------------------------------
-Cells visited:    4
-Cells dug:        2
-Bombs exploded:   1
-Medkits found:    1
-Power-ups collected: 1
+Cells visited:    0
+Cells dug:        0
+Bombs exploded:   0
+Medkits found:    0
+Power-ups collected: 0
 
 [PROGRESSION]
 ----------------------------------------

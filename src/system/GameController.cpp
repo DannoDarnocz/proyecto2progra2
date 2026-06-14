@@ -5,17 +5,17 @@
 #include "../../headers/system/GameController.h"
 
 int GameController::runGame() {
-    srand(time(NULL));
+    srand(time(nullptr));
 
     // Create logger
     Logger* logger = Logger::getInstance();
     GameHelper::safelog("\n --- New game started ---");
 
     // Load map from files
-    Map* gameMap = nullptr;
+    std::unique_ptr<Map> gameMap = nullptr;
     try
     {
-        gameMap = GameHelper::loadMapFromFiles("../map_data.txt");
+        gameMap = std::unique_ptr<Map>(GameHelper::loadMapFromFiles("../map_data.txt"));
     }
     catch (const FileException& e)
     {
@@ -48,7 +48,7 @@ int GameController::runGame() {
     cout << "====== BLOCK WORLD ======" << endl;
     cout << "Welcome, adventurer!" << endl << endl;
 
-
+    // game constants
     bool gameRunning = true;
     int totalKills = 0;
     int totalEscapes = 0;
@@ -145,7 +145,7 @@ int GameController::runGame() {
                 cout << "\n> Exiting game. Goodbye!" << endl;
                 try
                 {
-                    logger->log("Player quitted game.");
+                    logger->log("Player quit game.");
                     logger->exportReport(
                         GameHelper::displayGameState(*player, currentX,currentY,currentDimension,false),
                         "../final_report.txt",
@@ -192,7 +192,8 @@ int GameController::runGame() {
             } else if (interactResult == InteractResult::MONSTER) {
                 Monster* monster = nullptr;
                 // iniciate combat if possible
-                if (monster = dynamic_cast<Monster*>(newCell->getContent()))
+                monster = dynamic_cast<Monster*>(newCell->getContent());
+                if (monster)
                 {
                     int combatResult = GameHelper::combat(*player, *monster,damageDealt,damageTaken,debuffApplied);
                     switch (combatResult)
@@ -323,8 +324,7 @@ int GameController::runGame() {
         cout << endl;
     }
 
-    // Cleanup
-    delete gameMap;
+    // No need to manually delete gameMap, unique_ptr handles cleanup automatically
 
     return 0;
 }

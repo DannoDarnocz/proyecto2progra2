@@ -12,9 +12,14 @@ WeakenerAttack::~WeakenerAttack()
 
 void WeakenerAttack::attack(Player& player, Monster& monster)
 {
-    // Deals 80% of damage
-    player.takeDamage(monster.getDamage()*GameConstants::WEAKENER_DAMAGE);
+    player.takeDamage(strategyDamage(monster));
     // Locks health regen for next DEFEND action
     player.setDebuff(PlayerDebuff::WEAKNESS);
+}
+
+int WeakenerAttack::strategyDamage(Monster& monster)
+{
+    // Deals 80% of damage
+    return monster.getDamage()*GameConstants::WEAKENER_DAMAGE;
 }
 

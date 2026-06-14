@@ -13,6 +13,7 @@ public:
     LeechAttack();
     virtual ~LeechAttack();
 
+    int strategyDamage(Monster& monster) override;
     virtual void attack(Player& player, Monster& monster) override;
     std::string getName() const override { return "Leech Attack"; }
 };

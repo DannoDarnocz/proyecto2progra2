@@ -1,20 +1,22 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include <memory>
+
 #include "Dimension.h"
 #include <vector>
 
 class Map
 {
 private:
-    std::vector<Dimension*> dimensions;
+    std::vector<std::unique_ptr<Dimension>> dimensions;
     int currentDimensionIndex;
 
 public:
     Map();
     ~Map();
 
-    void addDimension(Dimension* dimension);
+    void addDimension(std::unique_ptr<Dimension> dimension);
     Dimension* getCurrentDimension() const;
     Dimension* getDimension(int index) const;
 

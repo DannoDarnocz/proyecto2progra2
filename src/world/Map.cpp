@@ -7,22 +7,20 @@ Map::Map()
 
 Map::~Map()
 {
-    for (auto dimension : dimensions) {
-        delete dimension;
-    }
+    // no destructor required due to unique_ptr
 }
 
-void Map::addDimension(Dimension* dimension)
+void Map::addDimension(std::unique_ptr<Dimension> dimension)
 {
     if (dimension != nullptr) {
-        dimensions.push_back(dimension);
+        dimensions.push_back(std::move(dimension));
     }
 }
 
 Dimension* Map::getCurrentDimension() const
 {
     if (currentDimensionIndex >= 0 && currentDimensionIndex < (int)dimensions.size()) {
-        return dimensions[currentDimensionIndex];
+        return dimensions[currentDimensionIndex].get();
     }
     return nullptr;
 }
@@ -30,7 +28,7 @@ Dimension* Map::getCurrentDimension() const
 Dimension* Map::getDimension(int index) const
 {
     if (index >= 0 && index < (int)dimensions.size()) {
-        return dimensions[index];
+        return dimensions[index].get();
     }
     return nullptr;
 }
@@ -59,7 +57,6 @@ int Map::getDimensionCount() const
 
 void Map::releaseDimension(int index) {
     if (index >= 0 && index < (int)dimensions.size() && dimensions[index] != nullptr) {
-        delete dimensions[index];
         dimensions[index] = nullptr;
     }
 }

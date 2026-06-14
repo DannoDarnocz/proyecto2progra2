@@ -16,8 +16,7 @@ LeechAttack::~LeechAttack()
 
 void LeechAttack::attack(Player& player, Monster& monster)
 {
-    // Deals 50% of damage
-    int damage = monster.getDamage()*GameConstants::LEECH_DAMAGE;
+    int damage = strategyDamage(monster);
     player.takeDamage(damage);
     // Steals the damage done to the player and heals
     int healedHp = monster.getHp() + damage;
@@ -27,3 +26,8 @@ void LeechAttack::attack(Player& player, Monster& monster)
     monster.setHp(healedHp);
 }
 
+
+int LeechAttack::strategyDamage(Monster& monster) {
+    // Deals 50% of damage
+ return monster.getDamage()*GameConstants::LEECH_DAMAGE;
+}

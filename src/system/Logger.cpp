@@ -85,6 +85,8 @@ void Logger::exportReport(const std::string& event, const std::string& otherLogP
 
     s << "\n========================================\n\n";
 
+    cout << s.str(); // show final report
+
     std::ofstream logFile(otherLogPath, std::ios::app);
 
     if (!logFile.is_open()) {

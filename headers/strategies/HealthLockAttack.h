@@ -10,6 +10,7 @@ public:
     virtual ~HealthLockAttack();
 
     virtual void attack(Player& player, Monster& monster) override;
+    int strategyDamage(Monster& monster) override;
     std::string getName() const override { return "Health Lock Attack"; }
 };
 

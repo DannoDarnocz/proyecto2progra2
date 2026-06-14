@@ -1469,3 +1469,169 @@ Player quitted game.
  --- New game started ---
 
  --- New game started ---
+
+ --- New game started ---
+
+Moved down to (1,0).
+Found nothing.
+
+Moved right to (1,1).
+Encountered a Zombie
+Player defeated Zombie
+
+Moved left to (1,0).
+Found nothing.
+
+Moved right to (1,1).
+Found nothing.
+
+Moved right to (1,2).
+Found nothing.
+
+Moved right to (1,3).
+Found nothing.
+
+Moved right to (1,4).
+Player obtained a damage power-up. Damage increased +20%.
+New player status: HP=71 | Level=2 | Active powerups: +20% more damage,  | Debuff: None
+
+Moved up to (0,4).
+Found nothing.
+
+ --- New game started ---
+
+Moved down to (1,0).
+Found nothing.
+
+Moved right to (1,1).
+Encountered a Slime
+Player ran away from Slime and ended up in (3,4).
+
+Moved down to (4,4).
+Found nothing.
+
+Moved down to (5,4).
+Found nothing.
+
+Moved down to (6,4).
+Found nothing.
+
+Moved down to (7,4).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=130 | Level=1 | Active powerups: +20% more damage, +30% max health,  | Debuff: None
+
+Moved right to (7,5).
+Found nothing.
+
+Moved right to (7,6).
+Found nothing.
+
+Moved right to (7,7).
+Found nothing.
+
+Moved right to (7,8).
+Found nothing.
+
+Moved right to (7,9).
+Encountered a Stone Golem
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+Player defeated Stone Golem
+Player advanced to dimension 1
+
+Moved down to (1,0).
+Found nothing.
+
+Moved down to (2,0).
+Found nothing.
+
+Moved down to (3,0).
+Found nothing.
+
+Moved down to (4,0).
+Found nothing.
+
+Moved down to (5,0).
+Found nothing.
+
+Moved down to (6,0).
+Encountered a Skeleton
+Player defeated Skeleton
+
+Moved down to (7,0).
+Found nothing.
+
+Moved down to (8,0).
+Found nothing.
+
+Moved right to (8,1).
+Encountered a Dark Knight
+Player obtained a damage power-up. Damage increased +20%.
+Player was defeated by Dark Knight
+Player died.
+
+Game state:
+
+ --- New game started ---
+Player quit game.
+
+ --- New game started ---
+
+Moved down to (1,0).
+Found nothing.
+
+Moved right to (1,1).
+Encountered a Goblin
+Player defeated Goblin
+
+Moved down to (2,1).
+Found nothing.
+
+Moved left to (2,0).
+Found nothing.
+
+Moved down to (3,0).
+Found nothing.
+
+Moved down to (4,0).
+Found nothing.
+
+Moved down to (5,0).
+Found nothing.
+
+Moved down to (6,0).
+Player obtained a health power-up. Max HP increased +30%.
+New player status: HP=97 | Level=2 | Active powerups: +30% max health,  | Debuff: Health Lock
+
+Moved down to (7,0).
+Found nothing.
+
+Moved right to (7,1).
+Found nothing.
+
+Moved right to (7,2).
+Found nothing.
+
+Moved right to (7,3).
+Found nothing.
+
+Moved right to (7,4).
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+New player status: HP=127 | Level=2 | Active powerups: +20% more damage, +30% max health, +30% max health,  | Debuff: Health Lock
+
+Moved right to (7,5).
+Found nothing.
+
+Moved right to (7,6).
+Found nothing.
+
+Moved right to (7,7).
+Found nothing.
+
+Moved right to (7,8).
+Found nothing.
+
+Moved right to (7,9).
+Encountered a Stone Golem
+Player obtained a health + damage power-up. Max HP (+30%) and damage (20%) increased.
+
+ --- New game started ---

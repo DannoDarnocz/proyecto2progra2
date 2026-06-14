@@ -292,3 +292,99 @@ Map cleared: No
 ========================================
 
 
+
+========================================
+      BLOCK WORLD - FINAL REPORT
+========================================
+
+[SESSION INFO]
+----------------------------------------
+
+========================================
+Player Status: HP=0 | Level=3 | Active powerups: +20% more damage,  | Debuff: None
+Position: (8, 1)
+========================================
+
+Full log available at: log.txt
+
+[FINAL RESULT]
+----------------------------------------
+Outcome:       DEFEAT
+Level reached: 3
+Dimension:     2
+
+[COMBAT STATS]
+----------------------------------------
+Monsters killed:  2
+Times escaped:    1
+Bosses defeated:  1
+Debuffs received: 0
+Damage dealt:     619
+Damage taken:     392
+
+[EXPLORATION STATS]
+----------------------------------------
+Cells visited:    20
+Cells dug:        0
+Bombs exploded:   0
+Medkits found:    0
+Power-ups collected: 1
+
+[PROGRESSION]
+----------------------------------------
+Final level:      3
+Dimension reached: 2
+Dimensions cleared: 1
+Map cleared: No
+
+========================================
+
+
+
+========================================
+      BLOCK WORLD - FINAL REPORT
+========================================
+
+[SESSION INFO]
+----------------------------------------
+
+========================================
+Player Status: HP=100 | Level=1 | No active powerups | Debuff: None
+Position: (0, 0)
+========================================
+
+Full log available at: log.txt
+
+[FINAL RESULT]
+----------------------------------------
+Outcome:       DEFEAT
+Level reached: 1
+Dimension:     1
+
+[COMBAT STATS]
+----------------------------------------
+Monsters killed:  0
+Times escaped:    0
+Bosses defeated:  0
+Debuffs received: 0
+Damage dealt:     0
+Damage taken:     0
+
+[EXPLORATION STATS]
+----------------------------------------
+Cells visited:    0
+Cells dug:        0
+Bombs exploded:   0
+Medkits found:    0
+Power-ups collected: 0
+
+[PROGRESSION]
+----------------------------------------
+Final level:      1
+Dimension reached: 1
+Dimensions cleared: 0
+Map cleared: No
+
+========================================
+
+

@@ -17,7 +17,7 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
         // Create a default small map if file doesn't exist
         cout << "Map file not found. Creating default map..." << endl;
 
-        Dimension* dimension = new Dimension(5, 5);
+        std::unique_ptr<Dimension> dimension = make_unique<Dimension>(5, 5);
 
         // Create cells for the dimension
         for (int i = 0; i < 5; i++)
@@ -35,7 +35,7 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
                 dimension->setCell(i, j, new Cell(std::move(content)));
             }
         }
-        map->addDimension(dimension);
+        map->addDimension(std::move(dimension)); // transfer ownership
         cout << "Using default settings: 1D [5x5]\n";
         return map;
     }
@@ -55,7 +55,7 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
             throw FileExceptionIn("Invalid or missing 'DIM' header for dimension " + to_string(d));
         } // Read "DIM 3,8" as example
 
-        Dimension* dimension = new Dimension(rows, cols);
+        std::unique_ptr<Dimension> dimension = make_unique<Dimension>(rows, cols);
 
         for (int i = 0; i < rows; i++)
         {
@@ -66,7 +66,7 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
                 char cell;  //Each character represent something in the map
                 if (!(file >> cell))
                 {
-                    delete dimension;
+                    // doesn't need to delete anything, it's unique_ptr
                     throw FileExceptionIn(
                         "Unexpected end of file or invalid character at dimension "
                         + to_string(d) + ", cell (" + to_string(i) + "," + to_string(j) + ")");
@@ -99,7 +99,7 @@ Map* GameHelper::loadMapFromFiles(const string& dimensionsFile)
             }
         }
 
-        map->addDimension(dimension);
+        map->addDimension(std::move(dimension)); // transfer ownership
     }
     file.close();
     cout << "Using custom settings: 3D [8x10][10x12][5x12]\n";
@@ -337,8 +337,8 @@ int GameHelper::combat(Player& player, Monster& monster, int& damageDealt, int& 
                 if (!strategyName.empty()) {
                     cout << "The monster uses " << strategyName << "! ";
                 }
-                cout << "The monster attacks you for " << monster.getDamage() << " damage!\n";
-                damageTaken = damageTaken + monster.getDamage();
+                cout << "The monster attacks you for " << monster.getAttackStrategy()->strategyDamage(monster) << " damage!\n";
+                damageTaken = damageTaken + monster.getAttackStrategy()->strategyDamage(monster);
             }
 
         } else {
@@ -368,8 +368,8 @@ int GameHelper::combat(Player& player, Monster& monster, int& damageDealt, int& 
                 if (!strategyName.empty()) {
                     cout << "The monster uses " << strategyName << "! ";
                 }
-                cout << "It attacks you for " << monster.getDamage() << " damage!\n";
-                damageTaken = damageTaken + monster.getDamage();
+                cout << "It attacks you for " <<monster.getAttackStrategy()->strategyDamage(monster) << " damage!\n";
+                damageTaken = damageTaken + monster.getAttackStrategy()->strategyDamage(monster);
             }
         }
 
@@ -489,7 +489,7 @@ void GameHelper::displayMap(Dimension* dimension, int playerX, int playerY)
         cout << endl;
     }
     cout << "-----------" << endl;
-    cout << "[Bomb = B | Monster = M | Medkit = H | Player = P | Boss = J]" << endl;
+    cout << "[Bomb = B | Monster = M | Medkit = H | Player = P | Boss = J/K/F]" << endl;
 }
 
 void GameHelper::slowPrint(const string& text, int delayMs)

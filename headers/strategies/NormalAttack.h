@@ -9,6 +9,8 @@ public:
     NormalAttack();
     virtual ~NormalAttack();
 
+
+    int strategyDamage(Monster& monster) override;
     virtual void attack(Player& player, Monster& monster) override;
     std::string getName() const override { return "Normal Attack"; }
 };
