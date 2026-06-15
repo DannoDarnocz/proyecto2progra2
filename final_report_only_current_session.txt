@@ -7,40 +7,40 @@
 ----------------------------------------
 
 ========================================
-Player Status: HP=100 | Level=1 | No active powerups | Debuff: None
-Position: (0, 0)
+Player Status: HP=205 | Level=8 | No active powerups | Debuff: None
+Position: (2, 11)
 ========================================
 
 Full log available at: log.txt
 
 [FINAL RESULT]
 ----------------------------------------
-Outcome:       QUIT
-Level reached: 1
-Dimension:     1
+Outcome:       VICTORY
+Level reached: 8
+Dimension:     3
 
 [COMBAT STATS]
 ----------------------------------------
-Monsters killed:  0
+Monsters killed:  7
 Times escaped:    0
-Bosses defeated:  0
-Debuffs received: 0
-Damage dealt:     0
-Damage taken:     0
+Bosses defeated:  3
+Debuffs received: 2
+Damage dealt:     1862
+Damage taken:     593
 
 [EXPLORATION STATS]
 ----------------------------------------
-Cells visited:    0
-Cells dug:        0
+Cells visited:    126
+Cells dug:        2
 Bombs exploded:   0
-Medkits found:    0
-Power-ups collected: 0
+Medkits found:    1
+Power-ups collected: 21
 
 [PROGRESSION]
 ----------------------------------------
-Final level:      1
-Dimension reached: 1
-Dimensions cleared: 1
+Final level:      8
+Dimension reached: 3
+Dimensions cleared: 3
 Map cleared: Yes
 
 ========================================

@@ -21,7 +21,6 @@
 #include "../world/Map.h"
 #include "Logger.h"
 
-#endif //PROYECTO_II_LOGICHELPER_H
 using namespace std;
 
 namespace GameHelper
@@ -42,3 +41,6 @@ namespace GameHelper
     void slowPrint(const string& text, int delayMs = 50);
     void safelog(const string& message);
 };
+
+
+#endif //PROYECTO_II_LOGICHELPER_H
